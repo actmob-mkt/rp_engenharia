@@ -1,0 +1,636 @@
+/* RP Engenharia Industrial — folha de estilos */
+html{scroll-behavior:smooth}
+body{margin:0;background:#F4F4F1;color:#0A1033;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#0B1B5C}
+a:where(:hover){color:#C24E00}
+:focus-visible{outline:3px solid #FF7A1A;outline-offset:3px}
+[hidden]{display:none!important}
+@media (max-width:1199px){[data-if="wide"]{display:none!important}}
+@media (min-width:1200px){[data-if="narrow"],[data-if="showMobile"]{display:none!important}}
+@keyframes rpPulse{0%{transform:scale(1);opacity:.85}100%{transform:scale(4.2);opacity:0}}
+@keyframes rpMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes rpFlow{to{stroke-dashoffset:-28}}
+@keyframes rpSpin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* estilos de componente (gerados) */
+.s0{position: sticky; top: 0px; z-index: 50; background: rgb(255, 255, 255); border-bottom: 1px solid rgb(218, 220, 227); font-family: Inter, system-ui, sans-serif}
+.s1{position: absolute; left: 12px; top: -60px; background: rgb(255, 122, 26); color: rgb(10, 16, 51); padding: 10px 14px; font-weight: 600; z-index: 60}
+.s2{max-width: 1440px; margin: 0px auto; padding: 0px clamp(20px, 4vw, 56px); height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px}
+.s3{display: flex; align-items: center; flex-shrink: 0}
+.s4{height: 44px; width: auto; display: block}
+.s5{display: contents}
+.s6{display: flex; align-items: center; gap: clamp(12px, 1.4vw, 24px)}
+.s7{font-size: 14px; font-weight: 500; color: rgb(10, 16, 51); text-decoration: none; padding: 27px 0px 25px; border-bottom: 3px solid transparent; white-space: nowrap}
+.s8{background: rgb(255, 122, 26); color: rgb(10, 16, 51); font-weight: 600; font-size: 14px; padding: 12px 18px; text-decoration: none; white-space: nowrap}
+.s9{display: flex; align-items: center; gap: 10px; background: none; border: 1px solid rgb(10, 16, 51); color: rgb(10, 16, 51); font: 600 14px Inter, sans-serif; padding: 10px 14px; cursor: pointer; min-height: 44px}
+.sa{display: flex; flex-direction: column; gap: 4px; width: 18px}
+.sb{height: 2px; background: rgb(10, 16, 51)}
+.sc{background: rgb(10, 16, 51); padding: 12px clamp(20px, 4vw, 56px) 28px; display: flex; flex-direction: column; max-height: calc(-76px + 100vh); overflow: auto}
+.sd{color: rgb(255, 255, 255); font: 600 20px Sora, sans-serif; text-decoration: none; padding: 14px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.14); display: flex; justify-content: space-between}
+.se{color: transparent}
+.sf{margin-top: 20px; background: rgb(255, 122, 26); color: rgb(10, 16, 51); font-weight: 600; font-size: 16px; padding: 16px 18px; text-decoration: none; text-align: center}
+.sg{position: relative; overflow: hidden}
+.sh{position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1; pointer-events: none; overflow: visible}
+.si{filter: drop-shadow(rgba(255, 122, 26, 0.7) 0px 0px 4px); stroke-dasharray: 200, 200; stroke-dashoffset: 20}
+.sj{opacity: 1; transition: opacity 0.3s}
+.sk{transform-box: fill-box; transform-origin: center center; animation: 1.6s ease-out 0s infinite normal none running rpPulse}
+.sl{filter: drop-shadow(rgb(255, 122, 26) 0px 0px 6px) drop-shadow(rgba(255, 122, 26, 0.9) 0px 0px 14px)}
+.sm{position: relative; background: rgb(11, 27, 92); color: rgb(255, 255, 255); min-height: calc(-76px + 100vh); display: flex}
+.sn{position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.15); mix-blend-mode: luminosity; opacity: 0.55}
+.so{position: absolute; inset: 0px; background: linear-gradient(90deg, rgba(6, 11, 38, 0.94) 0%, rgba(6, 11, 38, 0.7) 45%, rgba(6, 11, 38, 0.35) 100%)}
+.sp{position: absolute; left: 10px; top: 56px; width: 11px; height: 11px; margin-left: -5px; transform: rotate(45deg); border: 1.5px solid rgb(255, 122, 26); z-index: 5; box-shadow: none}
+.sq{position: relative; width: 100%; max-width: 1440px; margin: 0px auto; padding: clamp(48px, 8vw, 96px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr)); gap: 48px; align-items: center; z-index: 2}
+.sr{display: flex; flex-direction: column; gap: 28px}
+.ss{font: 500 13px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(255, 178, 122)}
+.st{font: 800 clamp(40px, 6.2vw, 88px) / 1.02 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px; text-wrap: balance}
+.su{color: rgb(255, 122, 26)}
+.sv{font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55; color: rgb(213, 217, 234); margin: 0px; max-width: 34em; text-wrap: pretty}
+.sw{display: flex; flex-wrap: wrap; gap: 12px}
+.sx{background: rgb(255, 122, 26); color: rgb(10, 16, 51); font-weight: 600; font-size: 16px; padding: 17px 26px; text-decoration: none}
+.sy{border: 1px solid rgba(255, 255, 255, 0.6); color: rgb(255, 255, 255); font-weight: 600; font-size: 16px; padding: 16px 26px; text-decoration: none}
+.sz{margin: 0px; position: relative; max-width: 560px; width: 100%; justify-self: center}
+.s10{width: 100%; height: auto; display: block; overflow: visible}
+.s11{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 0s infinite normal none running rpPulse}
+.s12{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 0.23s infinite normal none running rpPulse}
+.s13{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 0.46s infinite normal none running rpPulse}
+.s14{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 0.69s infinite normal none running rpPulse}
+.s15{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 0.92s infinite normal none running rpPulse}
+.s16{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 1.15s infinite normal none running rpPulse}
+.s17{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 1.38s infinite normal none running rpPulse}
+.s18{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 1.61s infinite normal none running rpPulse}
+.s19{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 1.84s infinite normal none running rpPulse}
+.s1a{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 2.07s infinite normal none running rpPulse}
+.s1b{transform-box: fill-box; transform-origin: center center; animation: 2.6s ease-out 2.3s infinite normal none running rpPulse}
+.s1c{display: flex; flex-wrap: wrap; gap: 8px 20px; font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.06em; color: rgb(213, 217, 234); margin-top: 8px}
+.s1d{display: flex; align-items: center; gap: 8px}
+.s1e{width: 9px; height: 9px; background: rgb(255, 255, 255)}
+.s1f{width: 9px; height: 9px; border-radius: 50%; background: rgb(255, 122, 26)}
+.s1g{position: relative; background: linear-gradient(rgba(11, 27, 92, 0.05) 1px, transparent 1px) 0% 0% / 32px 32px, linear-gradient(90deg, rgba(11, 27, 92, 0.05) 1px, transparent 1px) rgb(244, 244, 241)}
+.s1h{position: absolute; left: -10px; top: -5px; width: 11px; height: 11px; margin-left: -5px; transform: rotate(45deg); border: 1.5px solid rgb(255, 122, 26); background: rgb(255, 122, 26); z-index: 5; box-shadow: rgba(255, 122, 26, 0.18) 0px 0px 0px 4px}
+.s1i{max-width: 1440px; margin: 0px auto; padding: clamp(64px, 9vw, 120px) clamp(28px, 6vw, 96px); position: relative; z-index: 2}
+.s1j{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 48px}
+.s1k{font: 700 clamp(28px, 3.4vw, 48px) / 1.08 Sora, sans-serif; letter-spacing: -0.02em; margin: 0px; max-width: 16em; text-wrap: balance; position: relative; z-index: 5; transition: color 0.45s; color: rgb(217, 95, 10)}
+.s1l{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(74, 82, 117)}
+.s1m{display: grid; grid-template-columns: repeat(6, minmax(0px, 1fr)); column-gap: clamp(12px, 1.6vw, 28px); border-top: 1px solid rgb(10, 16, 51)}
+.s1n{padding: 28px 0px; border-bottom: 1px solid rgb(201, 204, 216); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px; min-width: 0px}
+.s1o{font-style: normal; font-variant: tabular-nums; font-size-adjust: none; font-language-override: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-weight: 800; font-stretch: normal; font-size: clamp(44px, 4.4vw, 72px); line-height: 1; font-family: Sora, sans-serif; letter-spacing: -0.04em; color: rgb(11, 27, 92)}
+.s1p{font-size: 15px; line-height: 1.4; color: rgb(58, 66, 102); max-width: 14em; text-wrap: pretty}
+.s1q{position: relative; background: rgb(6, 11, 38); color: rgb(255, 255, 255)}
+.s1r{position: absolute; left: 10px; top: -5px; width: 11px; height: 11px; margin-left: -5px; transform: rotate(45deg); border: 1.5px solid rgb(255, 122, 26); background: rgb(255, 122, 26); z-index: 5; box-shadow: rgba(255, 122, 26, 0.18) 0px 0px 0px 4px}
+.s1s{max-width: 1440px; margin: 0px auto; padding: clamp(64px, 9vw, 120px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 40px; position: relative; z-index: 2}
+.s1t{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px}
+.s1u{display: flex; flex-direction: column; gap: 16px; max-width: 760px}
+.s1v{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(140, 147, 179)}
+.s1w{font: 700 clamp(32px, 4.4vw, 64px) / 1.04 Sora, sans-serif; letter-spacing: -0.025em; margin: 0px; text-wrap: balance; position: relative; z-index: 5; transition: color 0.45s; color: rgb(255, 122, 26)}
+.s1x{font-size: 18px; line-height: 1.55; color: rgb(201, 206, 224); margin: 0px; text-wrap: pretty}
+.s1y{width: 100%; height: auto; display: block}
+.s1z{animation: 1.1s linear 0s infinite normal none running rpFlow}
+.s20{font: 500 13px "IBM Plex Mono", monospace; letter-spacing: 0.12em}
+.s21{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.08em}
+.s22{display: flex; flex-wrap: wrap; gap: 8px}
+.s23{display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 12px 18px; background: rgb(255, 255, 255); color: rgb(6, 11, 38); border: 1px solid rgb(255, 255, 255); font: 600 15px Inter, sans-serif; cursor: pointer}
+.s24{width: 10px; height: 10px; border-radius: 50%; background: rgb(255, 255, 255)}
+.s25{display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 12px 18px; background: transparent; color: rgb(255, 255, 255); border: 1px solid rgba(255, 255, 255, 0.3); font: 600 15px Inter, sans-serif; cursor: pointer}
+.s26{width: 10px; height: 10px; border-radius: 50%; background: rgb(255, 138, 31)}
+.s27{width: 10px; height: 10px; border-radius: 50%; background: rgb(63, 182, 232)}
+.s28{width: 10px; height: 10px; border-radius: 50%; background: rgb(166, 208, 75)}
+.s29{width: 10px; height: 10px; border-radius: 50%; background: rgb(197, 155, 255)}
+.s2a{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 32px; align-items: start}
+.s2b{margin: 0px; grid-column: span 2; min-width: 0px; border: 1px solid rgb(28, 36, 80); background: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0% 0% / 20px 20px, linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) rgb(8, 16, 47); padding: 16px}
+.s2c{transition: stroke 0.35s, fill 0.35s}
+.s2d{font: 500 12px "IBM Plex Mono", monospace; transition: fill 0.35s}
+.s2e{display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font: 500 11px "IBM Plex Mono", monospace; letter-spacing: 0.08em; color: rgb(140, 147, 179); margin-top: 12px}
+.s2f{display: flex; flex-direction: column; gap: 20px; padding-top: 8px; min-width: 0px}
+.s2g{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(255, 178, 122)}
+.s2h{font: 700 30px / 1.1 Sora, sans-serif; margin: 0px}
+.s2i{font-size: 17px; line-height: 1.55; color: rgb(201, 206, 224); margin: 0px; text-wrap: pretty}
+.s2j{list-style: none; margin: 0px; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid rgb(28, 36, 80)}
+.s2k{display: flex; gap: 12px; padding: 12px 0px; border-bottom: 1px solid rgb(28, 36, 80); font-size: 15px; line-height: 1.45}
+.s2l{color: rgb(255, 178, 122); font-family: "IBM Plex Mono", monospace}
+.s2m{color: rgb(255, 255, 255); font-weight: 600; font-size: 15px}
+.s2n{position: relative; background: rgb(244, 244, 241)}
+.s2o{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 40px}
+.s2p{font: 700 clamp(32px, 4.4vw, 64px) / 1.04 Sora, sans-serif; letter-spacing: -0.025em; margin: 0px; position: relative; z-index: 5; transition: color 0.45s; color: rgb(217, 95, 10)}
+.s2q{border-top: 1px solid rgb(10, 16, 51)}
+.s2r{border-bottom: 1px solid rgb(201, 204, 216)}
+.s2s{margin: 0px}
+.s2t{width: 100%; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: clamp(14px, 2.4vw, 40px); padding: 26px 0px; background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: pointer; text-align: left; color: rgb(10, 16, 51)}
+.s2u{font: 500 13px "IBM Plex Mono", monospace; color: rgb(74, 82, 117); display: flex; align-items: center; gap: 10px}
+.s2v{width: 12px; height: 12px; border-radius: 50%; background: rgb(255, 138, 31); border: 1px solid rgba(10, 16, 51, 0.25)}
+.s2w{font: 700 clamp(26px, 3.2vw, 44px) / 1.05 Sora, sans-serif; letter-spacing: -0.02em}
+.s2x{font: 400 32px Sora, sans-serif; color: rgb(11, 27, 92)}
+.s2y{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 32px; padding: 0px 0px 40px}
+.s2z{display: flex; flex-direction: column; gap: 16px}
+.s30{font: 600 20px / 1.35 Sora, sans-serif; margin: 0px; text-wrap: balance}
+.s31{font-size: 16px; line-height: 1.55; color: rgb(58, 66, 102); margin: 0px}
+.s32{font-weight: 600; font-size: 15px; color: rgb(11, 27, 92)}
+.s33{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(74, 82, 117); margin: 0px 0px 12px}
+.s34{margin: 0px; padding: 0px; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.45}
+.s35{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(74, 82, 117); margin: 24px 0px 12px}
+.s36{font-weight: 500}
+.s37{background: rgb(11, 27, 92); aspect-ratio: 4 / 3; overflow: hidden}
+.s38{width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(1) contrast(1.15); mix-blend-mode: luminosity; opacity: 0.92}
+.s39{width: 12px; height: 12px; border-radius: 50%; background: rgb(63, 182, 232); border: 1px solid rgba(10, 16, 51, 0.25)}
+.s3a{width: 12px; height: 12px; border-radius: 50%; background: rgb(166, 208, 75); border: 1px solid rgba(10, 16, 51, 0.25)}
+.s3b{width: 12px; height: 12px; border-radius: 50%; background: rgb(197, 155, 255); border: 1px solid rgba(10, 16, 51, 0.25)}
+.s3c{width: 12px; height: 12px; border-radius: 50%; background: rgb(230, 232, 240); border: 1px solid rgba(10, 16, 51, 0.25)}
+.s3d{position: relative; background: rgb(11, 27, 92); color: rgb(255, 255, 255)}
+.s3e{font: 700 clamp(32px, 4.4vw, 64px) / 1.04 Sora, sans-serif; letter-spacing: -0.025em; margin: 0px; max-width: 12em; text-wrap: balance; position: relative; z-index: 5; transition: color 0.45s; color: rgb(255, 122, 26)}
+.s3f{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); border-top: 1px solid rgba(255, 255, 255, 0.25); border-left: 1px solid rgba(255, 255, 255, 0.25)}
+.s3g{padding: 32px 28px; border-right: 1px solid rgba(255, 255, 255, 0.25); border-bottom: 1px solid rgba(255, 255, 255, 0.25); display: flex; flex-direction: column; gap: 14px}
+.s3h{font: 700 26px / 1.1 Sora, sans-serif; margin: 0px}
+.s3i{font-size: 15px; line-height: 1.55; color: rgb(213, 217, 234); margin: 0px; text-wrap: pretty}
+.s3j{max-width: 1440px; margin: 0px auto; padding: clamp(64px, 9vw, 120px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 56px; align-items: center; position: relative; z-index: 2}
+.s3k{display: flex; flex-direction: column; gap: 24px}
+.s3l{font: 700 clamp(32px, 4.4vw, 64px) / 1.04 Sora, sans-serif; letter-spacing: -0.025em; margin: 0px; text-wrap: balance; position: relative; z-index: 5; transition: color 0.45s; color: rgb(217, 95, 10)}
+.s3m{font-size: 18px; line-height: 1.55; color: rgb(58, 66, 102); margin: 0px; max-width: 30em}
+.s3n{list-style: none; margin: 0px; padding: 0px; display: flex; flex-wrap: wrap; gap: 6px}
+.s3o{font: 500 14px "IBM Plex Mono", monospace; padding: 8px 12px; border: 1px solid rgb(11, 27, 92); background: rgb(11, 27, 92); color: rgb(255, 255, 255)}
+.s3p{font: 500 14px "IBM Plex Mono", monospace; padding: 8px 12px; border: 1px solid rgb(11, 27, 92); background: transparent; color: rgb(10, 16, 51)}
+.s3q{align-self: flex-start; background: rgb(11, 27, 92); color: rgb(255, 255, 255); font-weight: 600; font-size: 15px; padding: 15px 22px; text-decoration: none}
+.s3r{display: block; max-width: 520px; width: 100%; justify-self: center}
+.s3s{position: relative; background: rgb(255, 255, 255); border-top: 1px solid rgb(218, 220, 227)}
+.s3t{max-width: 1440px; margin: 0px auto; padding: clamp(64px, 9vw, 120px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 56px; position: relative; z-index: 2}
+.s3u{font: 700 clamp(32px, 4.4vw, 56px) / 1.06 Sora, sans-serif; letter-spacing: -0.025em; margin: 0px; text-wrap: balance; position: relative; z-index: 5; transition: color 0.45s; color: rgb(217, 95, 10)}
+.s3v{font-size: 17px; line-height: 1.6; color: rgb(58, 66, 102); margin: 0px; max-width: 34em}
+.s3w{display: flex; flex-wrap: wrap; gap: 16px 24px}
+.s3x{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 12px; align-content: start}
+.s3y{border: 2px solid rgb(11, 27, 92); padding: 24px 20px; display: flex; flex-direction: column; gap: 6px; aspect-ratio: 1 / 1; justify-content: space-between; background: rgb(255, 255, 255)}
+.s3z{font: 500 11px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(74, 82, 117)}
+.s40{font: 800 34px / 1 Sora, sans-serif; color: rgb(11, 27, 92)}
+.s41{font-size: 14px; color: rgb(58, 66, 102); margin-top: 10px}
+.s42{border: 2px solid rgb(11, 27, 92); padding: 24px 20px; display: flex; flex-direction: column; gap: 6px; aspect-ratio: 1 / 1; justify-content: space-between; background: rgb(11, 27, 92)}
+.s43{font: 500 11px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(255, 178, 122)}
+.s44{font: 800 34px / 1 Sora, sans-serif; color: rgb(255, 255, 255)}
+.s45{font-size: 14px; color: rgb(213, 217, 234); margin-top: 10px}
+.s46{position: relative; background: rgb(255, 255, 255); border-top: 1px solid rgb(218, 220, 227); padding: 56px 0px}
+.s47{max-width: 1440px; margin: 0px auto 32px; padding: 0px clamp(28px, 6vw, 96px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px; position: relative; z-index: 2}
+.s48{font: 600 20px Sora, sans-serif; margin: 0px; position: relative; z-index: 5; transition: color 0.45s; color: rgb(217, 95, 10)}
+.s49{font-weight: 600; font-size: 15px; color: rgb(11, 27, 92); background: rgb(255, 255, 255); padding: 6px 12px; margin: -6px -12px}
+.s4a{overflow: hidden; position: relative; z-index: 2}
+.s4b{list-style: none; margin: 0px; padding: 0px; display: flex; gap: 16px; width: max-content; animation-duration: 70s; animation-timing-function: linear; animation-delay: 0s; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: none; animation-play-state: var(--p,running); animation-name: rpMarquee; animation-timeline: auto; animation-range: normal}
+.s4c{width: 150px; height: 96px; flex-shrink: 0; display: flex; align-items: center; justify-content: center}
+.s4d{max-width: 130px; max-height: 80px; filter: grayscale(1); opacity: 0.7; mix-blend-mode: multiply; transition: filter 0.3s, opacity 0.3s}
+.s4e{position: relative; background: rgb(11, 27, 92); color: rgb(255, 255, 255); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr))}
+.s4f{position: absolute; left: clamp(10px, 2.4vw, 36px); top: 64px; width: 11px; height: 11px; margin-left: -5px; transform: rotate(45deg); border: 1.5px solid rgb(255, 122, 26); background: rgb(11, 27, 92); z-index: 5; display: none}
+.s4g{min-height: 420px; position: relative; overflow: hidden; background: rgb(11, 27, 92); z-index: 2}
+.s4h{position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; filter: grayscale(0) contrast(1.05); opacity: 1; transform: scale(1.04); transition: filter 0.8s, opacity 0.8s, transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1)}
+.s4i{position: absolute; inset: 0px; box-shadow: rgb(255, 122, 26) 0px 0px 0px 3px inset; transition: box-shadow 0.6s; pointer-events: none}
+.s4j{padding: clamp(56px, 7vw, 100px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 24px; justify-content: center; position: relative; z-index: 2}
+.s4k{font: 700 clamp(32px, 4vw, 56px) / 1.05 Sora, sans-serif; letter-spacing: -0.025em; margin: 0px; text-wrap: balance; position: relative; z-index: 5; transition: color 0.45s; color: rgb(255, 122, 26)}
+.s4l{font-size: 17px; line-height: 1.6; color: rgb(213, 217, 234); margin: 0px; max-width: 32em}
+.s4m{display: flex; flex-wrap: wrap; gap: 10px}
+.s4n{border: 1px solid rgb(255, 178, 122); color: rgb(255, 255, 255); padding: 10px 14px; font-size: 14px; font-weight: 600}
+.s4o{border: 1px solid rgba(255, 255, 255, 0.4); color: rgb(255, 255, 255); padding: 10px 14px; font-size: 14px; font-weight: 600}
+.s4p{align-self: flex-start; background: rgb(255, 122, 26); color: rgb(10, 16, 51); font-weight: 600; font-size: 16px; padding: 16px 24px; text-decoration: none}
+.s4q{font: 700 clamp(32px, 4.4vw, 56px) / 1.04 Sora, sans-serif; letter-spacing: -0.025em; margin: 0px; position: relative; z-index: 5; transition: color 0.45s; color: rgb(217, 95, 10)}
+.s4r{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 32px}
+.s4s{display: flex; flex-direction: column; gap: 14px}
+.s4t{background: rgb(11, 27, 92); aspect-ratio: 16 / 10; overflow: hidden}
+.s4u{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.08em; color: rgb(74, 82, 117)}
+.s4v{font: 600 22px / 1.25 Sora, sans-serif; margin: 0px; text-wrap: balance}
+.s4w{color: rgb(10, 16, 51); text-decoration: none}
+.s4x{font-size: 15px; line-height: 1.55; color: rgb(58, 66, 102); margin: 0px}
+.s4y{position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr))}
+.s4z{position: absolute; left: 10px; top: 59px; width: 11px; height: 11px; margin-left: -5px; transform: rotate(45deg); border: 1.5px solid rgb(10, 16, 51); z-index: 5; box-shadow: none}
+.s50{background: rgb(255, 122, 26); color: rgb(10, 16, 51); text-decoration: none; padding: clamp(56px, 7vw, 96px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 16px; min-height: 300px; justify-content: flex-end; position: relative; z-index: 2}
+.s51{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em}
+.s52{font: 800 clamp(34px, 4.4vw, 60px) / 1 Sora, sans-serif; letter-spacing: -0.03em}
+.s53{font-size: 17px; line-height: 1.5; max-width: 28em}
+.s54{background: rgb(6, 11, 38); color: rgb(255, 255, 255); text-decoration: none; padding: clamp(56px, 7vw, 96px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 16px; min-height: 300px; justify-content: flex-end; position: relative; z-index: 2}
+.s55{font-size: 17px; line-height: 1.5; max-width: 28em; color: rgb(201, 206, 224)}
+.s56{background: rgb(6, 11, 38); color: rgb(201, 206, 224); font-family: Inter, system-ui, sans-serif; position: relative}
+.s57{max-width: 1440px; margin: 0px auto; padding: clamp(56px, 8vw, 96px) clamp(20px, 6vw, 96px) 32px}
+.s58{display: flex; align-items: center; gap: 16px; margin-bottom: 56px}
+.s59{width: 14px; height: 14px; border: 2px solid rgb(255, 122, 26); transform: rotate(45deg); flex-shrink: 0}
+.s5a{flex: 1 1 0%; height: 1px; background: rgb(255, 122, 26)}
+.s5b{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 40px 32px}
+.s5c{font: 700 26px / 1.15 Sora, sans-serif; color: rgb(255, 255, 255); margin: 0px; text-wrap: balance}
+.s5d{align-self: flex-start; background: rgb(255, 122, 26); color: rgb(10, 16, 51); font-weight: 600; font-size: 15px; padding: 14px 20px; text-decoration: none}
+.s5e{font-style: normal; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.5}
+.s5f{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.08em; color: rgb(140, 147, 179)}
+.s5g{color: rgb(255, 255, 255); word-break: break-all}
+.s5h{color: rgb(255, 255, 255)}
+.s5i{display: flex; flex-direction: column; gap: 10px; font-size: 15px}
+.s5j{color: rgb(201, 206, 224); text-decoration: none}
+.s5k{display: flex; gap: 8px; margin-top: 6px}
+.s5l{min-width: 44px; height: 44px; border: 1px solid rgb(42, 51, 96); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font: 600 12px "IBM Plex Mono", monospace; text-decoration: none}
+.s5m{display: flex; flex-wrap: wrap; gap: 12px; margin-top: 56px}
+.s5n{border: 1px solid rgb(42, 51, 96); padding: 12px 16px; display: flex; flex-direction: column; gap: 2px}
+.s5o{font: 700 15px Sora, sans-serif; color: rgb(255, 255, 255)}
+.s5p{font: 500 11px "IBM Plex Mono", monospace; color: rgb(140, 147, 179)}
+.s5q{display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 40px; padding-top: 24px; border-top: 1px solid rgb(28, 36, 80); font-size: 13px; color: rgb(140, 147, 179)}
+.s5r{background: none; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; color: rgb(140, 147, 179); font: inherit; text-decoration: underline; cursor: pointer; padding: 0px}
+.s5s{position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 80; max-width: 560px; margin-left: auto; background: rgb(255, 255, 255); color: rgb(10, 16, 51); border: 1px solid rgb(10, 16, 51); box-shadow: rgba(6, 11, 38, 0.25) 0px 12px 40px; padding: 20px; display: flex; flex-direction: column; gap: 14px}
+.s5t{margin: 0px; font-size: 14px; line-height: 1.5}
+.s5u{color: rgb(11, 27, 92); font-weight: 600}
+.s5v{background: rgb(11, 27, 92); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font: 600 14px Inter, sans-serif; padding: 12px 18px; min-height: 44px; cursor: pointer}
+.s5w{background: rgb(255, 255, 255); color: rgb(11, 27, 92); border: 1px solid rgb(11, 27, 92); font: 600 14px Inter, sans-serif; padding: 12px 18px; min-height: 44px; cursor: pointer}
+.s5x{font-size: 14px; font-weight: 500; color: rgb(10, 16, 51); text-decoration: none; padding: 27px 0px 25px; border-bottom: 3px solid rgb(255, 122, 26); white-space: nowrap}
+.s5y{background: rgb(6, 11, 38); color: rgb(255, 255, 255); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr))}
+.s5z{padding: clamp(56px, 8vw, 112px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 24px; justify-content: center}
+.s60{color: rgb(140, 147, 179)}
+.s61{font: 800 clamp(38px, 5.4vw, 76px) / 1.03 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px; text-wrap: balance}
+.s62{font-size: clamp(17px, 1.4vw, 19px); line-height: 1.6; color: rgb(201, 206, 224); margin: 0px; max-width: 34em; text-wrap: pretty}
+.s63{min-height: 380px; position: relative; background: rgb(11, 27, 92); overflow: hidden}
+.s64{position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.15); mix-blend-mode: luminosity; opacity: 0.92}
+.s65{position: absolute; left: 20px; bottom: 20px; background: rgb(6, 11, 38); color: rgb(255, 255, 255); font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.08em; padding: 8px 12px}
+.s66{max-width: 1440px; margin: 0px auto; padding: clamp(64px, 9vw, 120px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 48px}
+.s67{font: 700 clamp(28px, 3.4vw, 46px) / 1.1 Sora, sans-serif; letter-spacing: -0.02em; margin: 0px; text-wrap: balance}
+.s68{display: flex; flex-direction: column; gap: 20px; font-size: 17px; line-height: 1.65; color: rgb(42, 50, 84)}
+.s69{background: rgb(255, 255, 255); border-top: 1px solid rgb(218, 220, 227); border-bottom: 1px solid rgb(218, 220, 227)}
+.s6a{max-width: 1440px; margin: 0px auto; padding: 0px clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr))}
+.s6b{padding: 56px 32px 56px 0px; display: flex; flex-direction: column; gap: 16px; border-bottom: 1px solid rgb(218, 220, 227)}
+.s6c{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(194, 78, 0)}
+.s6d{font: 600 21px / 1.4 Sora, sans-serif; margin: 0px; text-wrap: pretty}
+.s6e{background: rgb(6, 11, 38); color: rgb(255, 255, 255); padding: clamp(64px, 9vw, 120px) 0px}
+.s6f{max-width: 1440px; margin: 0px auto 40px; padding: 0px clamp(28px, 6vw, 96px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px}
+.s6g{font: 700 clamp(32px, 4.4vw, 64px) / 1.04 Sora, sans-serif; letter-spacing: -0.025em; margin: 0px}
+.s6h{display: flex; gap: 8px}
+.s6i{width: 52px; height: 52px; background: transparent; border: 1px solid rgba(255, 255, 255, 0.4); color: rgb(255, 255, 255); font-size: 20px; cursor: pointer}
+.s6j{width: 52px; height: 52px; background: rgb(255, 122, 26); border: 1px solid rgb(255, 122, 26); color: rgb(10, 16, 51); font-size: 20px; cursor: pointer}
+.s6k{overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; cursor: grab; user-select: none; touch-action: pan-y; padding: 0px clamp(28px, 6vw, 96px); scroll-padding: 0px clamp(28px, 6vw, 96px)}
+.s6l{list-style: none; margin: 0px; padding: 0px; display: flex; width: max-content; position: relative}
+.s6m{width: clamp(270px, 28vw, 380px); flex-shrink: 0; scroll-snap-align: start; padding-right: 28px; display: flex; flex-direction: column; gap: 18px}
+.s6n{display: flex; align-items: center}
+.s6o{width: 13px; height: 13px; transform: rotate(45deg); background: rgb(255, 138, 31); flex-shrink: 0}
+.s6p{flex: 1 1 0%; height: 1px; background: rgba(255, 255, 255, 0.3); margin-right: -28px}
+.s6q{font: 800 clamp(48px, 5vw, 72px) / 1 Sora, sans-serif; letter-spacing: -0.04em; color: rgb(255, 255, 255)}
+.s6r{width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(1) contrast(1.15); mix-blend-mode: luminosity; opacity: 0.92; pointer-events: none}
+.s6s{font: 700 22px / 1.2 Sora, sans-serif; margin: 0px}
+.s6t{font-size: 15px; line-height: 1.55; color: rgb(201, 206, 224); margin: 0px}
+.s6u{width: 13px; height: 13px; transform: rotate(45deg); background: rgb(63, 182, 232); flex-shrink: 0}
+.s6v{width: 13px; height: 13px; transform: rotate(45deg); background: rgb(166, 208, 75); flex-shrink: 0}
+.s6w{width: 13px; height: 13px; transform: rotate(45deg); background: rgb(255, 255, 255); flex-shrink: 0}
+.s6x{width: 13px; height: 13px; transform: rotate(45deg); background: rgb(197, 155, 255); flex-shrink: 0}
+.s6y{max-width: 1440px; margin: 0px auto; padding: clamp(64px, 9vw, 120px) clamp(28px, 6vw, 96px)}
+.s6z{font-size: 16px; line-height: 1.55; color: rgb(58, 66, 102); margin: 0px; max-width: 30em}
+.s70{display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); grid-auto-rows: 220px; grid-auto-flow: dense; gap: 12px}
+.s71{padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: zoom-in; background: rgb(11, 27, 92); overflow: hidden; grid-area: span 2 / span 2}
+.s72{width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(1) contrast(1.1); mix-blend-mode: luminosity; opacity: 0.92; transition: opacity 0.3s, filter 0.3s}
+.s73{padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: zoom-in; background: rgb(11, 27, 92); overflow: hidden; grid-area: auto}
+.s74{padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: zoom-in; background: rgb(11, 27, 92); overflow: hidden; grid-area: auto / span 2}
+.s75{padding: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: zoom-in; background: rgb(11, 27, 92); overflow: hidden; grid-area: span 2}
+.s76{position: fixed; inset: 0px; z-index: 90; background: rgba(6, 11, 38, 0.94); display: flex; align-items: center; justify-content: center; padding: 24px}
+.s77{max-width: 100%; max-height: 86vh; display: block}
+.s78{position: absolute; top: 20px; right: 20px; background: rgb(255, 255, 255); color: rgb(10, 16, 51); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font: 600 14px Inter, sans-serif; padding: 12px 16px; cursor: pointer}
+.s79{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr))}
+.s7a{background: rgb(11, 27, 92); color: rgb(255, 255, 255); text-decoration: none; padding: clamp(48px, 6vw, 80px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 12px}
+.s7b{font: 700 clamp(26px, 3vw, 40px) / 1.1 Sora, sans-serif}
+.s7c{background: rgb(255, 122, 26); color: rgb(10, 16, 51); text-decoration: none; padding: clamp(48px, 6vw, 80px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 12px}
+.s7d{background: rgb(6, 11, 38); color: rgb(255, 255, 255)}
+.s7e{max-width: 1440px; margin: 0px auto; padding: clamp(48px, 7vw, 104px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 20px}
+.s7f{font: 800 clamp(38px, 5.4vw, 76px) / 1.03 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px; max-width: 13em; text-wrap: balance}
+.s7g{font-size: 18px; line-height: 1.6; color: rgb(201, 206, 224); margin: 0px; max-width: 36em}
+.s7h{max-width: 1440px; margin: 0px auto; padding: clamp(48px, 7vw, 96px) clamp(28px, 6vw, 96px)}
+.s7i{list-style: none; margin: 0px; padding: 0px; border-top: 1px solid rgb(10, 16, 51)}
+.s7j{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 20px 40px; padding: 36px 0px; border-bottom: 1px solid rgb(201, 204, 216); align-items: start}
+.s7k{display: flex; gap: 18px; align-items: baseline}
+.s7l{font: 500 13px "IBM Plex Mono", monospace; color: rgb(194, 78, 0)}
+.s7m{font: 800 clamp(30px, 3.6vw, 52px) / 1 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px}
+.s7n{font-size: 17px; line-height: 1.6; color: rgb(42, 50, 84); margin: 0px}
+.s7o{display: flex; flex-direction: column; gap: 10px}
+.s7p{display: flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid rgb(11, 27, 92); color: rgb(10, 16, 51); text-decoration: none; font-size: 14px; font-weight: 600}
+.s7q{width: 9px; height: 9px; border-radius: 50%; background: rgb(255, 138, 31); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.s7r{width: 9px; height: 9px; border-radius: 50%; background: rgb(63, 182, 232); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.s7s{width: 9px; height: 9px; border-radius: 50%; background: rgb(166, 208, 75); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.s7t{width: 9px; height: 9px; border-radius: 50%; background: rgb(197, 155, 255); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.s7u{width: 9px; height: 9px; border-radius: 50%; background: rgb(230, 232, 240); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.s7v{background: rgb(255, 122, 26)}
+.s7w{max-width: 1440px; margin: 0px auto; padding: clamp(48px, 6vw, 80px) clamp(28px, 6vw, 96px); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px}
+.s7x{font: 800 clamp(28px, 3.4vw, 48px) / 1.05 Sora, sans-serif; letter-spacing: -0.02em; margin: 0px; max-width: 16em}
+.s7y{background: rgb(10, 16, 51); color: rgb(255, 255, 255); font-weight: 600; font-size: 16px; padding: 17px 26px; text-decoration: none}
+.s7z{max-width: 1440px; margin: 0px auto; padding: clamp(48px, 7vw, 96px) clamp(28px, 6vw, 96px) clamp(32px, 4vw, 56px); display: flex; flex-direction: column; gap: 20px}
+.s80{font: 800 clamp(38px, 5.4vw, 76px) / 1.03 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px; max-width: 14em; text-wrap: balance}
+.s81{max-width: 1440px; margin: 0px auto; padding: 0px clamp(28px, 6vw, 96px) clamp(64px, 8vw, 112px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 40px; align-items: start}
+.s82{cursor: default; transition: fill 0.25s; outline: none}
+.s83{cursor: pointer; transition: fill 0.25s; outline: none}
+.s84{pointer-events: none}
+.s85{display: flex; flex-wrap: wrap; gap: 8px 20px; font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.06em; color: rgb(201, 206, 224); margin-top: 12px}
+.s86{width: 10px; height: 10px; border-radius: 50%; background: rgb(255, 122, 26)}
+.s87{width: 10px; height: 10px; background: rgb(26, 42, 110)}
+.s88{background: rgb(255, 255, 255); color: rgb(10, 16, 51); padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 18px; border-top: 4px solid rgb(255, 122, 26)}
+.s89{display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap}
+.s8a{font: 500 12px "IBM Plex Mono", monospace; color: rgb(74, 82, 117)}
+.s8b{font: 800 clamp(30px, 3vw, 42px) / 1.05 Sora, sans-serif; letter-spacing: -0.02em; margin: 0px}
+.s8c{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(74, 82, 117); margin: 0px 0px 8px}
+.s8d{font-size: 14px; font-weight: 500; padding: 7px 12px; background: rgb(238, 240, 245)}
+.s8e{display: flex; flex-direction: column; gap: 6px; font-size: 15px; border-top: 1px solid rgb(218, 220, 227); padding-top: 16px}
+.s8f{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(74, 82, 117); margin: 0px 0px 4px}
+.s8g{font-weight: 600}
+.s8h{font-weight: 600; word-break: break-all}
+.s8i{align-self: flex-start; background: rgb(11, 27, 92); color: rgb(255, 255, 255); font-weight: 600; font-size: 15px; padding: 14px 20px; text-decoration: none}
+.s8j{list-style: none; margin: 0px; padding: 0px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 1px; background: rgb(28, 36, 80); border: 1px solid rgb(28, 36, 80)}
+.s8k{background: rgb(6, 11, 38)}
+.s8l{width: 100%; min-height: 56px; display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgb(255, 122, 26); color: rgb(10, 16, 51); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: pointer; text-align: left; font: 500 15px Inter, sans-serif}
+.s8m{font: 500 13px "IBM Plex Mono", monospace; min-width: 24px; color: rgb(10, 16, 51)}
+.s8n{flex: 1 1 0%}
+.s8o{font: 500 10px "IBM Plex Mono", monospace; letter-spacing: 0.08em; color: rgb(10, 16, 51)}
+.s8p{width: 100%; min-height: 56px; display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: rgb(6, 11, 38); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; cursor: pointer; text-align: left; font: 500 15px Inter, sans-serif}
+.s8q{font: 500 13px "IBM Plex Mono", monospace; min-width: 24px; color: rgb(255, 178, 122)}
+.s8r{font: 500 10px "IBM Plex Mono", monospace; letter-spacing: 0.08em; color: rgb(255, 178, 122)}
+.s8s{max-width: 1440px; margin: 0px auto; padding: clamp(48px, 7vw, 104px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 40px; align-items: end}
+.s8t{display: flex; flex-direction: column; gap: 20px}
+.s8u{font-size: 18px; line-height: 1.6; color: rgb(201, 206, 224); margin: 0px}
+.s8v{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 1px; background: rgb(201, 204, 216); border: 1px solid rgb(201, 204, 216)}
+.s8w{background: rgb(244, 244, 241); padding: clamp(28px, 3vw, 44px); display: flex; flex-direction: column; gap: 20px}
+.s8x{font: 800 64px / 1 Sora, sans-serif; color: rgb(166, 208, 75); -webkit-text-stroke: 1px rgb(10, 16, 51)}
+.s8y{list-style: none; margin: 0px; padding: 0px; display: flex; flex-direction: column; border-top: 1px solid rgb(201, 204, 216)}
+.s8z{padding: 14px 0px; border-bottom: 1px solid rgb(201, 204, 216); font-size: 16px; line-height: 1.5}
+.s90{font: 800 64px / 1 Sora, sans-serif; color: rgb(255, 138, 31); -webkit-text-stroke: 1px rgb(10, 16, 51)}
+.s91{font: 800 64px / 1 Sora, sans-serif; color: rgb(63, 182, 232); -webkit-text-stroke: 1px rgb(10, 16, 51)}
+.s92{background: rgb(11, 27, 92); color: rgb(255, 255, 255)}
+.s93{max-width: 1440px; margin: 0px auto; padding: clamp(56px, 7vw, 96px) clamp(28px, 6vw, 96px)}
+.s94{font: 700 clamp(28px, 3.2vw, 44px) / 1.1 Sora, sans-serif; margin: 0px 0px 40px}
+.s95{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); border-top: 1px solid rgba(255, 255, 255, 0.3)}
+.s96{padding: 28px 24px 28px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.18); display: flex; flex-direction: column; gap: 10px}
+.s97{font: 800 clamp(44px, 4.6vw, 68px) / 1 Sora, sans-serif; letter-spacing: -0.03em}
+.s98{font-size: 15px; line-height: 1.45; color: rgb(213, 217, 234)}
+.s99{font: 700 clamp(32px, 4.4vw, 60px) / 1.05 Sora, sans-serif; letter-spacing: -0.025em; margin: 0px 0px 48px; max-width: 14em; text-wrap: balance}
+.s9a{display: flex; flex-direction: column; border-top: 1px solid rgb(10, 16, 51)}
+.s9b{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 24px; padding: 32px 0px; border-bottom: 1px solid rgb(201, 204, 216)}
+.s9c{font: 800 40px / 1 Sora, sans-serif; color: rgb(11, 27, 92)}
+.s9d{font: 600 18px / 1.4 Sora, sans-serif}
+.s9e{font-size: 16px; line-height: 1.6; color: rgb(58, 66, 102); margin: 0px}
+.s9f{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); background: rgb(255, 255, 255); border-top: 1px solid rgb(218, 220, 227)}
+.s9g{padding: clamp(56px, 7vw, 96px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 20px; justify-content: center}
+.s9h{font: 700 clamp(28px, 3.2vw, 44px) / 1.1 Sora, sans-serif; margin: 0px; text-wrap: balance}
+.s9i{font-size: 17px; line-height: 1.6; color: rgb(58, 66, 102); margin: 0px}
+.s9j{font-weight: 600; font-size: 15px}
+.s9k{display: grid; grid-template-columns: 1fr 1fr; gap: 4px; min-height: 420px}
+.s9l{background: rgb(11, 27, 92); overflow: hidden}
+.s9m{width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(1) contrast(1.1); mix-blend-mode: luminosity; opacity: 0.92}
+.s9n{max-width: 1440px; margin: 0px auto; padding: clamp(48px, 7vw, 104px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 40px; align-items: end}
+.s9o{display: flex; gap: 16px; align-items: baseline}
+.s9p{font: 800 clamp(64px, 7vw, 104px) / 1 Sora, sans-serif; letter-spacing: -0.04em; color: rgb(255, 122, 26)}
+.s9q{font-size: 17px; line-height: 1.45; color: rgb(201, 206, 224); max-width: 14em}
+.s9r{background: rgb(255, 255, 255)}
+.s9s{list-style: none; margin: 0px auto; max-width: 1440px; padding: clamp(40px, 6vw, 80px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr)); gap: 1px; background: rgb(255, 255, 255)}
+.s9t{aspect-ratio: 3 / 2; display: flex; align-items: center; justify-content: center; padding: 18px; outline: rgb(228, 230, 236) solid 1px; background: rgb(255, 255, 255)}
+.s9u{max-width: 100%; max-height: 80px; filter: grayscale(1); opacity: 0.75; mix-blend-mode: multiply; transition: filter 0.3s, opacity 0.3s}
+.s9v{background: rgb(255, 122, 26); color: rgb(10, 16, 51); text-decoration: none; padding: clamp(48px, 6vw, 80px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 10px}
+.s9w{font: 800 clamp(28px, 3.4vw, 48px) / 1.05 Sora, sans-serif}
+.s9x{background: rgb(6, 11, 38); color: rgb(255, 255, 255); text-decoration: none; padding: clamp(48px, 6vw, 80px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 10px}
+.s9y{font: 800 clamp(38px, 5.4vw, 76px) / 1.03 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px}
+.s9z{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px 48px; padding: 36px 0px; border-bottom: 1px solid rgb(201, 204, 216); align-items: center}
+.sa0{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.08em; color: rgb(194, 78, 0)}
+.sa1{font: 700 clamp(24px, 2.6vw, 36px) / 1.15 Sora, sans-serif; margin: 0px; text-wrap: balance}
+.sa2{background: rgb(6, 11, 38); color: rgb(255, 255, 255); min-height: 80vh}
+.sa3{max-width: 1280px; margin: 0px auto; padding: clamp(40px, 6vw, 88px) clamp(20px, 5vw, 72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(32px, 5vw, 72px); align-items: start}
+.sa4{display: flex; flex-direction: column; gap: 22px}
+.sa5{font: 800 clamp(38px, 4.8vw, 68px) / 1.02 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px; text-wrap: balance}
+.sa6{border-top: 1px solid rgb(28, 36, 80); padding-top: 22px; display: flex; flex-direction: column; gap: 8px; font-size: 15px}
+.sa7{color: rgb(255, 255, 255); font: 700 22px Sora, sans-serif; text-decoration: none}
+.sa8{background: rgb(255, 255, 255); color: rgb(10, 16, 51); min-width: 0px}
+.sa9{padding: clamp(20px, 3vw, 32px) clamp(20px, 3.6vw, 44px) 0px}
+.saa{list-style: none; margin: 0px; padding: 0px; display: grid; grid-template-columns: repeat(5, 1fr)}
+.sab{display: flex; flex-direction: column; gap: 8px}
+.sac{width: 12px; height: 12px; transform: rotate(45deg); background: rgb(255, 122, 26); border: 1.5px solid rgb(255, 122, 26); flex-shrink: 0}
+.sad{flex: 1 1 0%; height: 2px; background: rgb(218, 220, 227)}
+.sae{font: 500 11px "IBM Plex Mono", monospace; letter-spacing: 0.06em; color: rgb(10, 16, 51)}
+.saf{width: 12px; height: 12px; transform: rotate(45deg); background: rgb(255, 255, 255); border: 1.5px solid rgb(140, 147, 179); flex-shrink: 0}
+.sag{font: 500 11px "IBM Plex Mono", monospace; letter-spacing: 0.06em; color: rgb(74, 82, 117)}
+.sah{padding: clamp(20px, 3vw, 32px) clamp(20px, 3.6vw, 44px) clamp(24px, 3.6vw, 44px); display: flex; flex-direction: column; gap: 22px}
+.sai{font: 700 clamp(24px, 2.4vw, 32px) / 1.15 Sora, sans-serif; margin: 0px; outline: none}
+.saj{background: rgb(255, 241, 232); border: 1px solid rgb(194, 78, 0); color: rgb(122, 46, 0); padding: 14px 16px; font-size: 15px}
+.sak{border-width: medium; border-style: none; border-color: currentcolor; border-image: none; margin: 0px; padding: 0px; display: grid; gap: 8px}
+.sal{position: absolute; width: 1px; height: 1px; overflow: hidden}
+.sam{display: flex; align-items: center; gap: 14px; min-height: 56px; padding: 12px 16px; border: 1.5px solid rgb(201, 204, 216); background: rgb(255, 255, 255); cursor: pointer}
+.san{width: 18px; height: 18px; margin: 0px; accent-color: rgb(11, 27, 92)}
+.sao{display: flex; flex-direction: column}
+.sap{font-weight: 600; font-size: 16px}
+.saq{font-size: 14px; color: rgb(74, 82, 117)}
+.sar{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 18px}
+.sas{width: 100%; box-sizing: border-box; min-height: 52px; padding: 14px 16px; border: 1.5px solid rgb(140, 147, 179); font: 400 16px Inter, sans-serif; color: rgb(10, 16, 51); background: rgb(255, 255, 255)}
+.sat{font-size: 14px; color: rgb(179, 38, 30)}
+.sau{border-width: medium; border-style: none; border-color: currentcolor; border-image: none; margin: 0px; padding: 0px; display: flex; flex-direction: column; gap: 10px}
+.sav{font-size: 15px; color: rgb(58, 66, 102); margin-bottom: 10px}
+.saw{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 8px}
+.sax{display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0px 16px; border: 1.5px solid rgb(201, 204, 216); background: rgb(255, 255, 255); color: rgb(10, 16, 51); cursor: pointer; font-weight: 600; font-size: 15px}
+.say{width: 18px; height: 18px; margin: 0px; accent-color: rgb(255, 122, 26)}
+.saz{width: 10px; height: 10px; border-radius: 50%; background: rgb(255, 138, 31); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.sb0{width: 10px; height: 10px; border-radius: 50%; background: rgb(63, 182, 232); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.sb1{width: 10px; height: 10px; border-radius: 50%; background: rgb(166, 208, 75); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.sb2{width: 10px; height: 10px; border-radius: 50%; background: rgb(197, 155, 255); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.sb3{width: 10px; height: 10px; border-radius: 50%; background: rgb(230, 232, 240); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.sb4{width: 10px; height: 10px; border-radius: 50%; background: rgb(255, 255, 255); outline: rgba(10, 16, 51, 0.2) solid 1px}
+.sb5{display: flex; flex-direction: column; gap: 18px}
+.sb6{width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1.5px solid rgb(140, 147, 179); font: 400 16px / 1.5 Inter, sans-serif; color: rgb(10, 16, 51); resize: vertical}
+.sb7{display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.5; cursor: pointer}
+.sb8{width: 20px; height: 20px; margin: 2px 0px 0px; accent-color: rgb(11, 27, 92); flex-shrink: 0}
+.sb9{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; border-top: 1px solid rgb(218, 220, 227); padding-top: 20px}
+.sba{min-height: 52px; padding: 0px 20px; background: rgb(255, 255, 255); border: 1.5px solid rgb(11, 27, 92); color: rgb(11, 27, 92); font: 600 15px Inter, sans-serif; cursor: pointer}
+.sbb{display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0px 26px; background: rgb(255, 122, 26); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; color: rgb(10, 16, 51); font: 700 16px Inter, sans-serif; cursor: pointer; opacity: 1}
+.sbc{width: 16px; height: 16px; border-width: 2px; border-style: solid; border-color: rgb(10, 16, 51) transparent rgb(10, 16, 51) rgb(10, 16, 51); border-image: none; border-radius: 50%; animation: 0.8s linear 0s infinite normal none running rpSpin}
+.sbd{padding: clamp(28px, 4vw, 52px); display: flex; flex-direction: column; gap: 18px; border-top: 6px solid rgb(166, 208, 75); outline: none}
+.sbe{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(74, 122, 0)}
+.sbf{font: 800 clamp(28px, 3.2vw, 42px) / 1.08 Sora, sans-serif; margin: 0px}
+.sbg{background: rgb(6, 11, 38); color: rgb(255, 255, 255); padding: 24px; display: flex; flex-direction: column; gap: 8px}
+.sbh{color: rgb(255, 255, 255); font: 700 24px Sora, sans-serif; text-decoration: none}
+.sbi{font-size: 14px; color: rgb(201, 206, 224)}
+.sbj{max-width: 1440px; margin: 0px auto; padding: clamp(48px, 7vw, 96px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 40px}
+.sbk{margin: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 28px}
+.sbl{display: flex; flex-direction: column; gap: 6px}
+.sbm{color: rgb(255, 255, 255); font: 700 26px Sora, sans-serif; text-decoration: none}
+.sbn{color: rgb(255, 255, 255); font-size: 17px; font-weight: 600; word-break: break-all}
+.sbo{margin: 0px; font-size: 17px; line-height: 1.5; color: rgb(226, 229, 240)}
+.sbp{margin: 0px; display: flex; flex-wrap: wrap; gap: 14px; font-size: 16px}
+.sbq{background: rgb(11, 27, 92)}
+.sbr{display: block; width: 100%; height: clamp(300px, 42vw, 460px); border: 0px; filter: grayscale(1) contrast(1.05)}
+.sbs{background: rgb(255, 122, 26); color: rgb(10, 16, 51); padding: clamp(48px, 6vw, 88px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 16px}
+.sbt{font: 800 clamp(30px, 3.6vw, 52px) / 1.03 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px}
+.sbu{font-size: 17px; line-height: 1.55; margin: 0px; max-width: 28em}
+.sbv{align-self: flex-start; background: rgb(10, 16, 51); color: rgb(255, 255, 255); font-weight: 600; font-size: 16px; padding: 16px 24px; text-decoration: none}
+.sbw{background: rgb(255, 255, 255); padding: clamp(48px, 6vw, 88px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 18px}
+.sbx{border-top: 5px solid rgb(166, 208, 75); background: rgb(244, 244, 241); padding: 24px; display: flex; flex-direction: column; gap: 8px}
+.sby{font: 700 20px Sora, sans-serif}
+.sbz{font-size: 15px; line-height: 1.5; color: rgb(58, 66, 102)}
+.sc0{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px}
+.sc1{width: 100%; box-sizing: border-box; min-height: 50px; padding: 12px 14px; border: 1.5px solid rgb(140, 147, 179); font: 400 16px Inter, sans-serif; color: rgb(10, 16, 51); background: rgb(255, 255, 255)}
+.sc2{font-size: 13px; color: rgb(179, 38, 30)}
+.sc3{grid-column: 1 / -1; display: flex; gap: 12px; align-items: flex-start; font-size: 14px; line-height: 1.5; cursor: pointer}
+.sc4{width: 20px; height: 20px; margin: 1px 0px 0px; accent-color: rgb(11, 27, 92); flex-shrink: 0}
+.sc5{grid-column: 1 / -1; font-size: 13px; color: rgb(179, 38, 30)}
+.sc6{grid-column: 1 / -1; justify-self: start; min-height: 52px; padding: 0px 24px; background: rgb(11, 27, 92); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font: 600 16px Inter, sans-serif; cursor: pointer}
+.sc7{position: relative; background: rgb(11, 27, 92); color: rgb(255, 255, 255); min-height: min(78vh, 720px); display: flex; align-items: flex-end}
+.sc8{position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.1); mix-blend-mode: luminosity; opacity: 0.6}
+.sc9{position: absolute; inset: 0px; background: linear-gradient(0deg, rgba(6, 11, 38, 0.95) 0%, rgba(6, 11, 38, 0.55) 55%, rgba(6, 11, 38, 0.2) 100%)}
+.sca{position: relative; width: 100%; max-width: 1440px; margin: 0px auto; padding: clamp(48px, 7vw, 96px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 22px}
+.scb{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(201, 206, 224)}
+.scc{color: rgb(201, 206, 224)}
+.scd{font: 800 clamp(40px, 6vw, 88px) / 1.02 Sora, sans-serif; letter-spacing: -0.035em; margin: 0px; max-width: 12em; text-wrap: balance}
+.sce{font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55; color: rgb(226, 229, 240); margin: 0px; max-width: 34em}
+.scf{background: rgb(255, 122, 26); color: rgb(10, 16, 51); font-weight: 600; font-size: 16px; padding: 16px 24px; text-decoration: none}
+.scg{border: 1px solid rgba(255, 255, 255, 0.6); color: rgb(255, 255, 255); font-weight: 600; font-size: 16px; padding: 15px 24px; text-decoration: none}
+.sch{font: 700 clamp(32px, 4.4vw, 60px) / 1.05 Sora, sans-serif; letter-spacing: -0.025em; margin: 0px 0px 48px}
+.sci{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 40px}
+.scj{display: flex; flex-direction: column; gap: 14px; border-top: 3px solid rgb(11, 27, 92); padding-top: 24px}
+.sck{font: 700 26px / 1.15 Sora, sans-serif; margin: 0px}
+.scl{display: flex; flex-direction: column; gap: 14px; border-top: 3px solid rgb(255, 122, 26); padding-top: 24px}
+.scm{display: flex; flex-direction: column; gap: 14px; border-top: 3px solid rgb(63, 182, 232); padding-top: 24px}
+.scn{max-width: 1440px; margin: 0px auto; padding: clamp(64px, 9vw, 120px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 56px}
+.sco{font: 700 clamp(28px, 3.2vw, 44px) / 1.1 Sora, sans-serif; margin: 0px 0px 28px}
+.scp{list-style: none; margin: 0px; padding: 0px; border-top: 1px solid rgba(255, 255, 255, 0.25)}
+.scq{display: flex; align-items: center; gap: 16px; padding: 18px 0px; border-bottom: 1px solid rgba(255, 255, 255, 0.15); font: 600 22px Sora, sans-serif}
+.scr{width: 12px; height: 12px; border-radius: 50%; background: rgb(255, 138, 31)}
+.scs{width: 12px; height: 12px; border-radius: 50%; background: rgb(63, 182, 232)}
+.sct{width: 12px; height: 12px; border-radius: 50%; background: rgb(166, 208, 75)}
+.scu{width: 12px; height: 12px; border-radius: 50%; background: rgb(197, 155, 255)}
+.scv{width: 12px; height: 12px; border-radius: 50%; background: rgb(230, 232, 240)}
+.scw{list-style: none; margin: 0px; padding: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px}
+.scx{border: 1px solid rgba(255, 255, 255, 0.25); padding: 20px; display: flex; flex-direction: column; gap: 8px}
+.scy{font: 700 18px / 1.25 Sora, sans-serif}
+.scz{font-size: 14px; line-height: 1.5; color: rgb(201, 206, 224)}
+.sd0{display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); background: rgb(255, 255, 255)}
+.sd1{min-height: 400px; background: rgb(11, 27, 92); overflow: hidden}
+.sd2{width: 100%; height: 100%; object-fit: cover; display: block}
+.sd3{font: 700 clamp(30px, 3.6vw, 50px) / 1.06 Sora, sans-serif; letter-spacing: -0.02em; margin: 0px; text-wrap: balance}
+.sd4{list-style: none; margin: 0px; padding: 0px; display: flex; flex-wrap: wrap; gap: 8px}
+.sd5{padding: 9px 14px; background: rgb(238, 240, 245); font-size: 14px; font-weight: 600}
+.sd6{align-self: flex-start; background: rgb(11, 27, 92); color: rgb(255, 255, 255); font-weight: 600; font-size: 16px; padding: 16px 24px; text-decoration: none}
+.sd7{background: rgb(255, 122, 26); color: rgb(10, 16, 51)}
+.sd8{max-width: 1440px; margin: 0px auto; padding: clamp(64px, 8vw, 112px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 48px}
+.sd9{font: 800 clamp(32px, 4vw, 56px) / 1.02 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px}
+.sda{font-size: 17px; line-height: 1.6; margin: 0px}
+.sdb{font: 700 20px Sora, sans-serif; margin: 0px 0px 14px}
+.sdc{padding: 13px 0px; border-bottom: 1px solid rgba(10, 16, 51, 0.35); font-size: 16px}
+.sdd{display: flex; gap: 14px; padding: 13px 0px; border-bottom: 1px solid rgba(10, 16, 51, 0.35); font-size: 16px}
+.sde{font-family: "IBM Plex Mono", monospace}
+.sdf{margin: 0px; display: flex; flex-direction: column; gap: 18px}
+.sdg{background: rgb(11, 27, 92); aspect-ratio: 3 / 2; overflow: hidden}
+.sdh{margin: 0px; font: 600 20px / 1.4 Sora, sans-serif; text-wrap: pretty}
+.sdi{display: flex; flex-direction: column; gap: 2px}
+.sdj{background: rgb(255, 255, 255); border-top: 1px solid rgb(218, 220, 227)}
+.sdk{list-style: none; margin: 0px; padding: 0px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr))}
+.sdl{display: flex; flex-direction: column; gap: 12px; padding: 0px 20px 24px 0px}
+.sdm{width: 12px; height: 12px; transform: rotate(45deg); background: rgb(255, 122, 26)}
+.sdn{flex: 1 1 0%; height: 1px; background: rgb(10, 16, 51)}
+.sdo{font: 700 19px / 1.25 Sora, sans-serif}
+.sdp{width: 12px; height: 12px; transform: rotate(45deg); background: rgb(11, 27, 92)}
+.sdq{flex: 1 1 0%; height: 1px; background: transparent}
+.sdr{max-width: 1100px; margin: 0px auto; padding: clamp(64px, 9vw, 120px) clamp(20px, 5vw, 64px)}
+.sds{display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px}
+.sdt{font: 800 clamp(32px, 4.4vw, 60px) / 1.03 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px}
+.sdu{font-size: 17px; line-height: 1.6; color: rgb(201, 206, 224); margin: 0px; max-width: 36em}
+.sdv{background: rgb(255, 255, 255); color: rgb(10, 16, 51); padding: clamp(32px, 5vw, 56px); border-top: 6px solid rgb(166, 208, 75); display: flex; flex-direction: column; gap: 16px}
+.sdw{font: 800 clamp(28px, 3.4vw, 44px) / 1.08 Sora, sans-serif; margin: 0px}
+.sdx{align-self: flex-start; background: rgb(11, 27, 92); color: rgb(255, 255, 255); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font: 600 15px Inter, sans-serif; padding: 14px 20px; cursor: pointer; min-height: 48px}
+.sdy{background: rgb(255, 255, 255); color: rgb(10, 16, 51); padding: clamp(24px, 4vw, 48px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 22px 24px}
+.sdz{grid-column: 1 / -1; background: rgb(255, 241, 232); border: 1px solid rgb(194, 78, 0); color: rgb(122, 46, 0); padding: 16px 18px; font-size: 15px; line-height: 1.5}
+.se0{display: flex; flex-direction: column; gap: 8px; grid-column: 1 / -1}
+.se1{width: 100%; box-sizing: border-box; min-height: 52px; padding: 14px 16px; border: 1.5px solid rgb(140, 147, 179); background: rgb(255, 255, 255); font: 400 16px Inter, sans-serif; color: rgb(10, 16, 51)}
+.se2{grid-column: 1 / -1; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; margin: 0px; padding: 0px; display: flex; flex-direction: column; gap: 10px}
+.se3{font-weight: 600; font-size: 15px; margin-bottom: 10px}
+.se4{display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 0px 16px; border: 1.5px solid rgb(140, 147, 179); background: rgb(255, 255, 255); color: rgb(10, 16, 51); cursor: pointer; font-weight: 600; font-size: 15px}
+.se5{accent-color: rgb(255, 122, 26); width: 18px; height: 18px; margin: 0px}
+.se6{font-weight: 400; color: rgb(74, 82, 117)}
+.se7{width: 100%; box-sizing: border-box; padding: 14px 16px; border: 1.5px solid rgb(140, 147, 179); background: rgb(255, 255, 255); font: 400 16px / 1.5 Inter, sans-serif; color: rgb(10, 16, 51); resize: vertical}
+.se8{grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px}
+.se9{display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-height: 150px; padding: 24px; border: 2px dashed rgb(140, 147, 179); background: rgb(247, 248, 250); cursor: pointer; text-align: center}
+.sea{position: absolute; width: 1px; height: 1px; opacity: 0}
+.seb{font: 700 18px Sora, sans-serif}
+.sec{font-size: 15px; color: rgb(58, 66, 102)}
+.sed{text-decoration: underline; font-weight: 600; color: rgb(11, 27, 92)}
+.see{display: flex; align-items: center; gap: 14px; padding: 16px 18px; border: 1.5px solid rgb(11, 27, 92); background: rgb(238, 240, 245)}
+.sef{font: 600 12px "IBM Plex Mono", monospace; background: rgb(11, 27, 92); color: rgb(255, 255, 255); padding: 8px 10px}
+.seg{flex: 1 1 0%; min-width: 0px; display: flex; flex-direction: column}
+.seh{font-weight: 600; font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap}
+.sei{font-size: 13px; color: rgb(74, 82, 117)}
+.sej{min-height: 44px; padding: 0px 14px; background: rgb(255, 255, 255); border: 1px solid rgb(11, 27, 92); color: rgb(11, 27, 92); font: 600 14px Inter, sans-serif; cursor: pointer}
+.sek{grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px}
+.sel{grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 16px}
+.sem{display: flex; align-items: center; gap: 12px; background: rgb(255, 122, 26); color: rgb(10, 16, 51); border-width: medium; border-style: none; border-color: currentcolor; border-image: none; font: 700 16px Inter, sans-serif; padding: 0px 28px; min-height: 56px; cursor: pointer; opacity: 1}
+.sen{background: rgb(6, 11, 38); border-bottom: 1px solid rgb(28, 36, 80); overflow-x: auto}
+.seo{list-style: none; margin: 0px auto; max-width: 1440px; padding: 0px clamp(28px, 6vw, 96px); display: flex; gap: 4px}
+.sep{display: flex; align-items: center; gap: 10px; padding: 20px 16px 17px; color: rgb(255, 255, 255); text-decoration: none; font: 600 15px Inter, sans-serif; white-space: nowrap; border-bottom: 3px solid rgb(255, 138, 31)}
+.seq{display: flex; align-items: center; gap: 10px; padding: 20px 16px 17px; color: rgb(255, 255, 255); text-decoration: none; font: 600 15px Inter, sans-serif; white-space: nowrap; border-bottom: 3px solid transparent}
+.ser{width: 10px; height: 10px; border-radius: 50%; background: rgb(230, 232, 240)}
+.ses{padding: clamp(48px, 7vw, 104px) clamp(28px, 6vw, 96px); display: flex; flex-direction: column; gap: 22px; justify-content: center; position: relative}
+.set{display: flex; align-items: center; gap: 14px; font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(140, 147, 179)}
+.seu{flex: 1 1 0%; max-width: 120px; height: 2px; background: rgb(255, 138, 31)}
+.sev{font: 800 clamp(44px, 6vw, 88px) / 1 Sora, sans-serif; letter-spacing: -0.035em; margin: 0px}
+.sew{font: 600 clamp(20px, 2vw, 28px) / 1.3 Sora, sans-serif; margin: 0px; color: rgb(255, 138, 31); text-wrap: balance}
+.sex{font-size: 18px; line-height: 1.6; color: rgb(201, 206, 224); margin: 0px; max-width: 32em}
+.sey{min-height: 400px; position: relative; background: rgb(11, 27, 92); overflow: hidden}
+.sez{max-width: 1440px; margin: 0px auto; padding: clamp(64px, 9vw, 120px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 56px}
+.sf0{font: 500 13px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(74, 82, 117); margin: 0px 0px 20px}
+.sf1{font: 600 clamp(19px, 1.7vw, 24px) / 1.3 Sora, sans-serif; padding: 20px 0px; border-bottom: 1px solid rgb(201, 204, 216)}
+.sf2{display: grid; grid-template-columns: 48px 1fr; gap: 12px; padding: 20px 0px; border-bottom: 1px solid rgb(201, 204, 216)}
+.sf3{font: 500 13px "IBM Plex Mono", monospace; color: rgb(194, 78, 0); padding-top: 5px}
+.sf4{font: 600 clamp(19px, 1.7vw, 24px) / 1.3 Sora, sans-serif}
+.sf5{max-width: 1440px; margin: 0px auto; padding: clamp(56px, 7vw, 96px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 48px}
+.sf6{font: 700 clamp(28px, 3.2vw, 44px) / 1.1 Sora, sans-serif; letter-spacing: -0.02em; margin: 0px; text-wrap: balance}
+.sf7{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(74, 82, 117); margin: 8px 0px 10px}
+.sf8{font: 500 14px "IBM Plex Mono", monospace; padding: 8px 12px; border: 1px solid rgb(11, 27, 92)}
+.sf9{list-style: none; margin: 0px; padding: 0px; display: flex; flex-direction: column; gap: 8px}
+.sfa{display: flex; align-items: center; gap: 16px; padding: 20px 22px; border: 1px solid rgb(201, 204, 216); text-decoration: none; color: rgb(10, 16, 51)}
+.sfb{width: 28px; height: 2px; background: rgb(63, 182, 232); outline: rgba(10, 16, 51, 0.15) solid 1px}
+.sfc{font: 500 13px "IBM Plex Mono", monospace; color: rgb(74, 82, 117)}
+.sfd{font: 700 20px Sora, sans-serif; flex: 1 1 0%}
+.sfe{width: 28px; height: 2px; background: rgb(166, 208, 75); outline: rgba(10, 16, 51, 0.15) solid 1px}
+.sff{width: 28px; height: 2px; background: rgb(197, 155, 255); outline: rgba(10, 16, 51, 0.15) solid 1px}
+.sfg{width: 28px; height: 2px; background: rgb(230, 232, 240); outline: rgba(10, 16, 51, 0.15) solid 1px}
+.sfh{display: flex; align-items: center; gap: 10px; padding: 20px 16px 17px; color: rgb(255, 255, 255); text-decoration: none; font: 600 15px Inter, sans-serif; white-space: nowrap; border-bottom: 3px solid rgb(63, 182, 232)}
+.sfi{flex: 1 1 0%; max-width: 120px; height: 2px; background: rgb(63, 182, 232)}
+.sfj{font: 600 clamp(20px, 2vw, 28px) / 1.3 Sora, sans-serif; margin: 0px; color: rgb(63, 182, 232); text-wrap: balance}
+.sfk{width: 28px; height: 2px; background: rgb(255, 138, 31); outline: rgba(10, 16, 51, 0.15) solid 1px}
+.sfl{display: flex; align-items: center; gap: 10px; padding: 20px 16px 17px; color: rgb(255, 255, 255); text-decoration: none; font: 600 15px Inter, sans-serif; white-space: nowrap; border-bottom: 3px solid rgb(166, 208, 75)}
+.sfm{flex: 1 1 0%; max-width: 120px; height: 2px; background: rgb(166, 208, 75)}
+.sfn{font: 600 clamp(20px, 2vw, 28px) / 1.3 Sora, sans-serif; margin: 0px; color: rgb(166, 208, 75); text-wrap: balance}
+.sfo{display: flex; align-items: center; gap: 10px; padding: 20px 16px 17px; color: rgb(255, 255, 255); text-decoration: none; font: 600 15px Inter, sans-serif; white-space: nowrap; border-bottom: 3px solid rgb(197, 155, 255)}
+.sfp{flex: 1 1 0%; max-width: 120px; height: 2px; background: rgb(197, 155, 255)}
+.sfq{font: 600 clamp(20px, 2vw, 28px) / 1.3 Sora, sans-serif; margin: 0px; color: rgb(197, 155, 255); text-wrap: balance}
+.sfr{display: flex; align-items: center; gap: 10px; padding: 20px 16px 17px; color: rgb(255, 255, 255); text-decoration: none; font: 600 15px Inter, sans-serif; white-space: nowrap; border-bottom: 3px solid rgb(230, 232, 240)}
+.sfs{flex: 1 1 0%; max-width: 120px; height: 2px; background: rgb(230, 232, 240)}
+.sft{font: 600 clamp(20px, 2vw, 28px) / 1.3 Sora, sans-serif; margin: 0px; color: rgb(230, 232, 240); text-wrap: balance}
+.sfu{position: sticky; top: 76px; z-index: 40; height: 3px; background: rgba(140, 147, 179, 0.25)}
+.sfv{height: 3px; width: 0px; background: rgb(255, 122, 26)}
+.sfw{max-width: 1200px; margin: 0px auto; padding: clamp(40px, 6vw, 88px) clamp(28px, 6vw, 96px) clamp(40px, 5vw, 72px); display: flex; flex-direction: column; gap: 22px}
+.sfx{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: rgb(140, 147, 179); display: flex; flex-wrap: wrap; gap: 6px}
+.sfy{color: rgb(255, 178, 122)}
+.sfz{font: 800 clamp(34px, 5vw, 68px) / 1.04 Sora, sans-serif; letter-spacing: -0.03em; margin: 0px; max-width: 16em; text-wrap: balance}
+.sg0{font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55; color: rgb(201, 206, 224); margin: 0px; max-width: 36em}
+.sg1{display: flex; flex-wrap: wrap; gap: 8px 28px; font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.08em; color: rgb(201, 206, 224); border-top: 1px solid rgb(28, 36, 80); padding-top: 18px}
+.sg2{background: linear-gradient(rgb(6, 11, 38) 50%, rgb(244, 244, 241) 50%)}
+.sg3{max-width: 1200px; margin: 0px auto; padding: 0px clamp(28px, 6vw, 96px)}
+.sg4{background: rgb(11, 27, 92); aspect-ratio: 21 / 9; overflow: hidden}
+.sg5{max-width: 1200px; margin: 0px auto; padding: clamp(40px, 6vw, 80px) clamp(28px, 6vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 48px; align-items: start}
+.sg6{grid-column: span 2; min-width: 0px; max-width: 720px; display: flex; flex-direction: column; gap: 22px}
+.sg7{font-size: 18px; line-height: 1.75; color: rgb(30, 38, 72); margin: 0px; text-wrap: pretty}
+.sg8{font: 700 clamp(22px, 2.2vw, 28px) / 1.25 Sora, sans-serif; margin: 18px 0px 0px}
+.sg9{margin: 12px 0px; padding: 6px 0px 6px 28px; border-left: 3px solid rgb(255, 122, 26); font: 600 clamp(20px, 2vw, 26px) / 1.4 Sora, sans-serif; color: rgb(11, 27, 92); text-wrap: balance}
+.sga{display: flex; gap: 14px; padding: 14px 0px; border-bottom: 1px solid rgb(201, 204, 216); font-size: 17px; line-height: 1.5}
+.sgb{width: 9px; height: 9px; transform: rotate(45deg); background: rgb(255, 122, 26); flex-shrink: 0; margin-top: 8px}
+.sgc{margin: 12px 0px; display: flex; flex-direction: column; gap: 10px}
+.sgd{background: rgb(11, 27, 92); aspect-ratio: 16 / 9; overflow: hidden}
+.sge{font: 500 12px "IBM Plex Mono", monospace; letter-spacing: 0.04em; color: rgb(74, 82, 117)}
+.sgf{position: sticky; top: 110px; display: flex; flex-direction: column; gap: 24px}
+.sgg{min-height: 44px; padding: 0px 14px; display: flex; align-items: center; border: 1px solid rgb(11, 27, 92); color: rgb(11, 27, 92); text-decoration: none; font-weight: 600; font-size: 14px}
+.sgh{min-height: 44px; padding: 0px 14px; border: 1px solid rgb(11, 27, 92); background: rgb(255, 255, 255); color: rgb(11, 27, 92); font: 600 14px Inter, sans-serif; cursor: pointer}
+.sgi{background: rgb(11, 27, 92); color: rgb(255, 255, 255); padding: 28px; display: flex; flex-direction: column; gap: 14px}
+.sgj{font: 700 21px / 1.3 Sora, sans-serif; margin: 0px}
+.sgk{max-width: 1200px; margin: 0px auto; padding: clamp(48px, 6vw, 88px) clamp(28px, 6vw, 96px)}
+.sgl{display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 32px}
+.sgm{font: 700 clamp(26px, 3vw, 40px) / 1.1 Sora, sans-serif; margin: 0px}
+.sgn{display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: rgb(10, 16, 51)}
+.sgo{font: 600 22px / 1.25 Sora, sans-serif; text-wrap: balance}
+/* estados hover/focus */
+.h0:hover { background: rgb(255, 147, 74) !important; color: rgb(10, 16, 51) !important; }
+.h1:hover { border-color: rgb(255, 255, 255) !important; background: rgba(255, 255, 255, 0.08) !important; color: rgb(255, 255, 255) !important; }
+.h2:hover { background: rgba(255, 255, 255, 0.05) !important; }
+.h3:hover { background: rgb(19, 40, 127) !important; color: rgb(255, 255, 255) !important; }
+.h4:hover { --p: paused !important; }
+.h5:hover { filter: grayscale(0) !important; opacity: 1 !important; }
+.h6:hover { color: rgb(194, 78, 0) !important; }
+.h7:hover { background: rgb(255, 140, 58) !important; color: rgb(10, 16, 51) !important; }
+.h8:hover { background: rgb(11, 20, 64) !important; color: rgb(255, 255, 255) !important; }
+.h9:focus { top: 12px !important; }
+.ha:hover { filter: grayscale(0) !important; mix-blend-mode: normal !important; opacity: 1 !important; }
+.hb:hover { background: rgb(255, 147, 74) !important; }
+.hc:hover { color: rgb(255, 255, 255) !important; }
+.hd:hover { border-color: rgb(255, 122, 26) !important; }
+.he:hover { background: rgb(11, 27, 92) !important; color: rgb(255, 255, 255) !important; }
+.hf:hover { border-color: rgb(255, 255, 255) !important; color: rgb(255, 255, 255) !important; }
+.hg:hover { color: rgb(255, 178, 122) !important; }
+.hh:hover { border-color: rgb(10, 16, 51) !important; color: rgb(10, 16, 51) !important; }
