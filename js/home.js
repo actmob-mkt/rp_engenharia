@@ -6,7 +6,14 @@
   const PLANT = [['civil'], ['civil'], ['civil'], ['civil'], ['civil'], ['civil'], ['civil'], ['civil'],
     ['mecanica'], ['mecanica', 1], ['mecanica'], ['mecanica'], ['eletrica'], ['eletrica', 1], ['eletrica'],
     ['instrumentacao', 1], ['instrumentacao', 1], ['instrumentacao']];
-  const LABELS = ['civil', 'civil', 'civil', 'civil', 'civil', 'civil', 'civil', 'eletrica', 'eletrica', 'instrumentacao', 'instrumentacao', 'instrumentacao', 'instrumentacao', 'instrumentacao', 'mecanica', 'mecanica', 'mecanica', 'mecanica'];
+  const LABELS = [
+    ['civil', 85, 345, 'GRADEAMENTO', 'middle'], ['civil', 215, 345, 'DESARENADOR', 'middle'], ['civil', 360, 352, 'REATOR', 'middle'],
+    ['civil', 545, 350, 'TANQUE DE AERAÇÃO', 'middle'], ['civil', 720, 352, 'DECANTADOR', 'middle'], ['civil', 110, 25, 'CASA DE QUÍMICA', 'middle'],
+    ['civil', 400, 22, 'SALA ELÉTRICA', 'middle'], ['eletrica', 715, 22, 'SUBESTAÇÃO 13,8 kV', 'middle'], ['eletrica', 350, 122, 'CCM', 'middle'],
+    ['instrumentacao', 440, 122, 'CLP', 'middle'], ['instrumentacao', 100, 205, 'LT-101', 'start'], ['instrumentacao', 305, 250, 'FT-102', 'start'],
+    ['instrumentacao', 560, 238, 'AIT-103', 'start'], ['instrumentacao', 795, 215, 'pH', 'start'],
+    ['mecanica', 145, 300, 'B-01', 'middle'], ['mecanica', 440, 300, 'B-02', 'middle'], ['mecanica', 646, 300, 'B-03', 'middle'], ['mecanica', 545, 312, 'AERADORES', 'middle']
+  ];
   const TABS = ['integracao', 'eletrica', 'mecanica', 'civil', 'instrumentacao'];
   const CIRC = ['eletrica', 'mecanica', 'civil', 'instrumentacao'];
   const PANELS = {
@@ -21,7 +28,19 @@
   let disc = 'integracao';
   const plantSvg = a('plantAria')[0];
   const plantPaths = a('e.d');
-  const labelEls = plantSvg ? $$(':scope > g:last-of-type > text', plantSvg) : [];
+  // rótulos da planta: recriados a partir da lista completa
+  let labelEls = [];
+  if (plantSvg) {
+    const old = $$('text', plantSvg), host = old.length ? old[0].parentNode : plantSvg;
+    old.forEach(el => el.remove());
+    const NS = 'http://www.w3.org/2000/svg';
+    labelEls = LABELS.map(([k, x, y, txt, anchor]) => {
+      const el = document.createElementNS(NS, 'text');
+      el.setAttribute('x', x); el.setAttribute('y', y); el.setAttribute('text-anchor', anchor);
+      el.style.font = "500 12px 'IBM Plex Mono',monospace"; el.style.transition = 'fill .35s';
+      el.textContent = txt; host.appendChild(el); return el;
+    });
+  }
   const circMain = a('c.path').filter(p => !p.matches('[data-a~="c.flowOp"]'));
   const circFlow = a('c.flowOp');
   const tabs = a('t.pick');
@@ -36,7 +55,7 @@
     });
     const wide = window.innerWidth >= 720;
     labelEls.forEach((el, i) => {
-      const k = LABELS[i];
+      const k = LABELS[i][0];
       el.setAttribute('fill', lit(k) ? (k === 'civil' ? '#E3EFC6' : COLORS[k]) : 'rgba(255,255,255,.3)');
       el.style.display = wide || k === 'civil' ? '' : 'none';
       el.style.transition = 'fill .35s';
@@ -176,7 +195,7 @@
       if (n && !hl) {
         n.style.left = xs[i] + 'px';
         n.style.top = i > 0 ? (cross[i] - tops[i] - 5) + 'px' : '';
-        n.style.background = on ? '#FF7A1A' : '';
+        n.style.background = on ? '#FF7A1A' : (getComputedStyle(s).backgroundColor === 'rgba(0, 0, 0, 0)' ? '#FF7A1A' : getComputedStyle(s).backgroundColor);
         n.style.boxShadow = on ? '0 0 0 4px rgba(255,122,26,.18)' : 'none';
       }
       const tt = titles[i];
@@ -185,7 +204,8 @@
   }
 
   let raf = 0;
-  const schedule = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(rail); };
+  let busy = false;
+  const schedule = () => { if (busy) return; busy = true; rail(); busy = false; cancelAnimationFrame(raf); raf = requestAnimationFrame(rail); };
   window.addEventListener('scroll', schedule, { passive: true });
   window.addEventListener('resize', () => { cols(); renderDisc(); schedule(); });
   window.addEventListener('load', schedule);
