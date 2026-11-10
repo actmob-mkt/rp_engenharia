@@ -39,7 +39,7 @@ window.RP_DATA = {
     { valor: 120, prefixo: "+", rotulo: "veículos próprios em operação" },        // EXEMPLO - substituir
     { valor: 300, prefixo: "+", rotulo: "clientes atendidos" },                   // EXEMPLO - substituir
     { valor: 11,  prefixo: "",  rotulo: "estados com operação ativa" },           // EXEMPLO - substituir
-    { valor: 3,   prefixo: "",  rotulo: "certificações ISO" },                    // EXEMPLO - substituir
+    { valor: 2,   prefixo: "",  rotulo: "certificações ISO" },                    // EXEMPLO - substituir
     { valor: 25,  prefixo: "+", rotulo: "NRs atendidas pelas equipes" }           // EXEMPLO - substituir
   ],
 
@@ -48,7 +48,6 @@ window.RP_DATA = {
     { ano: 2008, titulo: "Início em Mogi das Cruzes", texto: "Projetos e instalações elétricas para a indústria da região.", foto: "assets/img-exemplo/eletrica.webp", circuito: "eletrica" },    // EXEMPLO - substituir
     { ano: 2011, titulo: "Manutenção mecânica", texto: "Entrada na montagem e manutenção de sistemas mecânicos.", foto: "assets/img-exemplo/mecanica.webp", circuito: "mecanica" },                   // EXEMPLO - substituir
     { ano: 2014, titulo: "Frente civil", texto: "Obras e intervenções civis em plantas em operação.", foto: "assets/img-exemplo/sobre.webp", circuito: "civil" },                                       // EXEMPLO - substituir
-    { ano: 2016, titulo: "ISO 9001", texto: "Primeira certificação do sistema de gestão da qualidade.", foto: "assets/img-exemplo/estrutura-08.webp", circuito: "integracao" },                          // EXEMPLO - substituir
     { ano: 2018, titulo: "Instrumentação e automação", texto: "Controle, medição e calibração de processos.", foto: "assets/img-exemplo/instrumentacao.webp", circuito: "instrumentacao" },          // EXEMPLO - substituir
     { ano: 2020, titulo: "Centro-Oeste e Norte", texto: "Expansão das operações para novas regiões.", foto: "assets/img-exemplo/estrutura-04.webp", circuito: "integracao" },                           // EXEMPLO - substituir
     { ano: 2022, titulo: "ISO 45001", texto: "Certificação em saúde e segurança ocupacional.", foto: "assets/img-exemplo/hero-home.webp", circuito: "integracao" },                                     // EXEMPLO - substituir
