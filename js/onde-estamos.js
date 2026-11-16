@@ -1,6 +1,6 @@
 /* Onde estamos: seleção de unidade no mapa e na lista */
 (function () {
-  const { a, t, $ } = RP;
+  const { a, t, $, show } = RP;
   const D = window.RP_DATA;
   if (!D) return;
   const UFS = [['AC','Acre'],['AL','Alagoas'],['AM','Amazonas'],['AP','Amapá'],['BA','Bahia'],['CE','Ceará'],['ES','Espírito Santo'],['GO','Goiás'],['MA','Maranhão'],['MG','Minas Gerais'],['MS','Mato Grosso do Sul'],['MT','Mato Grosso'],['PA','Pará'],['PB','Paraíba'],['PE','Pernambuco'],['PI','Piauí'],['PR','Paraná'],['RJ','Rio de Janeiro'],['RN','Rio Grande do Norte'],['RO','Rondônia'],['RR','Roraima'],['RS','Rio Grande do Sul'],['SC','Santa Catarina'],['SE','Sergipe'],['SP','São Paulo'],['TO','Tocantins'],['DF','Distrito Federal']];
@@ -25,8 +25,14 @@
       b.style.color = s ? '#0A1033' : '#FFFFFF';
       a('f.ufc', b).forEach(el => { el.style.color = s ? '#0A1033' : '#FFB27A'; });
     });
-    const f = byUf[cur];
-    t('sel.tipoUp', f.tipo.toUpperCase()); t('sel.uf', f.uf); t('sel.estado', NOME[f.uf]); t('sel.cidade', f.cidade);
+    const f = byUf[cur], ilustr = f.fotoIlustrativa !== false;
+    t('sel.tipoUp', f.tipo.toUpperCase()); t('sel.uf', f.uf); t('sel.estado', NOME[f.uf]);
+    t('sel.nome', (f.tipo === 'Matriz' ? 'Matriz ' : 'RP ') + f.cidade);
+    t('sel.endereco', (f.endereco && f.endereco.length) ? f.endereco.join('\n') : 'Endereço sob consulta.\nFale com a central comercial.');
+    t('sel.horario', f.horario || 'Segunda a sexta, das 8h às 18h');
+    a('sel.tel').forEach(el => { el.textContent = f.telefone || D.contato.telefone; el.setAttribute('href', 'tel:' + (f.telefoneLink || D.contato.telefoneLink)); });
+    a('sel.foto').forEach(el => { el.setAttribute('src', f.foto || 'assets/img-exemplo/estrutura-04.webp'); el.setAttribute('alt', (ilustr ? 'Foto ilustrativa da unidade de ' : 'Fachada da unidade de ') + f.cidade); });
+    show($('[data-if="sel.ilustr"]'), ilustr);
     a('sel.orc').forEach(el => el.setAttribute('href', 'orcamento.html?uf=' + f.uf));
     if (segUl) segUl.replaceChildren(...f.segmentos.map(g => { const li = segTpl.cloneNode(true); li.querySelector('[data-t="g"]').textContent = g; return li; }));
   }

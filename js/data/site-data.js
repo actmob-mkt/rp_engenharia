@@ -55,20 +55,23 @@ window.RP_DATA = {
     { ano: 2025, titulo: "11 estados e Facilities", texto: "Presença em 11 estados e criação da frente de Facilities.", foto: "assets/img-exemplo/facilities.webp", circuito: "integracao" }            // EXEMPLO - substituir
   ],
 
-  /* ---------- FILIAIS (cidades de exemplo, sem endereço) ----------
-     lon/lat posicionam o ponto no mapa. */
+  /* ---------- FILIAIS ----------
+     lon/lat posicionam o ponto no mapa.
+     endereco: linhas do endereço ([] = ainda não informado; a página mostra "Endereço sob consulta").
+     telefone/horario: por enquanto a central comercial e um horário de EXEMPLO — trocar pelos da unidade.
+     foto: fachada da unidade; fotoIlustrativa: true mostra o selo "FOTO ILUSTRATIVA". */
   filiais: [
-    { uf: "SP", cidade: "Mogi das Cruzes", tipo: "Matriz", lon: -46.188, lat: -23.523, segmentos: ["Saneamento", "Automotiva", "Alimentícia", "Educacional"] }, // EXEMPLO - substituir (segmentos)
-    { uf: "GO", cidade: "Goiânia",         tipo: "Filial", lon: -49.254, lat: -16.687, segmentos: ["Energia", "Alimentícia"] },                    // EXEMPLO - substituir
-    { uf: "PR", cidade: "Curitiba",        tipo: "Filial", lon: -49.273, lat: -25.428, segmentos: ["Automotiva", "Saneamento"] },                  // EXEMPLO - substituir
-    { uf: "TO", cidade: "Palmas",          tipo: "Filial", lon: -48.334, lat: -10.184, segmentos: ["Energia", "Saneamento"] },                     // EXEMPLO - substituir
-    { uf: "MG", cidade: "Belo Horizonte",  tipo: "Filial", lon: -43.938, lat: -19.921, segmentos: ["Energia", "Alimentícia"] },                    // EXEMPLO - substituir
-    { uf: "MT", cidade: "Cuiabá",          tipo: "Filial", lon: -56.097, lat: -15.601, segmentos: ["Energia", "Alimentícia"] },                    // EXEMPLO - substituir
-    { uf: "ES", cidade: "Vitória",         tipo: "Filial", lon: -40.313, lat: -20.316, segmentos: ["Petroquímica", "Energia"] },                   // EXEMPLO - substituir
-    { uf: "RJ", cidade: "Rio de Janeiro",  tipo: "Filial", lon: -43.173, lat: -22.907, segmentos: ["Petroquímica", "Saneamento"] },                // EXEMPLO - substituir
-    { uf: "DF", cidade: "Brasília",        tipo: "Filial", lon: -47.883, lat: -15.794, segmentos: ["Educacional", "Energia"] },                    // EXEMPLO - substituir
-    { uf: "AM", cidade: "Manaus",          tipo: "Filial", lon: -60.022, lat: -3.119,  segmentos: ["Energia", "Automotiva"] },                     // EXEMPLO - substituir
-    { uf: "PA", cidade: "Belém",           tipo: "Filial", lon: -48.504, lat: -1.456,  segmentos: ["Saneamento", "Energia"] }                      // EXEMPLO - substituir
+    { uf: "SP", cidade: "Mogi das Cruzes", tipo: "Matriz", lon: -46.188, lat: -23.523, segmentos: ["Saneamento", "Automotiva", "Alimentícia", "Educacional"], endereco: ["R. João de Pina, 220 - Jardim Pte. Grande", "Mogi das Cruzes - SP, 08770-480"], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/sobre-2.webp", fotoIlustrativa: false }, // EXEMPLO - substituir (segmentos)
+    { uf: "GO", cidade: "Goiânia",         tipo: "Filial", lon: -49.254, lat: -16.687, segmentos: ["Energia", "Alimentícia"], endereco: [], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/sobre-2.webp", fotoIlustrativa: true },                    // EXEMPLO - substituir
+    { uf: "PR", cidade: "Curitiba",        tipo: "Filial", lon: -49.273, lat: -25.428, segmentos: ["Automotiva", "Saneamento"], endereco: [], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/estrutura-10.webp", fotoIlustrativa: true },                  // EXEMPLO - substituir
+    { uf: "TO", cidade: "Palmas",          tipo: "Filial", lon: -48.334, lat: -10.184, segmentos: ["Energia", "Saneamento"], endereco: [], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/estrutura-04.webp", fotoIlustrativa: true },                     // EXEMPLO - substituir
+    { uf: "MG", cidade: "Belo Horizonte",  tipo: "Filial", lon: -43.938, lat: -19.921, segmentos: ["Energia", "Alimentícia"], endereco: ["Rua Rio Grande do Norte, 1435, sala 708", "Funcionários, Belo Horizonte - MG, 30130-138"], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/estrutura-10.webp", fotoIlustrativa: true },                    // EXEMPLO - substituir
+    { uf: "MT", cidade: "Cuiabá",          tipo: "Filial", lon: -56.097, lat: -15.601, segmentos: ["Energia", "Alimentícia"], endereco: [], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/estrutura-10.webp", fotoIlustrativa: true },                    // EXEMPLO - substituir
+    { uf: "ES", cidade: "Vitória",         tipo: "Filial", lon: -40.313, lat: -20.316, segmentos: ["Petroquímica", "Energia"], endereco: [], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/estrutura-04.webp", fotoIlustrativa: true },                   // EXEMPLO - substituir
+    { uf: "RJ", cidade: "Rio de Janeiro",  tipo: "Filial", lon: -43.173, lat: -22.907, segmentos: ["Petroquímica", "Saneamento"], endereco: [], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/sobre-2.webp", fotoIlustrativa: true },                // EXEMPLO - substituir
+    { uf: "DF", cidade: "Brasília",        tipo: "Filial", lon: -47.883, lat: -15.794, segmentos: ["Educacional", "Energia"], endereco: ["SGAS 915, Conjunto B, Bloco D, Sala 103 (parte), CH 121715", "Edifício Office Center, SGAS 915, Lote 71", "Asa Sul, Brasília - DF, 70390-150"], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/estrutura-04.webp", fotoIlustrativa: true },                    // EXEMPLO - substituir
+    { uf: "AM", cidade: "Manaus",          tipo: "Filial", lon: -60.022, lat: -3.119,  segmentos: ["Energia", "Automotiva"], endereco: [], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/estrutura-04.webp", fotoIlustrativa: true },                     // EXEMPLO - substituir
+    { uf: "PA", cidade: "Belém",           tipo: "Filial", lon: -48.504, lat: -1.456,  segmentos: ["Saneamento", "Energia"], endereco: [], telefone: "(11) 4791-9300", telefoneLink: "+551147919300", horario: "Segunda a sexta, das 8h às 18h", foto: "assets/img-exemplo/sobre-2.webp", fotoIlustrativa: true }                      // EXEMPLO - substituir
   ],
 
   /* ---------- TRABALHE CONOSCO ---------- */
