@@ -9,16 +9,16 @@ HTML, CSS e JavaScript puros, sem framework e sem etapa de build. Basta publicar
 - `blog.html` e um arquivo por post: `blog-<slug>.html`
 - `trabalhe-conosco.html`, `orcamento.html`, `contato.html`
 - `universidade-corporativa.html` — hot site da Universidade Corporativa (o botão "Acessar a plataforma" está com `href="#"`: troque pela URL da plataforma)
-- `css/style.css` — estilos base + classes geradas a partir do layout (`.sNN`) e estados de hover (`.hNN`)
-- `js/main.js` — menu mobile, aviso de cookies, utilitários
-- `js/universidade.js` — perguntas frequentes da Universidade Corporativa
-- `js/home.js`, `js/quem-somos.js`, `js/onde-estamos.js`, `js/blog-post.js`, `js/orcamento.js`, `js/contato.js`, `js/trabalhe-conosco.js`
-- `js/data/site-data.js` — configuração e dados (endereços das filiais, endpoints de formulário)
+- `assets/css/style.css` — estilos base + classes geradas a partir do layout (`.sNN`) e estados de hover (`.hNN`)
+- `assets/js/main.js` — menu mobile, aviso de cookies, utilitários
+- `assets/js/universidade.js` — perguntas frequentes da Universidade Corporativa
+- `assets/js/home.js`, `assets/js/quem-somos.js`, `assets/js/onde-estamos.js`, `assets/js/blog-post.js`, `assets/js/orcamento.js`, `assets/js/contato.js`, `assets/js/trabalhe-conosco.js`
+- `assets/js/data/site-data.js` — configuração e dados (endereços das filiais, endpoints de formulário)
 - `assets/` — logos (`logo-rp-header.png`, `logo-rp-footer.png`), fotos, logos de clientes e selos ISO
 
 ## Formulários
 Sem endpoint configurado, os formulários rodam em **modo demonstração** (simulam o envio).
-Para ativar o envio real, preencha em `js/data/site-data.js`:
+Para ativar o envio real, preencha em `assets/js/data/site-data.js`:
 - `config.endpointOrcamento` — usado por Orçamento e Contato (fornecedores)
 - `config.endpointCurriculo` — usado por Trabalhe conosco (multipart, com arquivo)
 
@@ -33,5 +33,10 @@ Elementos dinâmicos usam atributos:
 Não remova esses atributos ao editar o HTML.
 
 ## Pendências de conteúdo
-Os textos marcados `// EXEMPLO` em `js/data/site-data.js` e os números/unidades exibidos nas páginas ainda são dados de exemplo.
+Os textos marcados `// EXEMPLO` em `assets/js/data/site-data.js` e os números/unidades exibidos nas páginas ainda são dados de exemplo.
 Créditos e licenças das fotos: `assets/img-exemplo/CREDITOS.md`.
+
+## Unidades e sedes
+- Dados das filiais (endereço, telefone, horário e foto de cada estado) ficam em `assets/js/data/site-data.js`, na lista `filiais`.
+- Os endereços das sedes (página Onde estamos e Home) estão escritos direto no HTML.
+- Fotos marcadas como "FOTO ILUSTRATIVA" são provisórias: troque o arquivo em `assets/img-exemplo/` ou o campo `foto` da filial.
