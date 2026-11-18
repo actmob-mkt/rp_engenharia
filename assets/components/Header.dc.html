@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<header style="position:sticky;top:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #DADCE3;font-family:'Inter',system-ui,sans-serif;">
+  <a href="#conteudo" style="position:absolute;left:12px;top:-60px;background:#FF7A1A;color:#0A1033;padding:10px 14px;font-weight:600;z-index:60;" style-focus="top:12px;">Pular para o conteúdo</a>
+  <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,56px);height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px;">
+    <a href="index.html" aria-label="RP Engenharia — página inicial" style="display:flex;align-items:center;flex-shrink:0;">
+      <img src="assets/logo-rp-header.png" alt="RP Engenharia — Montagem e Manutenção Industrial" width="1492" height="270" style="height:40px;width:auto;max-width:min(240px,52vw);object-fit:contain;display:block;"></img>
+    </a>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Principal" style="display:flex;align-items:center;gap:clamp(12px,1.4vw,24px);">
+        <sc-for list="{{ items }}" as="it" hint-placeholder-count="9">
+          <a href="{{ it.href }}" aria-current="{{ it.current }}" style="font-size:14px;font-weight:500;color:#0A1033;text-decoration:none;padding:27px 0 25px;border-bottom:3px solid {{ it.bar }};white-space:nowrap;" style-hover="color:#C24E00;">{{ it.label }}</a>
+        </sc-for>
+        <a href="orcamento.html" style="background:#FF7A1A;color:#0A1033;font-weight:600;font-size:14px;padding:12px 18px;text-decoration:none;white-space:nowrap;" style-hover="background:#FF934A;">Solicite orçamento</a>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <button type="button" onClick="{{ toggle }}" aria-expanded="{{ openStr }}" aria-controls="menu-mobile" style="display:flex;align-items:center;gap:10px;background:none;border:1px solid #0A1033;color:#0A1033;font:600 14px 'Inter',sans-serif;padding:10px 14px;cursor:pointer;min-height:44px;">
+        <span style="display:flex;flex-direction:column;gap:4px;width:18px;"><span style="height:2px;background:#0A1033;"></span><span style="height:2px;background:#0A1033;"></span><span style="height:2px;background:#0A1033;"></span></span>
+        {{ menuLabel }}
+      </button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ showMobile }}" hint-placeholder-val="{{ false }}">
+    <nav id="menu-mobile" aria-label="Principal" style="background:#0A1033;padding:12px clamp(20px,4vw,56px) 28px;display:flex;flex-direction:column;max-height:calc(100vh - 76px);overflow:auto;">
+      <sc-for list="{{ items }}" as="it" hint-placeholder-count="9">
+        <a href="{{ it.href }}" aria-current="{{ it.current }}" style="color:#FFFFFF;font:600 20px 'Sora',sans-serif;text-decoration:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;">{{ it.label }}<span style="color:{{ it.dot }};">●</span></a>
+      </sc-for>
+      <a href="orcamento.html" style="margin-top:20px;background:#FF7A1A;color:#0A1033;font-weight:600;font-size:16px;padding:16px 18px;text-decoration:none;text-align:center;">Solicite orçamento</a>
+    </nav>
+  </sc-if>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;76px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;&quot;,&quot;quem&quot;,&quot;solucoes&quot;,&quot;segmentos&quot;,&quot;onde&quot;,&quot;esg&quot;,&quot;clientes&quot;,&quot;carreiras&quot;,&quot;universidade&quot;,&quot;blog&quot;,&quot;contato&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, open: false };
+  componentDidMount() {
+    this.onR = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onR);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onR); }
+  renderVals() {
+    const active = this.props.active ?? '';
+    const links = [
+      ['quem', 'Quem somos', 'quem-somos.html'],
+      ['solucoes', 'Soluções', 'solucoes.html'],
+      ['segmentos', 'Segmentos', 'segmentos.html'],
+      ['onde', 'Onde estamos', 'onde-estamos.html'],
+      ['esg', 'ESG', 'esg.html'],
+      ['clientes', 'Clientes', 'clientes.html'],
+      ['carreiras', 'Trabalhe conosco', 'trabalhe-conosco.html'],
+      ['universidade', 'Universidade', 'universidade-corporativa.html'],
+      ['blog', 'Blog RP', 'blog.html'],
+      ['contato', 'Contato', 'contato.html']
+    ];
+    const items = links.map(([k, label, href]) => ({
+      label, href, current: k === active ? 'page' : undefined,
+      bar: k === active ? '#FF7A1A' : 'transparent', dot: k === active ? '#FF7A1A' : 'transparent'
+    }));
+    const wide = this.state.w >= 1340;
+    return {
+      items, wide, narrow: !wide, showMobile: !wide && this.state.open,
+      openStr: this.state.open ? 'true' : 'false', menuLabel: this.state.open ? 'Fechar' : 'Menu',
+      toggle: () => this.setState(s => ({ open: !s.open }))
+    };
+  }
+}
+</script>
+</body>
+</html>
