@@ -3,349 +3,274 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Solicite um orçamento | RP Engenharia Industrial</title>
-<meta name="description" content="Peça um orçamento de engenharia elétrica, mecânica, civil, instrumentação ou facilities. Resposta do time comercial da RP Engenharia.">
-<link rel="canonical" href="https://www.rpengenhariaindustrial.com.br/solicite-orcamento">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Solicite um orçamento | RP Engenharia">
-<meta property="og:description" content="Fale com o time comercial.">
-<meta property="og:image" content="assets/img-exemplo/hero-home.webp">
-<meta property="og:locale" content="pt_BR">
-<meta name="twitter:card" content="summary">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="assets/js/data/site-data.js" defer></script>
-<script src="assets/js/main.js" defer></script>
-<script src="assets/js/orcamento.js" defer></script>
+<link rel="stylesheet" href="assets/css/base.css">
+<script src="assets/js/dc-runtime.js"></script>
 </head>
-<body>
-<header class="s0">
-  <a href="#conteudo" class="s1 h9">Pular para o conteúdo</a>
-  <div class="s2">
-    <a href="index.html" aria-label="RP Engenharia — página inicial" class="s3">
-      <img src="assets/logo-rp-header.png" alt="RP Engenharia — Montagem e Manutenção Industrial" width="1492" height="270" class="s4" style="height:40px;width:auto;max-width:min(240px,52vw);object-fit:contain;">
-    </a>
-    <div data-if="wide" class="s5">
-      <nav aria-label="Principal" class="s6">
-          <a href="quem-somos.html" data-a="it.href it.current it.bar" class="s7 h6"><span data-t="it.label">Quem somos</span></a>
-          <a href="solucoes-eletrica.html" data-a="it.href it.current it.bar" class="s7 h6"><span data-t="it.label">Soluções</span></a>
-          <a href="segmentos.html" data-a="it.href it.current it.bar" class="s7 h6"><span data-t="it.label">Segmentos</span></a>
-          <a href="onde-estamos.html" data-a="it.href it.current it.bar" class="s7 h6"><span data-t="it.label">Onde estamos</span></a>
-          <a href="esg.html" data-a="it.href it.current it.bar" class="s7 h6"><span data-t="it.label">ESG</span></a>
-          <a href="clientes.html" data-a="it.href it.current it.bar" class="s7 h6"><span data-t="it.label">Clientes</span></a>
-          <a href="trabalhe-conosco.html" data-a="it.href it.current it.bar" class="s7 h6"><span data-t="it.label">Trabalhe conosco</span></a>
-          <a href="universidade-corporativa.html" class="s7 h6">Universidade</a>
-          <a href="blog.html" data-a="it.href it.current it.bar" class="s7 h6"><span data-t="it.label">Blog RP</span></a>
-          <a href="contato.html" data-a="it.href it.current it.bar" class="s7 h6"><span data-t="it.label">Contato</span></a>
-        <a href="orcamento.html" class="s8 hb">Solicite orçamento</a>
-      </nav>
-    </div>
-    <div data-if="narrow" class="s5">
-      <button type="button" aria-expanded="false" aria-controls="menu-mobile" data-a="toggle openStr" class="s9">
-        <span class="sa"><span class="sb"></span><span class="sb"></span><span class="sb"></span></span>
-        <span data-t="menuLabel">Menu</span>
-      </button>
-    </div>
-  </div>
-  <div data-if="showMobile" hidden="" class="s5">
-    <nav id="menu-mobile" aria-label="Principal" class="sc">
-        <a href="quem-somos.html" data-a="it.href it.current" class="sd"><span data-t="it.label">Quem somos</span><span data-a="it.dot" class="se">●</span></a>
-        <a href="solucoes-eletrica.html" data-a="it.href it.current" class="sd"><span data-t="it.label">Soluções</span><span data-a="it.dot" class="se">●</span></a>
-        <a href="segmentos.html" data-a="it.href it.current" class="sd"><span data-t="it.label">Segmentos</span><span data-a="it.dot" class="se">●</span></a>
-        <a href="onde-estamos.html" data-a="it.href it.current" class="sd"><span data-t="it.label">Onde estamos</span><span data-a="it.dot" class="se">●</span></a>
-        <a href="esg.html" data-a="it.href it.current" class="sd"><span data-t="it.label">ESG</span><span data-a="it.dot" class="se">●</span></a>
-        <a href="clientes.html" data-a="it.href it.current" class="sd"><span data-t="it.label">Clientes</span><span data-a="it.dot" class="se">●</span></a>
-        <a href="trabalhe-conosco.html" data-a="it.href it.current" class="sd"><span data-t="it.label">Trabalhe conosco</span><span data-a="it.dot" class="se">●</span></a>
-        <a href="universidade-corporativa.html" class="sd">Universidade<span class="se">●</span></a>
-        <a href="blog.html" data-a="it.href it.current" class="sd"><span data-t="it.label">Blog RP</span><span data-a="it.dot" class="se">●</span></a>
-        <a href="contato.html" data-a="it.href it.current" class="sd"><span data-t="it.label">Contato</span><span data-a="it.dot" class="se">●</span></a>
-      <a href="orcamento.html" class="sf">Solicite orçamento</a>
-    </nav>
-  </div></header><main id="conteudo" class="sa2">
-  <div class="sa3">
-    <div class="sa4">
-      <nav aria-label="Trilha" class="s1v"><a href="index.html" class="s60">INÍCIO</a> / SOLICITE ORÇAMENTO</nav>
-      <h1 class="sa5">Conte o que a sua planta precisa.</h1>
-      <p class="s8u">Cinco passos curtos. O time comercial analisa o escopo e retorna com os próximos passos.</p>
-      <div class="sa6">
-        <span class="s1v">PREFERE FALAR DIRETO?</span>
-        <a href="tel:+551147919300" class="sa7">(11) 4791-9300</a>
-        <a href="mailto:comercial@rpengenhariaindustrial.com.br" class="s5g">comercial@rpengenhariaindustrial.com.br</a>
+<body data-screen="Orçamento">
+<x-dc>
+<helmet>
+  <title>Solicite um orçamento | RP Engenharia Industrial</title>
+  <meta name="description" content="Peça um orçamento de engenharia elétrica, mecânica, civil, instrumentação e automação, facilities ou operação. A equipe da RP avalia o escopo e monta a combinação certa de especialidades, equipes e recursos.">
+  <link rel="canonical" href="https://www.rpengenhariaindustrial.com.br/solicite-orcamento">
+  <meta property="og:type" content="website"><meta property="og:title" content="Solicite um orçamento | RP Engenharia"><meta property="og:description" content="Fale com o time comercial."><meta property="og:image" content="assets/img-exemplo/hero-home.webp"><meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="assets/data/site-data.js"></script>
+  <script src="assets/data/solucoes.js"></script>
+  <style>
+    body{margin:0;background:#F4F4F1;color:#0A1033;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:#0B1B5C}a:hover{color:#C24E00}
+    :focus-visible{outline:3px solid #FF7A1A;outline-offset:3px}
+    @keyframes rpSpin{to{transform:rotate(360deg)}}
+    @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+  </style>
+</helmet>
+<dc-import name="Header" active="" hint-size="100%,76px"></dc-import>
+<main id="conteudo" style="background:#060B26;color:#FFFFFF;min-height:80vh;">
+  <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,88px) clamp(20px,5vw,72px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,72px);align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:22px;">
+      <nav aria-label="Trilha" style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C93B3;"><a href="index.html" style="color:#8C93B3;">INÍCIO</a> / SOLICITE ORÇAMENTO</nav>
+      <h1 style="font:800 clamp(38px,4.8vw,68px)/1.02 'Sora',sans-serif;letter-spacing:-.03em;margin:0;text-wrap:balance;">Conte o que a sua planta precisa.</h1>
+      <p style="font-size:18px;line-height:1.6;color:#C9CEE0;margin:0;">Cinco passos curtos. O time comercial analisa o escopo e retorna com os próximos passos.</p>
+      <div style="border-top:1px solid #1C2450;padding-top:22px;display:flex;flex-direction:column;gap:8px;font-size:15px;">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C93B3;">PREFERE FALAR DIRETO?</span>
+        <a href="tel:+551147919300" style="color:#FFFFFF;font:700 22px 'Sora',sans-serif;text-decoration:none;">(11) 4791-9300</a>
+        <a href="mailto:comercial@rpengenhariaindustrial.com.br" style="color:#FFFFFF;word-break:break-all;">comercial@rpengenhariaindustrial.com.br</a>
       </div>
     </div>
-    <div class="sa8">
-      <div data-if="notDone" class="s5">
-        <div class="sa9">
-          <ol aria-label="Etapas" class="saa">
-              <li aria-current="step" data-a="s.cur" class="sab">
-                <div class="s6n"><span data-a="s.fill s.stroke" class="sac"></span><span data-a="s.line" class="sad"></span></div>
-                <span data-a="s.fg" class="sae"><span data-t="s.label">ASSUNTO</span></span>
+
+    <div style="background:#FFFFFF;color:#0A1033;min-width:0;">
+      <sc-if value="{{ notDone }}" hint-placeholder-val="{{ true }}">
+        <div style="padding:clamp(20px,3vw,32px) clamp(20px,3.6vw,44px) 0;">
+          <ol aria-label="Etapas" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);">
+            <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
+              <li aria-current="{{ s.cur }}" style="display:flex;flex-direction:column;gap:8px;">
+                <div style="display:flex;align-items:center;"><span style="width:12px;height:12px;transform:rotate(45deg);background:{{ s.fill }};border:1.5px solid {{ s.stroke }};flex-shrink:0;"></span><span style="flex:1;height:2px;background:{{ s.line }};"></span></div>
+                <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:{{ s.fg }};">{{ s.label }}</span>
               </li>
-              <li data-a="s.cur" class="sab">
-                <div class="s6n"><span data-a="s.fill s.stroke" class="saf"></span><span data-a="s.line" class="sad"></span></div>
-                <span data-a="s.fg" class="sag"><span data-t="s.label">CONTATO</span></span>
-              </li>
-              <li data-a="s.cur" class="sab">
-                <div class="s6n"><span data-a="s.fill s.stroke" class="saf"></span><span data-a="s.line" class="sad"></span></div>
-                <span data-a="s.fg" class="sag"><span data-t="s.label">EMPRESA</span></span>
-              </li>
-              <li data-a="s.cur" class="sab">
-                <div class="s6n"><span data-a="s.fill s.stroke" class="saf"></span><span data-a="s.line" class="sad"></span></div>
-                <span data-a="s.fg" class="sag"><span data-t="s.label">SOLUÇÃO</span></span>
-              </li>
-              <li data-a="s.cur" class="sab">
-                <div class="s6n"><span data-a="s.fill s.stroke" class="saf"></span><span data-a="s.line" class="sad"></span></div>
-                <span data-a="s.fg" class="sag"><span data-t="s.label">MENSAGEM</span></span>
-              </li>
+            </sc-for>
           </ol>
         </div>
-        <form data-a="submit formRef" class="sah">
-          <h2 tabindex="-1" data-a="titleRef" class="sai"><span data-t="stepTitle">1/5 · Qual é o assunto?</span></h2>
-          <div data-if="isError" hidden="" class="s5">
-            <div role="alert" class="saj">Não foi possível enviar agora. Tente de novo ou ligue para (11) 4791-9300.</div>
-          </div>
-          <div data-if="st1" class="s5">
-            <fieldset class="sak">
-              <legend class="sal">Assunto</legend>
-                <label data-a="a.border a.bg" class="sam">
-                  <input type="radio" name="assunto" data-a="a.checked a.pick" class="san">
-                  <span class="sao"><span class="sap"><span data-t="a.t">Novo projeto ou obra</span></span><span class="saq"><span data-t="a.d">Implantação, ampliação ou modernização</span></span></span>
+        <form noValidate="{{ true }}" onSubmit="{{ submit }}" ref="{{ formRef }}" style="padding:clamp(20px,3vw,32px) clamp(20px,3.6vw,44px) clamp(24px,3.6vw,44px);display:flex;flex-direction:column;gap:22px;">
+          <h2 ref="{{ titleRef }}" tabindex="-1" style="font:700 clamp(24px,2.4vw,32px)/1.15 'Sora',sans-serif;margin:0;outline:none;">{{ stepTitle }}</h2>
+          <sc-if value="{{ isError }}" hint-placeholder-val="{{ false }}">
+            <div role="alert" style="background:#FFF1E8;border:1px solid #C24E00;color:#7A2E00;padding:14px 16px;font-size:15px;">Não foi possível enviar agora. Tente de novo ou ligue para (11) 4791-9300.</div>
+          </sc-if>
+
+          <sc-if value="{{ st1 }}" hint-placeholder-val="{{ true }}">
+            <fieldset style="border:none;margin:0;padding:0;display:grid;gap:8px;">
+              <legend style="position:absolute;width:1px;height:1px;overflow:hidden;">Assunto</legend>
+              <sc-for list="{{ assuntos }}" as="a" hint-placeholder-count="5">
+                <label style="display:flex;align-items:center;gap:14px;min-height:56px;padding:12px 16px;border:1.5px solid {{ a.border }};background:{{ a.bg }};cursor:pointer;">
+                  <input type="radio" name="assunto" checked="{{ a.checked }}" onChange="{{ a.pick }}" style="width:18px;height:18px;margin:0;accent-color:#0B1B5C;"></input>
+                  <span style="display:flex;flex-direction:column;"><span style="font-weight:600;font-size:16px;">{{ a.t }}</span><span style="font-size:14px;color:#4A5275;">{{ a.d }}</span></span>
                 </label>
-                <label data-a="a.border a.bg" class="sam">
-                  <input type="radio" name="assunto" data-a="a.checked a.pick" class="san">
-                  <span class="sao"><span class="sap"><span data-t="a.t">Manutenção</span></span><span class="saq"><span data-t="a.d">Preventiva, preditiva ou corretiva</span></span></span>
-                </label>
-                <label data-a="a.border a.bg" class="sam">
-                  <input type="radio" name="assunto" data-a="a.checked a.pick" class="san">
-                  <span class="sao"><span class="sap"><span data-t="a.t">Parada programada</span></span><span class="saq"><span data-t="a.d">Janela de manutenção com prazo fechado</span></span></span>
-                </label>
-                <label data-a="a.border a.bg" class="sam">
-                  <input type="radio" name="assunto" data-a="a.checked a.pick" class="san">
-                  <span class="sao"><span class="sap"><span data-t="a.t">Atendimento emergencial</span></span><span class="saq"><span data-t="a.d">Falha ou risco na operação</span></span></span>
-                </label>
-                <label data-a="a.border a.bg" class="sam">
-                  <input type="radio" name="assunto" data-a="a.checked a.pick" class="san">
-                  <span class="sao"><span class="sap"><span data-t="a.t">Outro assunto</span></span><span class="saq"><span data-t="a.d">Consultas, parcerias e documentação</span></span></span>
-                </label>
+              </sc-for>
             </fieldset>
-          </div>
-          <div data-if="st2" hidden="" class="s5">
-            <div class="sar">
-                <div class="sab">
-                  <label for="o-nome" data-a="f.id" class="s9j"><span data-t="f.label">Nome *</span></label>
-                  <input id="o-nome" type="text" autocomplete="name" inputmode="text" placeholder="" aria-invalid="false" data-a="f.id f.type f.ac f.im f.ph f.val f.on f.inv f.bc" value="" class="sas">
-                  <span class="sat"><span data-t="f.err"></span></span>
+          </sc-if>
+
+          <sc-if value="{{ st2 }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px;">
+              <sc-for list="{{ f2 }}" as="f" hint-placeholder-count="4">
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <label for="{{ f.id }}" style="font-weight:600;font-size:15px;">{{ f.label }}</label>
+                  <input id="{{ f.id }}" type="{{ f.type }}" autoComplete="{{ f.ac }}" inputMode="{{ f.im }}" placeholder="{{ f.ph }}" value="{{ f.val }}" onChange="{{ f.on }}" aria-invalid="{{ f.inv }}" style="width:100%;box-sizing:border-box;min-height:52px;padding:14px 16px;border:1.5px solid {{ f.bc }};font:400 16px 'Inter',sans-serif;color:#0A1033;background:#FFFFFF;"></input>
+                  <span style="font-size:14px;color:#B3261E;">{{ f.err }}</span>
                 </div>
-                <div class="sab">
-                  <label for="o-email" data-a="f.id" class="s9j"><span data-t="f.label">E-mail corporativo *</span></label>
-                  <input id="o-email" type="email" autocomplete="email" inputmode="email" placeholder="" aria-invalid="false" data-a="f.id f.type f.ac f.im f.ph f.val f.on f.inv f.bc" value="" class="sas">
-                  <span class="sat"><span data-t="f.err"></span></span>
-                </div>
-                <div class="sab">
-                  <label for="o-tel" data-a="f.id" class="s9j"><span data-t="f.label">Telefone / WhatsApp *</span></label>
-                  <input id="o-tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999" aria-invalid="false" data-a="f.id f.type f.ac f.im f.ph f.val f.on f.inv f.bc" value="" class="sas">
-                  <span class="sat"><span data-t="f.err"></span></span>
-                </div>
-                <div class="sab">
-                  <label for="o-cargo" data-a="f.id" class="s9j"><span data-t="f.label">Cargo</span></label>
-                  <input id="o-cargo" type="text" autocomplete="organization-title" inputmode="text" placeholder="" aria-invalid="false" data-a="f.id f.type f.ac f.im f.ph f.val f.on f.inv f.bc" value="" class="sas">
-                  <span class="sat"><span data-t="f.err"></span></span>
-                </div>
+              </sc-for>
             </div>
-          </div>
-          <div data-if="st3" hidden="" class="s5">
-            <div class="sar">
-                <div class="sab">
-                  <label for="o-emp" data-a="f.id" class="s9j"><span data-t="f.label">Empresa *</span></label>
-                  <input id="o-emp" autocomplete="organization" inputmode="text" placeholder="" aria-invalid="false" data-a="f.id f.ac f.im f.ph f.val f.on f.inv f.bc" value="" class="sas">
-                  <span class="sat"><span data-t="f.err"></span></span>
+          </sc-if>
+
+          <sc-if value="{{ st3 }}" hint-placeholder-val="{{ false }}">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px;">
+              <sc-for list="{{ f3 }}" as="f" hint-placeholder-count="3">
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <label for="{{ f.id }}" style="font-weight:600;font-size:15px;">{{ f.label }}</label>
+                  <input id="{{ f.id }}" autoComplete="{{ f.ac }}" inputMode="{{ f.im }}" placeholder="{{ f.ph }}" value="{{ f.val }}" onChange="{{ f.on }}" aria-invalid="{{ f.inv }}" style="width:100%;box-sizing:border-box;min-height:52px;padding:14px 16px;border:1.5px solid {{ f.bc }};font:400 16px 'Inter',sans-serif;color:#0A1033;background:#FFFFFF;"></input>
+                  <span style="font-size:14px;color:#B3261E;">{{ f.err }}</span>
                 </div>
-                <div class="sab">
-                  <label for="o-cnpj" data-a="f.id" class="s9j"><span data-t="f.label">CNPJ *</span></label>
-                  <input id="o-cnpj" autocomplete="off" inputmode="numeric" placeholder="00.000.000/0000-00" aria-invalid="false" data-a="f.id f.ac f.im f.ph f.val f.on f.inv f.bc" value="" class="sas">
-                  <span class="sat"><span data-t="f.err"></span></span>
-                </div>
-                <div class="sab">
-                  <label for="o-cid" data-a="f.id" class="s9j"><span data-t="f.label">Cidade da obra *</span></label>
-                  <input id="o-cid" autocomplete="address-level2" inputmode="text" placeholder="" aria-invalid="false" data-a="f.id f.ac f.im f.ph f.val f.on f.inv f.bc" value="" class="sas">
-                  <span class="sat"><span data-t="f.err"></span></span>
-                </div>
-              <div class="sab">
-                <label for="o-uf" class="s9j">Estado *</label>
-                <select id="o-uf" aria-invalid="false" data-a="v.uf onUf ufInv ufBc" class="sas">
+              </sc-for>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <label for="o-uf" style="font-weight:600;font-size:15px;">Estado *</label>
+                <select id="o-uf" value="{{ v.uf }}" onChange="{{ onUf }}" aria-invalid="{{ ufInv }}" style="width:100%;box-sizing:border-box;min-height:52px;padding:14px 16px;border:1.5px solid {{ ufBc }};font:400 16px 'Inter',sans-serif;color:#0A1033;background:#FFFFFF;">
                   <option value="">Selecione</option>
-                  <option value="AC" data-a="u">AC</option><option value="AL" data-a="u">AL</option><option value="AP" data-a="u">AP</option><option value="AM" data-a="u">AM</option><option value="BA" data-a="u">BA</option><option value="CE" data-a="u">CE</option><option value="DF" data-a="u">DF</option><option value="ES" data-a="u">ES</option><option value="GO" data-a="u">GO</option><option value="MA" data-a="u">MA</option><option value="MT" data-a="u">MT</option><option value="MS" data-a="u">MS</option><option value="MG" data-a="u">MG</option><option value="PA" data-a="u">PA</option><option value="PB" data-a="u">PB</option><option value="PR" data-a="u">PR</option><option value="PE" data-a="u">PE</option><option value="PI" data-a="u">PI</option><option value="RJ" data-a="u">RJ</option><option value="RN" data-a="u">RN</option><option value="RS" data-a="u">RS</option><option value="RO" data-a="u">RO</option><option value="RR" data-a="u">RR</option><option value="SC" data-a="u">SC</option><option value="SP" data-a="u">SP</option><option value="SE" data-a="u">SE</option><option value="TO" data-a="u">TO</option>
+                  <sc-for list="{{ ufs }}" as="u" hint-placeholder-count="0"><option value="{{ u }}">{{ u }}</option></sc-for>
                 </select>
-                <span class="sat"><span data-t="err.uf"></span></span>
+                <span style="font-size:14px;color:#B3261E;">{{ err.uf }}</span>
               </div>
             </div>
-          </div>
-          <div data-if="st4" hidden="" class="s5">
-            <fieldset class="sau">
-              <legend class="sav">Marque uma ou mais frentes.</legend>
-              <div class="saw">
-                  <label data-a="o.border o.bg o.fg" class="sax">
-                    <input type="checkbox" data-a="o.checked o.toggle" class="say">
-                    <span data-a="o.cor" class="saz"></span><span data-t="o.nome">Elétrica</span>
+          </sc-if>
+
+          <sc-if value="{{ st4 }}" hint-placeholder-val="{{ false }}">
+            <fieldset style="border:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+              <legend style="font-size:15px;color:#3A4266;margin-bottom:10px;">Marque uma ou mais frentes.</legend>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:8px;">
+                <sc-for list="{{ solOpts }}" as="o" hint-placeholder-count="6">
+                  <label style="display:flex;align-items:center;gap:12px;min-height:56px;padding:0 16px;border:1.5px solid {{ o.border }};background:{{ o.bg }};color:{{ o.fg }};cursor:pointer;font-weight:600;font-size:15px;">
+                    <input type="checkbox" checked="{{ o.checked }}" onChange="{{ o.toggle }}" style="width:18px;height:18px;margin:0;accent-color:#FF7A1A;"></input>
+                    <span style="width:10px;height:10px;border-radius:50%;background:{{ o.cor }};outline:1px solid rgba(10,16,51,.2);"></span>{{ o.nome }}
                   </label>
-                  <label data-a="o.border o.bg o.fg" class="sax">
-                    <input type="checkbox" data-a="o.checked o.toggle" class="say">
-                    <span data-a="o.cor" class="sb0"></span><span data-t="o.nome">Mecânica</span>
-                  </label>
-                  <label data-a="o.border o.bg o.fg" class="sax">
-                    <input type="checkbox" data-a="o.checked o.toggle" class="say">
-                    <span data-a="o.cor" class="sb1"></span><span data-t="o.nome">Civil</span>
-                  </label>
-                  <label data-a="o.border o.bg o.fg" class="sax">
-                    <input type="checkbox" data-a="o.checked o.toggle" class="say">
-                    <span data-a="o.cor" class="sb2"></span><span data-t="o.nome">Instrumentação</span>
-                  </label>
-                  <label data-a="o.border o.bg o.fg" class="sax">
-                    <input type="checkbox" data-a="o.checked o.toggle" class="say">
-                    <span data-a="o.cor" class="sb3"></span><span data-t="o.nome">Facilities</span>
-                  </label>
-                  <label data-a="o.border o.bg o.fg" class="sax">
-                    <input type="checkbox" data-a="o.checked o.toggle" class="say">
-                    <span data-a="o.cor" class="sb4"></span><span data-t="o.nome">Não sei, quero orientação</span>
-                  </label>
+                </sc-for>
               </div>
-              <span class="sat"><span data-t="err.sol"></span></span>
+              <span style="font-size:14px;color:#B3261E;">{{ err.sol }}</span>
             </fieldset>
-          </div>
-          <div data-if="st5" hidden="" class="s5">
-            <div class="sb5">
-              <div class="sab">
-                <label for="o-msg" class="s9j">Descreva a demanda *</label>
-                <textarea id="o-msg" rows="6" placeholder="Local, tipo de instalação, prazo desejado, se a planta estará em operação…" aria-invalid="false" data-a="v.msg onMsg msgInv msgBc" class="sb6"></textarea>
-                <span class="sat"><span data-t="err.msg"></span></span>
+          </sc-if>
+
+          <sc-if value="{{ st5 }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;gap:18px;">
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <label for="o-msg" style="font-weight:600;font-size:15px;">Descreva a demanda *</label>
+                <textarea id="o-msg" rows="6" placeholder="Local, tipo de instalação, prazo desejado, se a planta estará em operação…" value="{{ v.msg }}" onChange="{{ onMsg }}" aria-invalid="{{ msgInv }}" style="width:100%;box-sizing:border-box;padding:14px 16px;border:1.5px solid {{ msgBc }};font:400 16px/1.5 'Inter',sans-serif;color:#0A1033;resize:vertical;"></textarea>
+                <span style="font-size:14px;color:#B3261E;">{{ err.msg }}</span>
               </div>
-              <label class="sb7">
-                <input type="checkbox" aria-invalid="false" data-a="v.lgpd onLgpd lgpdInv" class="sb8">
-                <span>Autorizo a RP Engenharia a usar estes dados para responder a esta solicitação, conforme a LGPD e a <a href="https://www.rpengenhariaindustrial.com.br/pol%C3%ADtica-de-privacidade" target="_blank" rel="noopener" class="s8g">Política de Privacidade</a>. *</span>
+              <label style="display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.5;cursor:pointer;">
+                <input type="checkbox" checked="{{ v.lgpd }}" onChange="{{ onLgpd }}" aria-invalid="{{ lgpdInv }}" style="width:20px;height:20px;margin:2px 0 0;accent-color:#0B1B5C;flex-shrink:0;"></input>
+                <span>Autorizo a RP Engenharia a usar estes dados para responder a esta solicitação, conforme a LGPD e a <a href="https://www.rpengenhariaindustrial.com.br/pol%C3%ADtica-de-privacidade" target="_blank" rel="noopener" style="font-weight:600;">Política de Privacidade</a>. *</span>
               </label>
-              <span class="sat"><span data-t="err.lgpd"></span></span>
+              <span style="font-size:14px;color:#B3261E;">{{ err.lgpd }}</span>
             </div>
-          </div>
-          <div class="sb9">
-            <div data-if="canBack" hidden="" class="s5">
-              <button type="button" data-a="back" class="sba">← Voltar</button>
-            </div>
-            <span class="s8n"></span>
-            <button type="submit" data-a="isLoading btnOp" class="sbb">
-              <div data-if="isLoading" hidden="" class="s5"><span aria-hidden="true" class="sbc"></span></div>
-              <span data-t="nextLabel">Continuar →</span>
+          </sc-if>
+
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #DADCE3;padding-top:20px;">
+            <sc-if value="{{ canBack }}" hint-placeholder-val="{{ false }}">
+              <button type="button" onClick="{{ back }}" style="min-height:52px;padding:0 20px;background:#FFFFFF;border:1.5px solid #0B1B5C;color:#0B1B5C;font:600 15px 'Inter',sans-serif;cursor:pointer;">← Voltar</button>
+            </sc-if>
+            <span style="flex:1;"></span>
+            <button type="submit" disabled="{{ isLoading }}" style="display:flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;background:#FF7A1A;border:none;color:#0A1033;font:700 16px 'Inter',sans-serif;cursor:pointer;opacity:{{ btnOp }};">
+              <sc-if value="{{ isLoading }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="width:16px;height:16px;border:2px solid #0A1033;border-right-color:transparent;border-radius:50%;animation:rpSpin .8s linear infinite;"></span></sc-if>
+              {{ nextLabel }}
             </button>
           </div>
         </form>
-      </div>
-      <div data-if="isDone" hidden="" class="s5">
-        <div role="status" tabindex="-1" data-a="okRef" class="sbd">
-          <span class="sbe">SOLICITAÇÃO REGISTRADA</span>
-          <h2 class="sbf">Recebemos o seu pedido, <span data-t="firstName"></span>.</h2>
-          <p class="s9e">O time comercial vai analisar o escopo de <strong><span data-t="solSummary">engenharia</span></strong> e retornar pelo e-mail ou telefone informado.</p>
-          <div class="sbg">
-            <span class="s2g">CONTATO COMERCIAL</span>
-            <a href="tel:+551147919300" class="sbh">(11) 4791-9300</a>
-            <a href="mailto:comercial@rpengenhariaindustrial.com.br" class="s5g">comercial@rpengenhariaindustrial.com.br</a>
-            <span class="sbi">R. João de Pina, 220 - Jardim Pte. Grande, Mogi das Cruzes - SP</span>
-          </div>
-          <a href="index.html" class="s8g">Voltar para o início →</a>
-        </div>
-      </div>
-    </div>
-  </div></main><footer class="s56">
-  <div class="s57">
-    <div class="s58">
-      <span class="s59"></span>
-      <span class="s5a"></span>
-    </div>
-    <div class="s5b">
-      <div class="s2z">
-        <a href="index.html" aria-label="RP Engenharia — página inicial" style="align-self:flex-start;display:block;"><img src="assets/logo-rp-footer.png" alt="RP Engenharia" width="496" height="293" style="height:64px;width:auto;display:block;"></a>
-        <p class="s5c">Elétrica, mecânica, civil e instrumentação. Uma entrega.</p>
-        <a href="orcamento.html" class="s5d hb">Solicite um orçamento</a>
-      </div>
-      <address class="s5e">
-        <span class="s5f">MATRIZ</span>
-        <span>R. João de Pina, 220 - Jardim Pte. Grande<br>Mogi das Cruzes - SP, 08770-480</span>
-        <a href="mailto:comercial@rpengenhariaindustrial.com.br" class="s5g">comercial@rpengenhariaindustrial.com.br</a>
-        <a href="tel:+551147919300" class="s5h">(11) 4791-9300</a>
-      </address>
-      <nav aria-label="Rodapé" class="s5i">
-        <span class="s5f">EMPRESA</span>
-        <a href="quem-somos.html" class="s5j hc">Quem somos</a>
-        <a href="solucoes-eletrica.html" class="s5j hc">Soluções</a>
-        <a href="onde-estamos.html" class="s5j hc">Onde estamos</a>
-        <a href="onde-estamos.html#sedes" class="s5j hc">Sedes</a>
-        <a href="esg.html" class="s5j hc">ESG e Gestão Integrada</a>
-        <a href="trabalhe-conosco.html" class="s5j hc">Trabalhe conosco</a>
-        <a href="universidade-corporativa.html" class="s5j hc">Universidade Corporativa</a>
-        <a href="contato.html#fornecedor" class="s5j hc">Quero ser fornecedor</a>
-      </nav>
-      <div class="s5i">
-        <span class="s5f">LEGAL E REDES</span>
-        <a href="https://www.rpengenhariaindustrial.com.br/acessibilidade" class="s5j hc">Acessibilidade</a>
-        <a href="https://www.rpengenhariaindustrial.com.br/pol%C3%ADtica-de-privacidade" class="s5j hc">Política de Privacidade</a>
-        <div class="s5k">
-          <a href="https://www.instagram.com/rpengenhariaindustrial/" aria-label="Instagram da RP Engenharia" class="s5l hd">IG</a>
-          <a href="https://www.facebook.com/profile.php?id=61570614443501" aria-label="Facebook da RP Engenharia" class="s5l hd">FB</a>
-          <a href="https://www.linkedin.com/company/rp-engenharia-ltda/posts/?feedView=all" aria-label="LinkedIn da RP Engenharia" class="s5l hd">IN</a>
-        </div>
-      </div>
-    </div>
- <div class="rpx6">
-<div class="rpx7">
-<span class="rpx8">SEDES</span>
-<a class="rpx9" href="onde-estamos.html#sedes">Ver todas as unidades →</a>
-</div>
-<ul aria-label="Sedes da RP Engenharia" class="rpx10">
-<li class="rpx11">
-<span class="rpx12">SEDE · DF</span>
-<strong class="rpx13">Brasília</strong>
-<address class="rpx14">SGAS 915, Conjunto B, Bloco D, Sala 103 (parte), CH 121715<br/>Edifício Office Center, SGAS 915, Lote 71<br/>Asa Sul, Brasília - DF, 70390-150</address>
-<a class="rpx15" href="https://www.google.com/maps/search/?api=1&amp;query=Edif%C3%ADcio%20Office%20Center%2C%20SGAS%20915%20Lote%2071%2C%20Asa%20Sul%2C%20Bras%C3%ADlia%20-%20DF%2C%2070390-150" rel="noopener" target="_blank">Como chegar ↗</a>
-</li>
-<li class="rpx11">
-<span class="rpx12">SEDE · SP</span>
-<strong class="rpx13">Santos</strong>
-<address class="rpx14">Av. Conselheiro Nébias, 444, sala 907<br/>Encruzilhada, Santos - SP, 11045-000</address>
-<a class="rpx15" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Conselheiro%20N%C3%A9bias%2C%20444%20-%20Encruzilhada%2C%20Santos%20-%20SP%2C%2011045-000" rel="noopener" target="_blank">Como chegar ↗</a>
-</li>
-<li class="rpx11">
-<span class="rpx12">SEDE · PE</span>
-<strong class="rpx13">Recife</strong>
-<address class="rpx14">Av. República do Líbano, 251, Sala 2205, Torre A<br/>Empresarial RioMar Trade Center, Pina<br/>Recife - PE, 51110-160 · Caixa Postal 120832</address>
-<a class="rpx15" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Rep%C3%BAblica%20do%20L%C3%ADbano%2C%20251%2C%20Empresarial%20RioMar%20Trade%20Center%2C%20Pina%2C%20Recife%20-%20PE%2C%2051110-160" rel="noopener" target="_blank">Como chegar ↗</a>
-</li>
-<li class="rpx11">
-<span class="rpx12">SEDE · MG</span>
-<strong class="rpx13">Belo Horizonte</strong>
-<address class="rpx14">Rua Rio Grande do Norte, 1435, sala 708<br/>Funcionários, Belo Horizonte - MG, 30130-138</address>
-<a class="rpx15" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Rio%20Grande%20do%20Norte%2C%201435%2C%20Funcion%C3%A1rios%2C%20Belo%20Horizonte%20-%20MG%2C%2030130-138" rel="noopener" target="_blank">Como chegar ↗</a>
-</li>
-</ul>
-</div>
+      </sc-if>
 
-    <div class="s5m">
-      <div class="s5n"><span class="s5o">ISO 14001</span><span class="s5p">MEIO AMBIENTE</span></div>
-      <div class="s5n"><span class="s5o">ISO 45001</span><span class="s5p">SAÚDE E SEGURANÇA</span></div>
+      <sc-if value="{{ isDone }}" hint-placeholder-val="{{ false }}">
+        <div role="status" tabindex="-1" ref="{{ okRef }}" style="padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;gap:18px;border-top:6px solid #A6D04B;outline:none;">
+          <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#4A7A00;">SOLICITAÇÃO REGISTRADA</span>
+          <h2 style="font:800 clamp(28px,3.2vw,42px)/1.08 'Sora',sans-serif;margin:0;">Recebemos o seu pedido, {{ firstName }}.</h2>
+          <p style="font-size:16px;line-height:1.6;color:#3A4266;margin:0;">O time comercial vai analisar o escopo de <strong>{{ solSummary }}</strong> e retornar pelo e-mail ou telefone informado.</p>
+          <div style="background:#060B26;color:#FFFFFF;padding:24px;display:flex;flex-direction:column;gap:8px;">
+            <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#FFB27A;">CONTATO COMERCIAL</span>
+            <a href="tel:+551147919300" style="color:#FFFFFF;font:700 24px 'Sora',sans-serif;text-decoration:none;">(11) 4791-9300</a>
+            <a href="mailto:comercial@rpengenhariaindustrial.com.br" style="color:#FFFFFF;word-break:break-all;">comercial@rpengenhariaindustrial.com.br</a>
+            <span style="font-size:14px;color:#C9CEE0;">R. João de Pina, 220 - Jardim Pte. Grande, Mogi das Cruzes - SP</span>
+          </div>
+          <a href="index.html" style="font-weight:600;">Voltar para o início →</a>
+        </div>
+      </sc-if>
     </div>
- <div class="rpx1">
-<span class="rpx2">© 2026 RP Engenharia Industrial. Todos os direitos reservados.</span>
-<button class="rpx3" data-a="reopen" type="button">Preferências de cookies</button>
-<a aria-label="Desenvolvido por Actmob" class="rpx4" href="https://actmobmarketingdigital.com.br" rel="noopener" target="_blank"><img alt="Desenvolvido por Actmob" class="rpx5" height="37" src="assets/desenvolvido-por-actmob.png" width="107"/></a>
-</div>
   </div>
-  <div data-if="showCookies" hidden="" class="s5">
-    <div role="dialog" aria-live="polite" aria-label="Aviso de cookies" class="s5s">
-      <p class="s5t">Usamos cookies essenciais para o funcionamento do site e, com sua permissão, cookies de medição de audiência. Saiba mais na <a href="https://www.rpengenhariaindustrial.com.br/pol%C3%ADtica-de-privacidade" class="s5u">Política de Privacidade</a>.</p>
-      <div class="s22">
-        <button type="button" data-a="acceptAll" class="s5v">Aceitar todos</button>
-        <button type="button" data-a="acceptEssential" class="s5w">Somente essenciais</button>
-      </div>
-    </div>
-  </div></footer>
+</main>
+<dc-import name="Footer" hint-size="100%,640px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const UFS = ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO'];
+const ASSUNTOS = [
+  ['Novo projeto ou obra', 'Implantação, ampliação ou modernização'],
+  ['Manutenção', 'Preventiva, preditiva ou corretiva'],
+  ['Parada programada', 'Janela de manutenção com prazo fechado'],
+  ['Atendimento emergencial', 'Falha ou risco na operação'],
+  ['Outro assunto', 'Consultas, parcerias e documentação']
+];
+const TITLES = ['Qual é o assunto?', 'Seus dados de contato', 'Dados da empresa', 'Solução de interesse', 'Mensagem'];
+const LABELS = ['ASSUNTO', 'CONTATO', 'EMPRESA', 'SOLUÇÃO', 'MENSAGEM'];
+const maskTel = s => { const d = s.replace(/\D/g, '').slice(0, 11); if (d.length <= 2) return d ? '(' + d : ''; if (d.length <= 6) return '(' + d.slice(0, 2) + ') ' + d.slice(2); if (d.length <= 10) return '(' + d.slice(0, 2) + ') ' + d.slice(2, 6) + '-' + d.slice(6); return '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7); };
+const maskCnpj = s => { const d = s.replace(/\D/g, '').slice(0, 14); return d.replace(/^(\d{2})(\d)/, '$1.$2').replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3').replace(/\.(\d{3})(\d)/, '.$1/$2').replace(/(\d{4})(\d)/, '$1-$2'); };
+const cnpjOk = s => {
+  const c = s.replace(/\D/g, ''); if (c.length !== 14 || /^(\d)\1+$/.test(c)) return false;
+  const calc = n => { let sum = 0, p = n - 7; for (let i = 0; i < n; i++) { sum += +c[i] * p--; if (p < 2) p = 9; } const r = sum % 11; return r < 2 ? 0 : 11 - r; };
+  return calc(12) === +c[12] && calc(13) === +c[13];
+};
+
+class Component extends DCLogic {
+  state = { step: 0, status: 'idle', err: {}, ready: !!window.RP_SOLUCOES,
+    v: { assunto: '', nome: '', email: '', tel: '', cargo: '', empresa: '', cnpj: '', cidade: '', uf: '', sol: [], msg: '', lgpd: false } };
+  formRef = React.createRef(); titleRef = React.createRef(); okRef = React.createRef();
+  componentDidMount() {
+    const q = new URLSearchParams(location.search), pre = {};
+    if (q.get('uf')) pre.uf = q.get('uf').toUpperCase();
+    if (q.get('s')) pre.sol = [q.get('s')];
+    this.setState(s => ({ v: Object.assign({}, s.v, pre) }));
+    const go = () => window.RP_SOLUCOES ? this.setState({ ready: true }) : (this.t = setTimeout(go, 40)); go();
+  }
+  componentWillUnmount() { clearTimeout(this.t); }
+  set(k, val) { this.setState(s => ({ v: Object.assign({}, s.v, { [k]: val }), err: Object.assign({}, s.err, { [k]: '' }) })); }
+  validate(step) {
+    const v = this.state.v, e = {};
+    if (step === 0 && !v.assunto) e.assunto = 'Escolha um assunto.';
+    if (step === 1) {
+      if (v.nome.trim().length < 3) e.nome = 'Informe seu nome.';
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.email)) e.email = 'Informe um e-mail válido.';
+      if (v.tel.replace(/\D/g, '').length < 10) e.tel = 'Informe telefone com DDD.';
+    }
+    if (step === 2) {
+      if (!v.empresa.trim()) e.empresa = 'Informe a empresa.';
+      if (!cnpjOk(v.cnpj)) e.cnpj = 'CNPJ inválido. Confira os 14 dígitos.';
+      if (!v.cidade.trim()) e.cidade = 'Informe a cidade.';
+      if (!v.uf) e.uf = 'Selecione o estado.';
+    }
+    if (step === 3 && !v.sol.length) e.sol = 'Marque ao menos uma opção.';
+    if (step === 4) {
+      if (v.msg.trim().length < 10) e.msg = 'Descreva a demanda em poucas linhas.';
+      if (!v.lgpd) e.lgpd = 'É necessário autorizar o uso dos dados.';
+    }
+    return e;
+  }
+  focusTitle() { setTimeout(() => this.titleRef.current && this.titleRef.current.focus(), 30); }
+  async submit(ev) {
+    ev.preventDefault();
+    const step = this.state.step, e = this.validate(step);
+    if (Object.keys(e).length) {
+      this.setState({ err: e });
+      setTimeout(() => { const el = this.formRef.current && this.formRef.current.querySelector('[aria-invalid="true"]'); el && el.focus(); }, 30);
+      return;
+    }
+    if (step < 4) { this.setState({ step: step + 1, err: {} }); this.focusTitle(); return; }
+    this.setState({ status: 'loading' });
+    const fd = new FormData(), v = this.state.v;
+    fd.append('_assunto', 'Orçamento — ' + v.assunto + ' — ' + v.empresa);
+    Object.keys(v).forEach(k => fd.append(k, Array.isArray(v[k]) ? v[k].join(', ') : v[k]));
+    const endpoint = window.RP_DATA && window.RP_DATA.config.endpointOrcamento;
+    try {
+      if (endpoint) {
+        // Envio real: POST para o endpoint configurado em data/site-data.js
+        const r = await fetch(endpoint, { method: 'POST', body: fd, headers: { Accept: 'application/json' } });
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+      } else {
+        await new Promise(res => setTimeout(res, 1100)); // modo demonstração
+      }
+      this.setState({ status: 'done' });
+      setTimeout(() => this.okRef.current && this.okRef.current.focus(), 30);
+    } catch (x) { this.setState({ status: 'error' }); }
+  }
+  renderVals() {
+    const { step, v, err, status } = this.state;
+    const S = window.RP_SOLUCOES || [];
+    const fld = (id, k, label, opts) => Object.assign({ id, label, val: v[k], err: err[k] || '', inv: err[k] ? 'true' : 'false', bc: err[k] ? '#B3261E' : '#8C93B3', type: 'text', ac: 'off', im: 'text', ph: '', on: e => this.set(k, opts && opts.mask ? opts.mask(e.target.value) : e.target.value) }, opts || {});
+    const solAll = S.map(s => ({ k: s.slug, nome: s.nome, cor: s.cor })).concat([{ k: 'orientacao', nome: 'Não sei, quero orientação', cor: '#FFFFFF' }]);
+    const solNames = v.sol.map(k => (solAll.find(o => o.k === k) || {}).nome).filter(Boolean);
+    return {
+      formRef: this.formRef, titleRef: this.titleRef, okRef: this.okRef, v, err, ufs: UFS,
+      steps: LABELS.map((label, i) => ({ label, cur: i === step ? 'step' : undefined, fill: i < step ? '#0B1B5C' : i === step ? '#FF7A1A' : '#FFFFFF', stroke: i <= step ? (i === step ? '#FF7A1A' : '#0B1B5C') : '#8C93B3', line: i < step ? '#0B1B5C' : '#DADCE3', fg: i <= step ? '#0A1033' : '#4A5275' })),
+      stepTitle: (step + 1) + '/5 · ' + TITLES[step],
+      st1: step === 0, st2: step === 1, st3: step === 2, st4: step === 3, st5: step === 4,
+      assuntos: ASSUNTOS.map(([t, d]) => { const c = v.assunto === t; return { t, d, checked: c, border: c ? '#0B1B5C' : err.assunto ? '#B3261E' : '#C9CCD8', bg: c ? '#EEF0F5' : '#FFFFFF', pick: () => this.set('assunto', t) }; }),
+      f2: [fld('o-nome', 'nome', 'Nome *', { ac: 'name' }), fld('o-email', 'email', 'E-mail corporativo *', { type: 'email', ac: 'email', im: 'email' }), fld('o-tel', 'tel', 'Telefone / WhatsApp *', { type: 'tel', ac: 'tel', im: 'tel', ph: '(11) 99999-9999', mask: maskTel }), fld('o-cargo', 'cargo', 'Cargo', { ac: 'organization-title' })],
+      f3: [fld('o-emp', 'empresa', 'Empresa *', { ac: 'organization' }), fld('o-cnpj', 'cnpj', 'CNPJ *', { im: 'numeric', ph: '00.000.000/0000-00', mask: maskCnpj }), fld('o-cid', 'cidade', 'Cidade da obra *', { ac: 'address-level2' })],
+      onUf: e => this.set('uf', e.target.value), ufInv: err.uf ? 'true' : 'false', ufBc: err.uf ? '#B3261E' : '#8C93B3',
+      solOpts: solAll.map(o => { const c = v.sol.includes(o.k); return Object.assign({}, o, { checked: c, border: c ? '#0B1B5C' : '#C9CCD8', bg: c ? '#0B1B5C' : '#FFFFFF', fg: c ? '#FFFFFF' : '#0A1033', toggle: () => this.set('sol', c ? v.sol.filter(x => x !== o.k) : v.sol.concat(o.k)) }); }),
+      onMsg: e => this.set('msg', e.target.value), msgInv: err.msg ? 'true' : 'false', msgBc: err.msg ? '#B3261E' : '#8C93B3',
+      onLgpd: e => this.set('lgpd', e.target.checked), lgpdInv: err.lgpd ? 'true' : 'false',
+      canBack: step > 0, back: () => { this.setState({ step: step - 1, err: {} }); this.focusTitle(); },
+      submit: e => this.submit(e),
+      isLoading: status === 'loading', isError: status === 'error', btnOp: status === 'loading' ? 0.7 : 1,
+      nextLabel: step < 4 ? 'Continuar →' : status === 'loading' ? 'Enviando…' : 'Enviar solicitação',
+      notDone: status !== 'done', isDone: status === 'done',
+      firstName: v.nome.split(' ')[0], solSummary: solNames.join(', ') || 'engenharia'
+    };
+  }
+}
+</script>
+<script src="assets/js/review-tool.js" data-project="RP Engenharia" data-html2canvas="assets/js/vendor/html2canvas.min.js" data-jspdf="assets/js/vendor/jspdf.umd.min.js" defer></script>
 </body>
 </html>

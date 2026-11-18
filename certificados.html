@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/base.css">
+<script src="assets/js/dc-runtime.js"></script>
+</head>
+<body data-screen="Certificados">
+<x-dc>
+<helmet>
+  <title>Certificados e qualificações | RP Engenharia</title>
+  <meta name="description" content="Registros profissionais, capacitações normativas das equipes, atestados de capacidade técnica e documentos de conformidade da RP Engenharia.">
+  <link rel="canonical" href="https://www.rpengenhariaindustrial.com.br/certificados">
+  <meta property="og:type" content="website"><meta property="og:title" content="Certificados e qualificações | RP Engenharia"><meta property="og:description" content="Qualificação comprovada, documento por documento."><meta property="og:image" content="assets/img-exemplo/estrutura-07.webp"><meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <style>
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#F4F4F1;color:#0A1033;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:#0B1B5C}a:hover{color:#C24E00}
+    :focus-visible{outline:3px solid #FF7A1A;outline-offset:3px}
+    .ct-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .ct-resumo{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .ct-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:1080px){.ct-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ct-resumo{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media (max-width:760px){.ct-steps{grid-template-columns:1fr}}
+    @media (max-width:620px){.ct-grid{grid-template-columns:1fr}}
+    @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</helmet>
+<dc-import name="Header" active="esg" hint-size="100%,76px"></dc-import>
+<main id="conteudo">
+
+  <!-- HERO -->
+  <section aria-labelledby="h1" style="background:#060B26;color:#FFFFFF;position:relative;overflow:hidden;">
+    <div aria-hidden="true" style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;"></div>
+    <div style="position:relative;max-width:1440px;margin:0 auto;padding:clamp(48px,7vw,104px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:40px;">
+      <div style="display:flex;flex-direction:column;gap:24px;max-width:880px;">
+        <nav aria-label="Trilha" style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C93B3;"><a href="index.html" style="color:#8C93B3;">INÍCIO</a> / <a href="esg.html" style="color:#8C93B3;">ESG E GESTÃO INTEGRADA</a> / CERTIFICADOS</nav>
+        <span style="align-self:flex-start;font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#FFB27A;border:1px solid #FFB27A;padding:8px 12px;">CERTIFICADOS E QUALIFICAÇÕES</span>
+        <h1 id="h1" style="font:800 clamp(40px,5.6vw,80px)/1.02 'Sora',sans-serif;letter-spacing:-.03em;margin:0;text-wrap:balance;">Qualificação comprovada, documento por documento.</h1>
+        <p style="font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:#C9CEE0;margin:0;max-width:40em;text-wrap:pretty;">Na RP, a segurança aparece no jeito de trabalhar muito antes de aparecer no certificado. Aqui estão os registros, as capacitações e os atestados que sustentam isso, com emissor e validade de cada um.</p>
+      </div>
+      <ul class="ct-resumo" aria-label="Resumo" style="list-style:none;margin:0;padding:0;display:grid;gap:1px;background:#1C2450;border:1px solid #1C2450;border-top:3px solid #FF7A1A;">
+        <sc-for list="{{ resumo }}" as="r" hint-placeholder-count="4">
+          <li style="background:#08102F;padding:clamp(18px,2vw,28px);display:flex;flex-direction:column;gap:8px;">
+            <span style="font:800 clamp(32px,3.2vw,48px)/1 'Sora',sans-serif;letter-spacing:-.03em;">{{ r.n }}</span>
+            <span style="font-size:15px;line-height:1.4;color:#C9CEE0;">{{ r.label }}</span>
+          </li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+
+  <!-- AVISO -->
+  <section aria-label="Aviso" style="background:#FF7A1A;color:#0A1033;">
+    <p style="margin:0 auto;max-width:1440px;padding:18px clamp(28px,6vw,96px);font:600 15px/1.45 'Inter',sans-serif;display:flex;gap:12px;align-items:center;"><span aria-hidden="true" style="width:8px;height:8px;transform:rotate(45deg);background:#0A1033;flex-shrink:0;"></span>Página em atualização: os itens abaixo são exemplos de estrutura e serão substituídos pelos documentos oficiais da RP.</p>
+  </section>
+
+  <!-- LISTA -->
+  <section aria-labelledby="h-lista" style="max-width:1440px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:32px;">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;">
+      <div style="display:flex;flex-direction:column;gap:16px;max-width:720px;">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#C24E00;">01 — DOCUMENTOS</span>
+        <h2 id="h-lista" style="font:700 clamp(32px,4.4vw,56px)/1.05 'Sora',sans-serif;letter-spacing:-.025em;margin:0;text-wrap:balance;">O que a RP comprova.</h2>
+      </div>
+      <span aria-live="polite" style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#4A5275;">{{ contagem }}</span>
+    </div>
+    <div role="tablist" aria-label="Categorias" style="display:flex;flex-wrap:wrap;gap:8px;">
+      <sc-for list="{{ filtros }}" as="f" hint-placeholder-count="5">
+        <button type="button" role="tab" aria-selected="{{ f.sel }}" onClick="{{ f.pick }}" style="min-height:44px;padding:10px 16px;background:{{ f.bg }};color:{{ f.fg }};border:1px solid #0B1B5C;font:600 14px 'Inter',sans-serif;cursor:pointer;display:flex;align-items:center;gap:8px;">{{ f.label }}<span style="font:500 12px 'IBM Plex Mono',monospace;opacity:.7;">{{ f.qtd }}</span></button>
+      </sc-for>
+    </div>
+    <ul class="ct-grid" style="list-style:none;margin:0;padding:0;display:grid;gap:1px;background:#C9CCD8;border:1px solid #C9CCD8;border-top:3px solid #0A1033;">
+      <sc-for list="{{ itens }}" as="c" hint-placeholder-count="6">
+        <li style="background:#FFFFFF;padding:clamp(22px,2.2vw,32px);display:flex;flex-direction:column;gap:16px;min-width:0;">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+            <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:{{ c.cor }};display:flex;align-items:center;gap:8px;"><span aria-hidden="true" style="width:8px;height:8px;transform:rotate(45deg);background:{{ c.cor }};"></span>{{ c.cat }}</span>
+            <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#4A5275;border:1px dashed #8C93B3;padding:4px 8px;">EXEMPLO</span>
+          </div>
+          <h3 style="font:700 21px/1.25 'Sora',sans-serif;margin:0;text-wrap:balance;">{{ c.nome }}</h3>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:#3A4266;text-wrap:pretty;flex:1;">{{ c.escopo }}</p>
+          <dl style="margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:14px;border-top:1px solid #DADCE3;padding-top:14px;">
+            <dt style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#4A5275;">EMISSOR</dt><dd style="margin:0;">{{ c.emissor }}</dd>
+            <dt style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#4A5275;">VALIDADE</dt><dd style="margin:0;">{{ c.validade }}</dd>
+          </dl>
+          <a href="contato.html" style="align-self:flex-start;font-weight:600;font-size:15px;">Solicitar documento →</a>
+        </li>
+      </sc-for>
+    </ul>
+  </section>
+
+  <!-- COMO MANTEMOS -->
+  <section aria-labelledby="h-como" style="background:#FFFFFF;border-top:1px solid #DADCE3;">
+    <div style="max-width:1440px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:40px;">
+      <div style="display:flex;flex-direction:column;gap:16px;max-width:760px;">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#C24E00;">02 — CONTROLE</span>
+        <h2 id="h-como" style="font:700 clamp(32px,4.4vw,56px)/1.05 'Sora',sans-serif;letter-spacing:-.025em;margin:0;text-wrap:balance;">Documento em dia antes da equipe entrar em campo.</h2>
+      </div>
+      <ol class="ct-steps" style="list-style:none;margin:0;padding:0;display:grid;gap:clamp(24px,3vw,48px);">
+        <sc-for list="{{ passos }}" as="p" hint-placeholder-count="3">
+          <li style="border-top:3px solid #FF7A1A;padding-top:20px;display:flex;flex-direction:column;gap:12px;">
+            <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#4A5275;">{{ p.num }}</span>
+            <h3 style="font:700 22px/1.2 'Sora',sans-serif;margin:0;">{{ p.t }}</h3>
+            <p style="margin:0;font-size:16px;line-height:1.6;color:#3A4266;text-wrap:pretty;">{{ p.d }}</p>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));">
+    <a href="contato.html#fornecedor" style="background:#FF7A1A;color:#0A1033;text-decoration:none;padding:clamp(48px,6vw,80px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:10px;" style-hover="background:#FF8C3A;color:#0A1033;"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;">CADASTRO DE FORNECEDOR OU LICITAÇÃO</span><span style="font:800 clamp(28px,3.4vw,48px)/1.05 'Sora',sans-serif;">Pedir a documentação completa →</span></a>
+    <a href="universidade-corporativa.html" style="background:#060B26;color:#FFFFFF;text-decoration:none;padding:clamp(48px,6vw,80px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:10px;" style-hover="background:#0B1440;color:#FFFFFF;"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C93B3;">COMO AS EQUIPES SE FORMAM</span><span style="font:800 clamp(28px,3.4vw,48px)/1.05 'Sora',sans-serif;">Universidade Corporativa →</span></a>
+  </section>
+</main>
+<dc-import name="Footer" hint-size="100%,640px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+// EXEMPLOS PROVISÓRIOS: substituir pelos documentos oficiais da RP
+const CATS = [
+  ['registro', 'Registros profissionais', '#0B1B5C'],
+  ['nr', 'Segurança do trabalho', '#C24E00'],
+  ['tecnica', 'Capacidade técnica', '#2E7D4F'],
+  ['conformidade', 'Gestão e conformidade', '#6B4FB8']
+];
+const ITENS = [
+  ['registro', 'Registro da empresa no CREA-SP', 'Habilita a RP a executar obras e serviços de engenharia, com responsáveis técnicos registrados por modalidade.', 'CREA-SP', 'Anual'],
+  ['registro', 'Certidões de Acervo Técnico (CAT)', 'Acervo dos responsáveis técnicos em elétrica, mecânica e civil, usado para comprovar experiência em propostas e licitações.', 'CREA', 'Permanente'],
+  ['nr', 'NR-10 · Instalações elétricas (básico e SEP)', 'Capacitação das equipes que trabalham em instalações e serviços em eletricidade, incluindo o Sistema Elétrico de Potência.', 'Universidade Corporativa RP + instrutor habilitado', 'Reciclagem a cada 2 anos'],
+  ['nr', 'NR-35 · Trabalho em altura', 'Capacitação para atividades acima de 2 metros, com análise de risco, permissão de trabalho e plano de resgate.', 'Universidade Corporativa RP + instrutor habilitado', 'Reciclagem a cada 2 anos'],
+  ['nr', 'NR-33 · Espaços confinados', 'Formação de trabalhadores autorizados, vigias e supervisores de entrada para tanques, poços e galerias.', 'Universidade Corporativa RP + instrutor habilitado', 'Reciclagem anual'],
+  ['nr', 'NR-12 · Máquinas e equipamentos', 'Capacitação para operação, manutenção e intervenção segura em máquinas e equipamentos de processo.', 'Universidade Corporativa RP + instrutor habilitado', 'Conforme mudança de função'],
+  ['tecnica', 'Atestados · Saneamento', 'Manutenção e operação de elevatórias, ETAs, ETEs e poços para concessionárias de água e esgoto.', 'Clientes contratantes', 'Permanente'],
+  ['tecnica', 'Atestados · Energia', 'Montagem eletromecânica, proteção e controle e apoio à operação em subestações de 345 kV a 750 kV.', 'Clientes contratantes', 'Permanente'],
+  ['tecnica', 'Atestados · Indústria e Educação', 'Manutenção elétrica, mecânica, predial e facilities em plantas industriais e campi universitários.', 'Clientes contratantes', 'Permanente'],
+  ['conformidade', 'PGR e PCMSO', 'Programa de Gerenciamento de Riscos e Programa de Controle Médico de Saúde Ocupacional de cada contrato.', 'SST RP + médico do trabalho', 'Revisão periódica'],
+  ['conformidade', 'Certidões negativas de débito', 'Regularidade fiscal e trabalhista: Receita Federal, FGTS e Justiça do Trabalho.', 'Órgãos federais', '180 dias'],
+  ['conformidade', 'Política de SST e Regras de Ouro', 'Compromissos de segurança assinados pela direção, com direito de recusa garantido a qualquer colaborador.', 'Direção RP', 'Revisão anual']
+];
+const PASSOS = [
+  ['Controle de validade', 'Cada documento tem dono e data de vencimento. A renovação começa antes do prazo, para nenhuma frente parar por papel vencido.'],
+  ['Treinamento antes do campo', 'Ninguém entra em campo sem integração, análise de risco e as capacitações da função concluídas e registradas.'],
+  ['Pronto para o contratante', 'A documentação de cada equipe é organizada por contrato e entregue ao cliente na mobilização, sem retrabalho.']
+];
+class Component extends DCLogic {
+  state = { cat: 'todos' };
+  renderVals() {
+    const cat = this.state.cat;
+    const catOf = k => CATS.find(c => c[0] === k);
+    const list = ITENS.filter(i => cat === 'todos' || i[0] === cat);
+    const filtros = [['todos', 'Todos', null]].concat(CATS).map(([k, label]) => {
+      const sel = cat === k;
+      return { label, qtd: k === 'todos' ? ITENS.length : ITENS.filter(i => i[0] === k).length, sel: sel ? 'true' : 'false', bg: sel ? '#0B1B5C' : 'transparent', fg: sel ? '#FFFFFF' : '#0B1B5C', pick: () => this.setState({ cat: k }) };
+    });
+    return {
+      filtros,
+      contagem: list.length + (list.length === 1 ? ' DOCUMENTO' : ' DOCUMENTOS'),
+      itens: list.map(([k, nome, escopo, emissor, validade]) => ({ cat: catOf(k)[1].toUpperCase(), cor: catOf(k)[2], nome, escopo, emissor, validade })),
+      resumo: CATS.map(([k, label]) => ({ n: String(ITENS.filter(i => i[0] === k).length).padStart(2, '0'), label })),
+      passos: PASSOS.map(([t, d], i) => ({ num: String(i + 1).padStart(2, '0'), t, d }))
+    };
+  }
+}
+</script>
+<script src="assets/js/review-tool.js" data-project="RP Engenharia" data-html2canvas="assets/js/vendor/html2canvas.min.js" data-jspdf="assets/js/vendor/jspdf.umd.min.js" defer></script>
+</body>
+</html>

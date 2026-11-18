@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/base.css">
+<script src="assets/js/dc-runtime.js"></script>
+</head>
+<body data-screen="Soluções">
+<x-dc>
+<helmet>
+  <title>Frentes de atuação: elétrica, mecânica, civil, automação, facilities e operação | RP Engenharia</title>
+  <meta name="description" content="Seis frentes, uma só gestão: elétrica, mecânica, civil, instrumentação e automação, facilities e operação, para operações que não podem parar.">
+  <link rel="canonical" href="https://www.rpengenhariaindustrial.com.br/solucoes">
+  <meta property="og:type" content="website"><meta property="og:title" content="Soluções | RP Engenharia Industrial"><meta property="og:description" content="Seis frentes, uma só gestão."><meta property="og:image" content="assets/img-exemplo/eletrica.webp"><meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="assets/data/solucoes.js"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#F4F4F1;color:#0A1033;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:#0B1B5C}a:hover{color:#C24E00}
+    :focus-visible{outline:3px solid #FF7A1A;outline-offset:3px}
+    @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</helmet>
+<dc-import name="Header" active="solucoes" hint-size="100%,76px"></dc-import>
+<main id="conteudo">
+  <nav aria-label="Frentes" style="background:#060B26;border-bottom:1px solid #1C2450;overflow-x:auto;">
+    <ul style="list-style:none;margin:0 auto;max-width:1440px;padding:0 clamp(28px,6vw,96px);display:flex;gap:4px;">
+      <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="6">
+        <li><a href="{{ t.href }}" aria-current="{{ t.cur }}" style="display:flex;align-items:center;gap:10px;padding:20px 16px 17px;color:#FFFFFF;text-decoration:none;font:600 15px 'Inter',sans-serif;white-space:nowrap;border-bottom:3px solid {{ t.bar }};" style-hover="color:#FFB27A;"><span style="width:10px;height:10px;border-radius:50%;background:{{ t.cor }};"></span>{{ t.nome }}</a></li>
+      </sc-for>
+    </ul>
+  </nav>
+
+  <section aria-labelledby="h1" style="background:#060B26;color:#FFFFFF;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));">
+    <div style="padding:clamp(48px,7vw,104px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:22px;justify-content:center;position:relative;">
+      <div style="display:flex;align-items:center;gap:14px;font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C93B3;">
+        <span>SOLUÇÕES / CIRCUITO {{ s.codigo }}</span><span style="flex:1;max-width:120px;height:2px;background:{{ s.cor }};"></span>
+      </div>
+      <h1 id="h1" style="font:800 clamp(44px,6vw,88px)/1 'Sora',sans-serif;letter-spacing:-.035em;margin:0;">{{ s.nome }}</h1>
+      <p style="font:600 clamp(20px,2vw,28px)/1.3 'Sora',sans-serif;margin:0;color:{{ s.cor }};text-wrap:balance;">{{ s.titulo }}</p>
+      <p style="font-size:18px;line-height:1.6;color:#C9CEE0;margin:0;max-width:32em;">{{ s.resumo }}</p>
+      <a href="{{ orcHref }}" style="align-self:flex-start;background:#FF7A1A;color:#0A1033;font-weight:600;font-size:16px;padding:16px 24px;text-decoration:none;" style-hover="background:#FF934A;color:#0A1033;">Solicitar orçamento de {{ s.nome }}</a>
+    </div>
+    <div style="min-height:400px;position:relative;background:#0B1B5C;overflow:hidden;">
+      <img src="{{ s.foto }}" alt="{{ s.fotoAlt }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.15);mix-blend-mode:luminosity;opacity:.92;"></img>
+    </div>
+  </section>
+
+  <section aria-label="Escopo" style="max-width:1440px;margin:0 auto;padding:clamp(64px,9vw,120px) clamp(28px,6vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:56px;">
+    <div>
+      <h2 style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#4A5275;margin:0 0 20px;">ONDE ATUAMOS</h2>
+      <ul style="list-style:none;margin:0;padding:0;border-top:1px solid #0A1033;">
+        <sc-for list="{{ s.onde }}" as="o" hint-placeholder-count="3">
+          <li style="font:600 clamp(19px,1.7vw,24px)/1.3 'Sora',sans-serif;padding:20px 0;border-bottom:1px solid #C9CCD8;">{{ o }}</li>
+        </sc-for>
+      </ul>
+    </div>
+    <div>
+      <h2 style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#4A5275;margin:0 0 20px;">O QUE ENTREGAMOS</h2>
+      <ol style="list-style:none;margin:0;padding:0;border-top:1px solid #0A1033;">
+        <sc-for list="{{ entrega }}" as="o" hint-placeholder-count="3">
+          <li style="display:grid;grid-template-columns:48px 1fr;gap:12px;padding:20px 0;border-bottom:1px solid #C9CCD8;"><span style="font:500 13px 'IBM Plex Mono',monospace;color:#C24E00;padding-top:5px;">{{ o.n }}</span><span style="font:600 clamp(19px,1.7vw,24px)/1.3 'Sora',sans-serif;">{{ o.t }}</span></li>
+        </sc-for>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-int" style="background:#FFFFFF;border-top:1px solid #DADCE3;">
+    <div style="max-width:1440px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(28px,6vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:48px;">
+      <div style="display:flex;flex-direction:column;gap:18px;">
+        <h2 id="h-int" style="font:700 clamp(28px,3.2vw,44px)/1.1 'Sora',sans-serif;letter-spacing:-.02em;margin:0;text-wrap:balance;">{{ s.nome }} conectada às outras frentes.</h2>
+        <p style="font-size:17px;line-height:1.6;color:#3A4266;margin:0;">Quando o escopo cruza disciplinas, a RP responde por todas no mesmo contrato, com um cronograma e uma equipe de gestão.</p>
+        <div>
+          <p style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#4A5275;margin:8px 0 10px;">REFERÊNCIAS NORMATIVAS TÍPICAS</p>
+          <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px;">
+            <sc-for list="{{ s.normas }}" as="n" hint-placeholder-count="3"><li style="font:500 14px 'IBM Plex Mono',monospace;padding:8px 12px;border:1px solid #0B1B5C;">{{ n }}</li></sc-for>
+          </ul>
+        </div>
+      </div>
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;">
+        <sc-for list="{{ outras }}" as="o" hint-placeholder-count="4">
+          <li><a href="{{ o.href }}" style="display:flex;align-items:center;gap:16px;padding:20px 22px;border:1px solid #C9CCD8;text-decoration:none;color:#0A1033;" style-hover="border-color:#0A1033;color:#0A1033;">
+            <span style="width:28px;height:2px;background:{{ o.cor }};outline:1px solid rgba(10,16,51,.15);"></span>
+            <span style="font:500 13px 'IBM Plex Mono',monospace;color:#4A5275;">{{ o.codigo }}</span>
+            <span style="font:700 20px 'Sora',sans-serif;flex:1;">{{ o.nome }}</span><span aria-hidden="true">→</span>
+          </a></li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+  <section aria-labelledby="h-atend" style="background:#060B26;color:#FFFFFF;">
+    <div style="max-width:1440px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(28px,6vw,96px);">
+      <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#FFB27A;">COMO O ATENDIMENTO FUNCIONA</span>
+      <h2 id="h-atend" style="font:700 clamp(28px,3.4vw,48px)/1.08 'Sora',sans-serif;letter-spacing:-.02em;margin:14px 0 40px;text-wrap:balance;">Do primeiro contato à operação rodando.</h2>
+      <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));column-gap:24px;border-top:1px solid rgba(255,255,255,.3);">
+        <li style="padding:28px 24px 28px 0;border-bottom:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;gap:12px;">
+          <span style="font:800 48px/1 'Sora',sans-serif;color:#FF7A1A;">1</span>
+          <h3 style="font:700 21px/1.2 'Sora',sans-serif;margin:0;">Entender</h3>
+          <p style="font-size:15px;line-height:1.6;color:#D5D9EA;margin:0;">Levantamos o escopo, as condições de trabalho e as exigências do contratante antes de propor qualquer solução.</p>
+        </li>
+        <li style="padding:28px 24px 28px 0;border-bottom:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;gap:12px;">
+          <span style="font:800 48px/1 'Sora',sans-serif;color:#FF7A1A;">2</span>
+          <h3 style="font:700 21px/1.2 'Sora',sans-serif;margin:0;">Planejar e mobilizar</h3>
+          <p style="font-size:15px;line-height:1.6;color:#D5D9EA;margin:0;">Definimos equipes, qualificações, documentos, recursos e prazos para começar com tudo no lugar.</p>
+        </li>
+        <li style="padding:28px 24px 28px 0;border-bottom:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;gap:12px;">
+          <span style="font:800 48px/1 'Sora',sans-serif;color:#FF7A1A;">3</span>
+          <h3 style="font:700 21px/1.2 'Sora',sans-serif;margin:0;">Executar e acompanhar</h3>
+          <p style="font-size:15px;line-height:1.6;color:#D5D9EA;margin:0;">Coordenamos as equipes em campo, com a segurança e os compromissos do contrato no centro.</p>
+        </li>
+        <li style="padding:28px 24px 28px 0;border-bottom:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;gap:12px;">
+          <span style="font:800 48px/1 'Sora',sans-serif;color:#FF7A1A;">4</span>
+          <h3 style="font:700 21px/1.2 'Sora',sans-serif;margin:0;">Informar</h3>
+          <p style="font-size:15px;line-height:1.6;color:#D5D9EA;margin:0;">Andamento, ocorrências e ajustes são comunicados cedo. O cliente nunca é pego de surpresa.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+</main>
+<dc-import name="Footer" hint-size="100%,640px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { ready: !!window.RP_SOLUCOES };
+  componentDidMount() {
+    const go = () => window.RP_SOLUCOES ? this.setState({ ready: true }) : (this.t = setTimeout(go, 40)); go();
+  }
+  componentWillUnmount() { clearTimeout(this.t); }
+  renderVals() {
+    const S = window.RP_SOLUCOES || [];
+    const f = new URLSearchParams(location.search).get('f') || 'eletrica';
+    const s = S.find(x => x.slug === f) || S[0] || { onde: [], entrega: [], normas: [] };
+    if (s.nome) document.title = s.nome + ' | Soluções | RP Engenharia Industrial';
+    return {
+      s,
+      entrega: (s.entrega || []).map((t, i) => ({ t, n: s.codigo + '-' + String(i + 1).padStart(2, '0') })),
+      tabs: S.map(x => ({ nome: x.nome, cor: x.cor, href: 'solucoes.html?f=' + x.slug, cur: x.slug === s.slug ? 'page' : undefined, bar: x.slug === s.slug ? x.cor : 'transparent' })),
+      outras: S.filter(x => x.slug !== s.slug).map(x => ({ nome: x.nome, cor: x.cor, codigo: x.codigo, href: 'solucoes.html?f=' + x.slug })),
+      orcHref: 'orcamento.html?s=' + (s.slug || '')
+    };
+  }
+}
+</script>
+<script src="assets/js/review-tool.js" data-project="RP Engenharia" data-html2canvas="assets/js/vendor/html2canvas.min.js" data-jspdf="assets/js/vendor/jspdf.umd.min.js" defer></script>
+</body>
+</html>
