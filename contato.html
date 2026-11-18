@@ -67,7 +67,7 @@
           <sc-for list="{{ fields }}" as="f" hint-placeholder-count="5">
             <div style="display:flex;flex-direction:column;gap:6px;">
               <label for="{{ f.id }}" style="font-weight:600;font-size:15px;">{{ f.label }}</label>
-              <input id="{{ f.id }}" type="{{ f.type }}" value="{{ f.val }}" onChange="{{ f.on }}" aria-invalid="{{ f.inv }}" style="width:100%;box-sizing:border-box;min-height:50px;padding:12px 14px;border:1.5px solid {{ f.bc }};font:400 16px 'Inter',sans-serif;color:#0A1033;background:#FFFFFF;"></input>
+              <input id="{{ f.id }}" type="{{ f.type }}" placeholder="{{ f.ph }}" value="{{ f.val }}" onChange="{{ f.on }}" aria-invalid="{{ f.inv }}" style="width:100%;box-sizing:border-box;min-height:50px;padding:12px 14px;border:1.5px solid {{ f.bc }};font:400 16px 'Inter',sans-serif;color:#0A1033;background:#FFFFFF;"></input>
               <span style="font-size:13px;color:#B3261E;">{{ f.err }}</span>
             </div>
           </sc-for>
@@ -85,6 +85,25 @@
 <dc-import name="Footer" hint-size="100%,640px"></dc-import>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
+// CNPJ numérico ou alfanumérico (IN RFB 2.229/2024): 12 caracteres A-Z/0-9 + 2 dígitos verificadores
+const cnpjClean = s => String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+const maskCnpj = s => {
+  const raw = cnpjClean(s); let c = '';
+  for (const ch of raw) { if (c.length >= 14) break; if (c.length >= 12 && !/\d/.test(ch)) continue; c += ch; }
+  let out = c.slice(0, 2);
+  if (c.length > 2) out += '.' + c.slice(2, 5);
+  if (c.length > 5) out += '.' + c.slice(5, 8);
+  if (c.length > 8) out += '/' + c.slice(8, 12);
+  if (c.length > 12) out += '-' + c.slice(12, 14);
+  return out;
+};
+const cnpjOk = s => {
+  const c = cnpjClean(s);
+  if (!/^[A-Z0-9]{12}\d{2}$/.test(c) || /^(.)\1+$/.test(c)) return false;
+  const val = ch => ch.charCodeAt(0) - 48;
+  const dv = n => { let sum = 0, p = n - 7; for (let i = 0; i < n; i++) { sum += val(c[i]) * p--; if (p < 2) p = 9; } const r = sum % 11; return r < 2 ? 0 : 11 - r; };
+  return dv(12) === +c[12] && dv(13) === +c[13];
+};
 const F = [['f-emp', 'empresa', 'Razão social *', 'text'], ['f-cnpj', 'cnpj', 'CNPJ *', 'text'], ['f-cat', 'categoria', 'Fornece o quê? *', 'text'], ['f-mail', 'email', 'E-mail *', 'email'], ['f-tel', 'tel', 'Telefone *', 'tel']];
 class Component extends DCLogic {
   state = { v: {}, err: {}, lgpd: false, status: 'idle' };
@@ -93,6 +112,7 @@ class Component extends DCLogic {
     const v = this.state.v, err = {};
     F.forEach(([, k]) => { if (!(v[k] || '').trim()) err[k] = 'Campo obrigatório.'; });
     if (v.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.email)) err.email = 'E-mail inválido.';
+    if (v.cnpj && !cnpjOk(v.cnpj)) err.cnpj = 'CNPJ inválido. Confira os 14 caracteres (números ou letras e números).';
     if (!this.state.lgpd) err.lgpd = 'Autorize o uso dos dados.';
     if (Object.keys(err).length) return this.setState({ err });
     this.setState({ status: 'loading', err: {} });
@@ -107,7 +127,7 @@ class Component extends DCLogic {
   renderVals() {
     const { v, err } = this.state;
     return {
-      fields: F.map(([id, k, label, type]) => ({ id, label, type, val: v[k] || '', err: err[k] || '', inv: err[k] ? 'true' : 'false', bc: err[k] ? '#B3261E' : '#8C93B3', on: e => this.setState({ v: Object.assign({}, v, { [k]: e.target.value }), err: Object.assign({}, err, { [k]: '' }) }) })),
+      fields: F.map(([id, k, label, type]) => ({ id, label, type, ph: k === 'cnpj' ? '00.000.000/0000-00 ou 12.ABC.345/01DE-35' : '', val: v[k] || '', err: err[k] || '', inv: err[k] ? 'true' : 'false', bc: err[k] ? '#B3261E' : '#8C93B3', on: e => this.setState({ v: Object.assign({}, v, { [k]: k === 'cnpj' ? maskCnpj(e.target.value) : e.target.value }), err: Object.assign({}, err, { [k]: '' }) }) })),
       lgpd: this.state.lgpd, onLgpd: e => this.setState({ lgpd: e.target.checked }), lgpdErr: err.lgpd || '',
       submit: e => this.submit(e), done: this.state.status === 'done', notDone: this.state.status !== 'done',
       btn: this.state.status === 'loading' ? 'Enviando…' : 'Cadastrar empresa'

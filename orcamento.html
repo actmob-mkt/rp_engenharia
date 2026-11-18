@@ -175,10 +175,25 @@ const ASSUNTOS = [
 const TITLES = ['Qual é o assunto?', 'Seus dados de contato', 'Dados da empresa', 'Solução de interesse', 'Mensagem'];
 const LABELS = ['ASSUNTO', 'CONTATO', 'EMPRESA', 'SOLUÇÃO', 'MENSAGEM'];
 const maskTel = s => { const d = s.replace(/\D/g, '').slice(0, 11); if (d.length <= 2) return d ? '(' + d : ''; if (d.length <= 6) return '(' + d.slice(0, 2) + ') ' + d.slice(2); if (d.length <= 10) return '(' + d.slice(0, 2) + ') ' + d.slice(2, 6) + '-' + d.slice(6); return '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7); };
-const maskCnpj = s => { const d = s.replace(/\D/g, '').slice(0, 14); return d.replace(/^(\d{2})(\d)/, '$1.$2').replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3').replace(/\.(\d{3})(\d)/, '.$1/$2').replace(/(\d{4})(\d)/, '$1-$2'); };
+// CNPJ numérico ou alfanumérico (IN RFB 2.229/2024): 12 caracteres A-Z/0-9 + 2 dígitos verificadores
+const cnpjClean = s => String(s || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+const maskCnpj = s => {
+  const raw = cnpjClean(s); let c = '';
+  for (const ch of raw) { if (c.length >= 14) break; if (c.length >= 12 && !/\d/.test(ch)) continue; c += ch; }
+  let out = c.slice(0, 2);
+  if (c.length > 2) out += '.' + c.slice(2, 5);
+  if (c.length > 5) out += '.' + c.slice(5, 8);
+  if (c.length > 8) out += '/' + c.slice(8, 12);
+  if (c.length > 12) out += '-' + c.slice(12, 14);
+  return out;
+};
 const cnpjOk = s => {
-  const c = s.replace(/\D/g, ''); if (c.length !== 14 || /^(\d)\1+$/.test(c)) return false;
-  const calc = n => { let sum = 0, p = n - 7; for (let i = 0; i < n; i++) { sum += +c[i] * p--; if (p < 2) p = 9; } const r = sum % 11; return r < 2 ? 0 : 11 - r; };
+  const c = cnpjClean(s);
+  if (!/^[A-Z0-9]{12}\d{2}$/.test(c) || /^(.)\1+$/.test(c)) return false;
+  const val = ch => ch.charCodeAt(0) - 48;
+  const dv = n => { let sum = 0, p = n - 7; for (let i = 0; i < n; i++) { sum += val(c[i]) * p--; if (p < 2) p = 9; } const r = sum % 11; return r < 2 ? 0 : 11 - r; };
+  return dv(12) === +c[12] && dv(13) === +c[13];
+};
   return calc(12) === +c[12] && calc(13) === +c[13];
 };
 
@@ -205,7 +220,7 @@ class Component extends DCLogic {
     }
     if (step === 2) {
       if (!v.empresa.trim()) e.empresa = 'Informe a empresa.';
-      if (!cnpjOk(v.cnpj)) e.cnpj = 'CNPJ inválido. Confira os 14 dígitos.';
+      if (!cnpjOk(v.cnpj)) e.cnpj = 'CNPJ inválido. Confira os 14 caracteres (números ou letras e números).';
       if (!v.cidade.trim()) e.cidade = 'Informe a cidade.';
       if (!v.uf) e.uf = 'Selecione o estado.';
     }
@@ -256,7 +271,7 @@ class Component extends DCLogic {
       st1: step === 0, st2: step === 1, st3: step === 2, st4: step === 3, st5: step === 4,
       assuntos: ASSUNTOS.map(([t, d]) => { const c = v.assunto === t; return { t, d, checked: c, border: c ? '#0B1B5C' : err.assunto ? '#B3261E' : '#C9CCD8', bg: c ? '#EEF0F5' : '#FFFFFF', pick: () => this.set('assunto', t) }; }),
       f2: [fld('o-nome', 'nome', 'Nome *', { ac: 'name' }), fld('o-email', 'email', 'E-mail corporativo *', { type: 'email', ac: 'email', im: 'email' }), fld('o-tel', 'tel', 'Telefone / WhatsApp *', { type: 'tel', ac: 'tel', im: 'tel', ph: '(11) 99999-9999', mask: maskTel }), fld('o-cargo', 'cargo', 'Cargo', { ac: 'organization-title' })],
-      f3: [fld('o-emp', 'empresa', 'Empresa *', { ac: 'organization' }), fld('o-cnpj', 'cnpj', 'CNPJ *', { im: 'numeric', ph: '00.000.000/0000-00', mask: maskCnpj }), fld('o-cid', 'cidade', 'Cidade da obra *', { ac: 'address-level2' })],
+      f3: [fld('o-emp', 'empresa', 'Empresa *', { ac: 'organization' }), fld('o-cnpj', 'cnpj', 'CNPJ *', { im: 'text', ph: '00.000.000/0000-00 ou 12.ABC.345/01DE-35', mask: maskCnpj }), fld('o-cid', 'cidade', 'Cidade da obra *', { ac: 'address-level2' })],
       onUf: e => this.set('uf', e.target.value), ufInv: err.uf ? 'true' : 'false', ufBc: err.uf ? '#B3261E' : '#8C93B3',
       solOpts: solAll.map(o => { const c = v.sol.includes(o.k); return Object.assign({}, o, { checked: c, border: c ? '#0B1B5C' : '#C9CCD8', bg: c ? '#0B1B5C' : '#FFFFFF', fg: c ? '#FFFFFF' : '#0A1033', toggle: () => this.set('sol', c ? v.sol.filter(x => x !== o.k) : v.sol.concat(o.k)) }); }),
       onMsg: e => this.set('msg', e.target.value), msgInv: err.msg ? 'true' : 'false', msgBc: err.msg ? '#B3261E' : '#8C93B3',
