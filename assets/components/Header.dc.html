@@ -38,7 +38,7 @@
   </sc-if>
 </header>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;76px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;&quot;,&quot;quem&quot;,&quot;solucoes&quot;,&quot;segmentos&quot;,&quot;onde&quot;,&quot;esg&quot;,&quot;clientes&quot;,&quot;carreiras&quot;,&quot;universidade&quot;,&quot;blog&quot;,&quot;contato&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;76px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;&quot;,&quot;quem&quot;,&quot;solucoes&quot;,&quot;segmentos&quot;,&quot;onde&quot;,&quot;esg&quot;,&quot;clientes&quot;,&quot;carreiras&quot;,&quot;universidade&quot;,&quot;certificados&quot;,&quot;blog&quot;,&quot;contato&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   state = { w: typeof window !== 'undefined' ? window.innerWidth : 1440, open: false };
   componentDidMount() {
@@ -53,11 +53,10 @@ class Component extends DCLogic {
       ['solucoes', 'Soluções', 'solucoes.html'],
       ['segmentos', 'Segmentos', 'segmentos.html'],
       ['onde', 'Onde estamos', 'onde-estamos.html'],
-      ['esg', 'ESG', 'esg.html'],
-      ['clientes', 'Clientes', 'clientes.html'],
-      ['carreiras', 'Trabalhe conosco', 'trabalhe-conosco.html'],
       ['universidade', 'Universidade', 'universidade-corporativa.html'],
-      ['blog', 'Blog RP', 'blog.html'],
+      ['certificados', 'Certificados', 'certificados.html'],
+      ['carreiras', 'Trabalhe conosco', 'trabalhe-conosco.html'],
+      ['blog', 'Blog', 'blog.html'],
       ['contato', 'Contato', 'contato.html']
     ];
     const items = links.map(([k, label, href]) => ({
