@@ -20,6 +20,8 @@
     body{margin:0;background:#F4F4F1;color:#0A1033;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
     a{color:#0B1B5C}a:hover{color:#C24E00}
     :focus-visible{outline:3px solid #FF7A1A;outline-offset:3px}
+    .blog-sub{white-space:nowrap}
+    @media (max-width:760px){.blog-sub{white-space:normal}}
     @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
   </style>
 </helmet>
@@ -29,7 +31,7 @@
     <div style="max-width:1440px;margin:0 auto;padding:clamp(48px,7vw,104px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:20px;">
       <nav aria-label="Trilha" style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C93B3;"><a href="index.html" style="color:#8C93B3;">INÍCIO</a> / BLOG RP</nav>
       <h1 id="h1" style="font:800 clamp(38px,5.4vw,76px)/1.03 'Sora',sans-serif;letter-spacing:-.03em;margin:0;">Do campo para o blog</h1>
-      <p style="font-size:18px;line-height:1.6;color:#C9CEE0;margin:0;max-width:36em;">Notas técnicas, bastidores de obra e registros de treinamentos das equipes RP.</p>
+      <p class="blog-sub" style="font-size:18px;line-height:1.6;color:#C9CEE0;margin:0;">Notas técnicas, bastidores de obra e registros de treinamentos das equipes RP.</p>
     </div>
   </section>
   <section aria-label="Publicações" style="max-width:1440px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(28px,6vw,96px);">
@@ -55,9 +57,8 @@ class Component extends DCLogic {
   state = { ready: !!window.RP_DATA };
   componentDidMount() { const go = () => window.RP_DATA ? this.setState({ ready: true }) : (this.t = setTimeout(go, 40)); go(); }
   componentWillUnmount() { clearTimeout(this.t); }
-  renderVals() { return { posts: this.state.ready ? window.RP_DATA.posts.map(p => Object.assign({}, p, { categoria: p.categoria.toUpperCase(), data: p.data.toUpperCase(), href: 'blog-post.html?p=' + p.slug })) : [] }; }
+  renderVals() { return { posts: this.state.ready ? window.RP_DATA.posts.map(p => Object.assign({}, p, { categoria: p.categoria.toUpperCase(), data: p.data.toUpperCase(), href: p.pagina || ('blog-termografia-em-paineis.html?p=' + p.slug) })) : [] }; }
 }
 </script>
-<script src="assets/js/review-tool.js" data-project="RP Engenharia" data-html2canvas="assets/js/vendor/html2canvas.min.js" data-jspdf="assets/js/vendor/jspdf.umd.min.js" defer></script>
 </body>
 </html>

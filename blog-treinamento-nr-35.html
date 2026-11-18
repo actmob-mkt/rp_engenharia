@@ -3,217 +3,152 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Treinamento NR-35 com equipes de campo | Blog RP</title>
-<meta name="description" content="Artigo do Blog RP: engenharia industrial na prática.">
-<meta property="og:type" content="article">
-<meta property="og:image" content="assets/img-exemplo/blog.webp">
-<meta property="og:locale" content="pt_BR">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<script src="assets/js/main.js" defer></script>
-<script src="assets/js/blog-post.js" defer></script>
+<link rel="stylesheet" href="assets/css/base.css">
+<script src="assets/js/dc-runtime.js"></script>
 </head>
-<body>
-<header class="s0">
-  <a href="#conteudo" class="s1 h9">Pular para o conteúdo</a>
-  <div class="s2">
-    <a href="index.html" aria-label="RP Engenharia — página inicial" class="s3">
-      <img src="assets/logo-rp-header.png" alt="RP Engenharia — Montagem e Manutenção Industrial" width="1492" height="270" class="s4" style="height:40px;width:auto;max-width:min(240px,52vw);object-fit:contain;">
-    </a>
-    <div data-if="wide" class="s5">
-      <nav aria-label="Principal" class="s6">
-          <a href="quem-somos.html" class="s7 h6">Quem somos</a>
-          <a href="solucoes-eletrica.html" class="s7 h6">Soluções</a>
-          <a href="segmentos.html" class="s7 h6">Segmentos</a>
-          <a href="onde-estamos.html" class="s7 h6">Onde estamos</a>
-          <a href="esg.html" class="s7 h6">ESG</a>
-          <a href="clientes.html" class="s7 h6">Clientes</a>
-          <a href="trabalhe-conosco.html" class="s7 h6">Trabalhe conosco</a>
-          <a href="universidade-corporativa.html" class="s7 h6">Universidade</a>
-          <a href="blog.html" aria-current="page" class="s5x h6">Blog RP</a>
-          <a href="contato.html" class="s7 h6">Contato</a>
-        <a href="orcamento.html" class="s8 hb">Solicite orçamento</a>
-      </nav>
-    </div>
-    <div data-if="narrow" class="s5">
-      <button type="button" aria-expanded="false" aria-controls="menu-mobile" data-a="toggle openStr" class="s9">
-        <span class="sa"><span class="sb"></span><span class="sb"></span><span class="sb"></span></span>
-        <span data-t="menuLabel">Menu</span>
-      </button>
-    </div>
-  </div>
-  <div data-if="showMobile" hidden="" class="s5">
-    <nav id="menu-mobile" aria-label="Principal" class="sc">
-        <a href="quem-somos.html" class="sd">Quem somos<span class="se">●</span></a>
-        <a href="solucoes-eletrica.html" class="sd">Soluções<span class="se">●</span></a>
-        <a href="segmentos.html" class="sd">Segmentos<span class="se">●</span></a>
-        <a href="onde-estamos.html" class="sd">Onde estamos<span class="se">●</span></a>
-        <a href="esg.html" class="sd">ESG<span class="se">●</span></a>
-        <a href="clientes.html" class="sd">Clientes<span class="se">●</span></a>
-        <a href="trabalhe-conosco.html" class="sd">Trabalhe conosco<span class="se">●</span></a>
-        <a href="universidade-corporativa.html" class="sd">Universidade<span class="se">●</span></a>
-        <a href="blog.html" aria-current="page" class="sd">Blog RP<span class="su">●</span></a>
-        <a href="contato.html" class="sd">Contato<span class="se">●</span></a>
-      <a href="orcamento.html" class="sf">Solicite orçamento</a>
-    </nav>
-  </div></header><div aria-hidden="true" class="sfu">
-  <div data-a="barRef" class="sfv"></div></div><main id="conteudo">
+<body data-screen="Post do blog">
+<x-dc>
+<helmet>
+  <title>Treinamento NR-35 com equipes de campo | Blog RP</title>
+  <meta name="description" content="Artigo do Blog RP: engenharia industrial na prática.">
+  <meta property="og:type" content="article"><meta property="og:image" content="assets/img-exemplo/blog.webp"><meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="assets/data/site-data.js"></script>
+  <style>
+    body{margin:0;background:#F4F4F1;color:#0A1033;font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:#0B1B5C}a:hover{color:#C24E00}
+    :focus-visible{outline:3px solid #FF7A1A;outline-offset:3px}
+    @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+  </style>
+</helmet>
+<dc-import name="Header" active="blog" hint-size="100%,76px"></dc-import>
+<div aria-hidden="true" style="position:sticky;top:76px;z-index:40;height:3px;background:rgba(140,147,179,.25);">
+  <div ref="{{ barRef }}" style="height:3px;width:0;background:#FF7A1A;"></div>
+</div>
+<main id="conteudo">
+  <sc-if value="{{ found }}" hint-placeholder-val="{{ true }}">
     <article>
-      <header class="s7d">
-        <div class="sfw">
-          <nav aria-label="Trilha" class="sfx"><a href="index.html" class="s60">INÍCIO</a><span>/</span><a href="blog.html" class="s60">BLOG RP</a><span>/</span><span class="sfy">SEGURANÇA</span></nav>
-          <h1 class="sfz">Treinamento NR-35 com equipes de campo</h1>
-          <p class="sg0">Registro da turma de trabalho em altura realizada na matriz.</p>
-          <div class="sg1">
-            <span>SEGURANÇA DO TRABALHO RP</span><time>05 SET 2026</time><span>LEITURA · 3 MIN</span>
+      <header style="background:#060B26;color:#FFFFFF;">
+        <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,88px) clamp(28px,6vw,96px) clamp(40px,5vw,72px);display:flex;flex-direction:column;gap:22px;">
+          <nav aria-label="Trilha" style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C93B3;display:flex;flex-wrap:wrap;gap:6px;"><a href="index.html" style="color:#8C93B3;">INÍCIO</a><span>/</span><a href="blog.html" style="color:#8C93B3;">BLOG RP</a><span>/</span><span style="color:#FFB27A;">{{ post.catUp }}</span></nav>
+          <h1 style="font:800 clamp(34px,5vw,68px)/1.04 'Sora',sans-serif;letter-spacing:-.03em;margin:0;max-width:16em;text-wrap:balance;">{{ post.titulo }}</h1>
+          <p style="font-size:clamp(17px,1.5vw,20px);line-height:1.55;color:#C9CEE0;margin:0;max-width:36em;">{{ post.resumo }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px 28px;font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#C9CEE0;border-top:1px solid #1C2450;padding-top:18px;">
+            <span>{{ post.autorUp }}</span><time>{{ post.dataUp }}</time><span>LEITURA · {{ post.leituraUp }}</span>
           </div>
         </div>
       </header>
-      <div class="sg2">
-        <div class="sg3">
-          <div class="sg4"><img src="assets/img-exemplo/conecte.webp" alt="" class="s38"></div>
+      <div style="background:linear-gradient(#060B26 50%,#F4F4F1 50%);">
+        <div style="max-width:1200px;margin:0 auto;padding:0 clamp(28px,6vw,96px);">
+          <div style="background:#0B1B5C;aspect-ratio:21/9;overflow:hidden;"><img src="{{ post.foto }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.15);mix-blend-mode:luminosity;opacity:.92;"></img></div>
         </div>
       </div>
-      <div class="sg5">
-        <div data-a="bodyRef" class="sg6">
-            <p class="sg7">Mais uma turma de colaboradores concluiu o treinamento de trabalho em altura na matriz, em Mogi das Cruzes. A capacitação combinou teoria, análise de risco e prática com equipamentos de proteção.</p>
-              <figure class="sgc">
-                <div class="sgd"><img src="assets/img-exemplo/estrutura-07.webp" alt="Turma com certificados ao final do treinamento." loading="lazy" class="s38"></div>
-                <figcaption class="sge">Turma com certificados ao final do treinamento.</figcaption>
+
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(28px,6vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:48px;align-items:start;">
+        <div ref="{{ bodyRef }}" style="grid-column:span 2;min-width:0;max-width:720px;display:flex;flex-direction:column;gap:22px;">
+          <sc-for list="{{ blocks }}" as="b" hint-placeholder-count="5">
+            <sc-if value="{{ b.isP }}" hint-placeholder-val="{{ true }}"><p style="font-size:18px;line-height:1.75;color:#1E2648;margin:0;text-wrap:pretty;">{{ b.texto }}</p></sc-if>
+            <sc-if value="{{ b.isH2 }}" hint-placeholder-val="{{ false }}"><h2 style="font:700 clamp(22px,2.2vw,28px)/1.25 'Sora',sans-serif;margin:18px 0 0;">{{ b.texto }}</h2></sc-if>
+            <sc-if value="{{ b.isUl }}" hint-placeholder-val="{{ false }}">
+              <ul style="list-style:none;margin:0;padding:0;border-top:1px solid #0A1033;">
+                <sc-for list="{{ b.itens }}" as="i" hint-placeholder-count="3"><li style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #C9CCD8;font-size:17px;line-height:1.5;"><span style="width:9px;height:9px;transform:rotate(45deg);background:#FF7A1A;flex-shrink:0;margin-top:8px;"></span>{{ i }}</li></sc-for>
+              </ul>
+            </sc-if>
+            <sc-if value="{{ b.isQuote }}" hint-placeholder-val="{{ false }}"><blockquote style="margin:12px 0;padding:6px 0 6px 28px;border-left:3px solid #FF7A1A;font:600 clamp(20px,2vw,26px)/1.4 'Sora',sans-serif;color:#0B1B5C;text-wrap:balance;">{{ b.texto }}</blockquote></sc-if>
+            <sc-if value="{{ b.isImg }}" hint-placeholder-val="{{ false }}">
+              <figure style="margin:12px 0;display:flex;flex-direction:column;gap:10px;">
+                <div style="background:#0B1B5C;aspect-ratio:16/9;overflow:hidden;"><img src="{{ b.src }}" alt="{{ b.legenda }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.15);mix-blend-mode:luminosity;opacity:.92;"></img></div>
+                <figcaption style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.04em;color:#4A5275;">{{ b.legenda }}</figcaption>
               </figure>
-            <p class="sg7">Treinamentos como este são custeados pela RP e fazem parte da integração de toda nova equipe de campo.</p>
+            </sc-if>
+          </sc-for>
         </div>
-        <aside class="sgf">
-          <div class="s7o">
-            <span class="s1l">COMPARTILHAR</span>
-            <div class="s22">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=about%3Asrcdoc" target="_blank" rel="noopener" data-a="shareIn" class="sgg he">LinkedIn</a>
-              <a href="https://wa.me/?text=Treinamento%20NR-35%20com%20equipes%20de%20campo%20about%3Asrcdoc" target="_blank" rel="noopener" data-a="shareWa" class="sgg he">WhatsApp</a>
-              <button type="button" data-a="copy" class="sgh"><span data-t="copyLabel">Copiar link</span></button>
+        <aside style="position:sticky;top:110px;display:flex;flex-direction:column;gap:24px;">
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#4A5275;">COMPARTILHAR</span>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <a href="{{ shareIn }}" target="_blank" rel="noopener" style="min-height:44px;padding:0 14px;display:flex;align-items:center;border:1px solid #0B1B5C;color:#0B1B5C;text-decoration:none;font-weight:600;font-size:14px;" style-hover="background:#0B1B5C;color:#FFFFFF;">LinkedIn</a>
+              <a href="{{ shareWa }}" target="_blank" rel="noopener" style="min-height:44px;padding:0 14px;display:flex;align-items:center;border:1px solid #0B1B5C;color:#0B1B5C;text-decoration:none;font-weight:600;font-size:14px;" style-hover="background:#0B1B5C;color:#FFFFFF;">WhatsApp</a>
+              <button type="button" onClick="{{ copy }}" style="min-height:44px;padding:0 14px;border:1px solid #0B1B5C;background:#FFFFFF;color:#0B1B5C;font:600 14px 'Inter',sans-serif;cursor:pointer;">{{ copyLabel }}</button>
             </div>
           </div>
-          <div class="sgi">
-            <span class="s2g">FALE COM UM ESPECIALISTA</span>
-            <p class="sgj">Tem uma demanda parecida na sua planta?</p>
-            <a href="orcamento.html" class="s5d h0">Solicitar orçamento</a>
+          <div style="background:#0B1B5C;color:#FFFFFF;padding:28px;display:flex;flex-direction:column;gap:14px;">
+            <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#FFB27A;">FALE COM UM ESPECIALISTA</span>
+            <p style="font:700 21px/1.3 'Sora',sans-serif;margin:0;">Tem uma demanda parecida na sua planta?</p>
+            <a href="orcamento.html" style="align-self:flex-start;background:#FF7A1A;color:#0A1033;font-weight:600;font-size:15px;padding:14px 20px;text-decoration:none;" style-hover="background:#FF934A;color:#0A1033;">Solicitar orçamento</a>
           </div>
         </aside>
       </div>
     </article>
-    <section aria-labelledby="h-rel" class="sdj">
-      <div class="sgk">
-        <div class="sgl">
-          <h2 id="h-rel" class="sgm">Continue lendo</h2>
-          <a href="blog.html" class="s9j">Todos os posts →</a>
+
+    <section aria-labelledby="h-rel" style="background:#FFFFFF;border-top:1px solid #DADCE3;">
+      <div style="max-width:1200px;margin:0 auto;padding:clamp(48px,6vw,88px) clamp(28px,6vw,96px);">
+        <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:32px;">
+          <h2 id="h-rel" style="font:700 clamp(26px,3vw,40px)/1.1 'Sora',sans-serif;margin:0;">Continue lendo</h2>
+          <a href="blog.html" style="font-weight:600;font-size:15px;">Todos os posts →</a>
         </div>
-        <div class="s4r">
-            <a href="blog-termografia-em-paineis.html" class="sgn h6">
-              <div class="s4t"><img src="assets/img-exemplo/instrumentacao.webp" alt="" loading="lazy" class="s38"></div>
-              <span class="s4u">ELÉTRICA · 08 OUT 2026</span>
-              <span class="sgo">Termografia em painéis: o que o laudo precisa mostrar</span>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:32px;">
+          <sc-for list="{{ related }}" as="r" hint-placeholder-count="2">
+            <a href="{{ r.href }}" style="display:flex;flex-direction:column;gap:12px;text-decoration:none;color:#0A1033;" style-hover="color:#C24E00;">
+              <div style="background:#0B1B5C;aspect-ratio:16/10;overflow:hidden;"><img src="{{ r.foto }}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.15);mix-blend-mode:luminosity;opacity:.92;"></img></div>
+              <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.08em;color:#4A5275;">{{ r.cat }} · {{ r.dat }}</span>
+              <span style="font:600 22px/1.25 'Sora',sans-serif;text-wrap:balance;">{{ r.titulo }}</span>
             </a>
-            <a href="blog-obra-civil-em-planta-operando.html" class="sgn h6">
-              <div class="s4t"><img src="assets/img-exemplo/civil.webp" alt="" loading="lazy" class="s38"></div>
-              <span class="s4u">CIVIL · 22 SET 2026</span>
-              <span class="sgo">Obra civil em planta operando: 5 cuidados de planejamento</span>
-            </a>
+          </sc-for>
         </div>
       </div>
     </section>
-  </main><footer class="s56">
-  <div class="s57">
-    <div class="s58">
-      <span class="s59"></span>
-      <span class="s5a"></span>
-    </div>
-    <div class="s5b">
-      <div class="s2z">
-        <a href="index.html" aria-label="RP Engenharia — página inicial" style="align-self:flex-start;display:block;"><img src="assets/logo-rp-footer.png" alt="RP Engenharia" width="496" height="293" style="height:64px;width:auto;display:block;"></a>
-        <p class="s5c">Elétrica, mecânica, civil e instrumentação. Uma entrega.</p>
-        <a href="orcamento.html" class="s5d hb">Solicite um orçamento</a>
-      </div>
-      <address class="s5e">
-        <span class="s5f">MATRIZ</span>
-        <span>R. João de Pina, 220 - Jardim Pte. Grande<br>Mogi das Cruzes - SP, 08770-480</span>
-        <a href="mailto:comercial@rpengenhariaindustrial.com.br" class="s5g">comercial@rpengenhariaindustrial.com.br</a>
-        <a href="tel:+551147919300" class="s5h">(11) 4791-9300</a>
-      </address>
-      <nav aria-label="Rodapé" class="s5i">
-        <span class="s5f">EMPRESA</span>
-        <a href="quem-somos.html" class="s5j hc">Quem somos</a>
-        <a href="solucoes-eletrica.html" class="s5j hc">Soluções</a>
-        <a href="onde-estamos.html" class="s5j hc">Onde estamos</a>
-        <a href="onde-estamos.html#sedes" class="s5j hc">Sedes</a>
-        <a href="esg.html" class="s5j hc">ESG e Gestão Integrada</a>
-        <a href="trabalhe-conosco.html" class="s5j hc">Trabalhe conosco</a>
-        <a href="universidade-corporativa.html" class="s5j hc">Universidade Corporativa</a>
-        <a href="contato.html#fornecedor" class="s5j hc">Quero ser fornecedor</a>
-      </nav>
-      <div class="s5i">
-        <span class="s5f">LEGAL E REDES</span>
-        <a href="https://www.rpengenhariaindustrial.com.br/acessibilidade" class="s5j hc">Acessibilidade</a>
-        <a href="https://www.rpengenhariaindustrial.com.br/pol%C3%ADtica-de-privacidade" class="s5j hc">Política de Privacidade</a>
-        <div class="s5k">
-          <a href="https://www.instagram.com/rpengenhariaindustrial/" aria-label="Instagram da RP Engenharia" class="s5l hd">IG</a>
-          <a href="https://www.facebook.com/profile.php?id=61570614443501" aria-label="Facebook da RP Engenharia" class="s5l hd">FB</a>
-          <a href="https://www.linkedin.com/company/rp-engenharia-ltda/posts/?feedView=all" aria-label="LinkedIn da RP Engenharia" class="s5l hd">IN</a>
-        </div>
-      </div>
-    </div>
- <div class="rpx6">
-<div class="rpx7">
-<span class="rpx8">SEDES</span>
-<a class="rpx9" href="onde-estamos.html#sedes">Ver todas as unidades →</a>
-</div>
-<ul aria-label="Sedes da RP Engenharia" class="rpx10">
-<li class="rpx11">
-<span class="rpx12">SEDE · DF</span>
-<strong class="rpx13">Brasília</strong>
-<address class="rpx14">SGAS 915, Conjunto B, Bloco D, Sala 103 (parte), CH 121715<br/>Edifício Office Center, SGAS 915, Lote 71<br/>Asa Sul, Brasília - DF, 70390-150</address>
-<a class="rpx15" href="https://www.google.com/maps/search/?api=1&amp;query=Edif%C3%ADcio%20Office%20Center%2C%20SGAS%20915%20Lote%2071%2C%20Asa%20Sul%2C%20Bras%C3%ADlia%20-%20DF%2C%2070390-150" rel="noopener" target="_blank">Como chegar ↗</a>
-</li>
-<li class="rpx11">
-<span class="rpx12">SEDE · SP</span>
-<strong class="rpx13">Santos</strong>
-<address class="rpx14">Av. Conselheiro Nébias, 444, sala 907<br/>Encruzilhada, Santos - SP, 11045-000</address>
-<a class="rpx15" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Conselheiro%20N%C3%A9bias%2C%20444%20-%20Encruzilhada%2C%20Santos%20-%20SP%2C%2011045-000" rel="noopener" target="_blank">Como chegar ↗</a>
-</li>
-<li class="rpx11">
-<span class="rpx12">SEDE · PE</span>
-<strong class="rpx13">Recife</strong>
-<address class="rpx14">Av. República do Líbano, 251, Sala 2205, Torre A<br/>Empresarial RioMar Trade Center, Pina<br/>Recife - PE, 51110-160 · Caixa Postal 120832</address>
-<a class="rpx15" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20Rep%C3%BAblica%20do%20L%C3%ADbano%2C%20251%2C%20Empresarial%20RioMar%20Trade%20Center%2C%20Pina%2C%20Recife%20-%20PE%2C%2051110-160" rel="noopener" target="_blank">Como chegar ↗</a>
-</li>
-<li class="rpx11">
-<span class="rpx12">SEDE · MG</span>
-<strong class="rpx13">Belo Horizonte</strong>
-<address class="rpx14">Rua Rio Grande do Norte, 1435, sala 708<br/>Funcionários, Belo Horizonte - MG, 30130-138</address>
-<a class="rpx15" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20Rio%20Grande%20do%20Norte%2C%201435%2C%20Funcion%C3%A1rios%2C%20Belo%20Horizonte%20-%20MG%2C%2030130-138" rel="noopener" target="_blank">Como chegar ↗</a>
-</li>
-</ul>
-</div>
+  </sc-if>
 
-    <div class="s5m">
-      <div class="s5n"><span class="s5o">ISO 14001</span><span class="s5p">MEIO AMBIENTE</span></div>
-      <div class="s5n"><span class="s5o">ISO 45001</span><span class="s5p">SAÚDE E SEGURANÇA</span></div>
-    </div>
- <div class="rpx1">
-<span class="rpx2">© 2026 RP Engenharia Industrial. Todos os direitos reservados.</span>
-<button class="rpx3" data-a="reopen" type="button">Preferências de cookies</button>
-<a aria-label="Desenvolvido por Actmob" class="rpx4" href="https://actmobmarketingdigital.com.br" rel="noopener" target="_blank"><img alt="Desenvolvido por Actmob" class="rpx5" height="37" src="assets/desenvolvido-por-actmob.png" width="107"/></a>
-</div>
-  </div>
-  <div data-if="showCookies" hidden="" class="s5">
-    <div role="dialog" aria-live="polite" aria-label="Aviso de cookies" class="s5s">
-      <p class="s5t">Usamos cookies essenciais para o funcionamento do site e, com sua permissão, cookies de medição de audiência. Saiba mais na <a href="https://www.rpengenhariaindustrial.com.br/pol%C3%ADtica-de-privacidade" class="s5u">Política de Privacidade</a>.</p>
-      <div class="s22">
-        <button type="button" data-a="acceptAll" class="s5v">Aceitar todos</button>
-        <button type="button" data-a="acceptEssential" class="s5w">Somente essenciais</button>
+  <sc-if value="{{ notFound }}" hint-placeholder-val="{{ false }}">
+    <section style="background:#060B26;color:#FFFFFF;min-height:60vh;display:flex;align-items:center;">
+      <div style="max-width:1200px;margin:0 auto;padding:80px clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:20px;">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#FFB27A;">CIRCUITO ABERTO · 404</span>
+        <h1 style="font:800 clamp(34px,5vw,64px)/1.05 'Sora',sans-serif;margin:0;">Post não encontrado.</h1>
+        <a href="blog.html" style="color:#FFFFFF;font-weight:600;">Voltar para o Blog RP →</a>
       </div>
-    </div>
-  </div></footer>
+    </section>
+  </sc-if>
+</main>
+<dc-import name="Footer" hint-size="100%,640px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const POST_SLUG = 'treinamento-nr-35';
+class Component extends DCLogic {
+  state = { ready: !!window.RP_DATA, copied: false };
+  barRef = React.createRef(); bodyRef = React.createRef();
+  componentDidMount() {
+    const go = () => window.RP_DATA ? this.setState({ ready: true }) : (this.t = setTimeout(go, 40)); go();
+    this.onScroll = () => {
+      const b = this.bodyRef.current, bar = this.barRef.current; if (!b || !bar) return;
+      const r = b.getBoundingClientRect(), total = r.height - window.innerHeight * 0.6;
+      const k = Math.max(0, Math.min(1, (window.innerHeight * 0.4 - r.top) / Math.max(1, total)));
+      bar.style.width = (k * 100).toFixed(1) + '%';
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+  }
+  componentWillUnmount() { clearTimeout(this.t); window.removeEventListener('scroll', this.onScroll); }
+  renderVals() {
+    const D = window.RP_DATA;
+    if (!this.state.ready) return { found: true, notFound: false, post: {}, blocks: [], related: [], barRef: this.barRef, bodyRef: this.bodyRef };
+    const slug = new URLSearchParams(location.search).get('p') || (typeof POST_SLUG !== 'undefined' && POST_SLUG) || D.posts[0].slug;
+    const p = D.posts.find(x => x.slug === slug);
+    if (!p) return { found: false, notFound: true, barRef: this.barRef, bodyRef: this.bodyRef, post: {}, blocks: [], related: [] };
+    document.title = p.titulo + ' | Blog RP';
+    const url = location.href;
+    const blocks = ((D.postsCorpo || {})[p.slug] || [{ t: 'p', texto: p.resumo }]).map(b => Object.assign({ isP: b.t === 'p', isH2: b.t === 'h2', isUl: b.t === 'ul', isQuote: b.t === 'citacao', isImg: b.t === 'img', itens: [] }, b));
+    return {
+      found: true, notFound: false, barRef: this.barRef, bodyRef: this.bodyRef, blocks,
+      post: Object.assign({}, p, { catUp: p.categoria.toUpperCase(), dataUp: p.data.toUpperCase(), autorUp: (p.autor || 'RP Engenharia').toUpperCase(), leituraUp: (p.leitura || '').toUpperCase() }),
+      related: D.posts.filter(x => x.slug !== p.slug).map(x => ({ titulo: x.titulo, foto: x.foto, cat: x.categoria.toUpperCase(), dat: x.data.toUpperCase(), href: x.pagina || ('blog-termografia-em-paineis.html?p=' + x.slug) })),
+      shareIn: 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(url),
+      shareWa: 'https://wa.me/?text=' + encodeURIComponent(p.titulo + ' ' + url),
+      copyLabel: this.state.copied ? 'Link copiado ✓' : 'Copiar link',
+      copy: () => { try { navigator.clipboard.writeText(url); } catch (e) {} this.setState({ copied: true }); setTimeout(() => this.setState({ copied: false }), 2000); }
+    };
+  }
+}
+</script>
 </body>
 </html>

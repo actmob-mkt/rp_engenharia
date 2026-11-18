@@ -1,42 +1,17 @@
-# RP Engenharia Industrial — site estático
+# RP Engenharia — site exportado
 
-HTML, CSS e JavaScript puros, sem framework e sem etapa de build. Basta publicar a pasta num servidor (Apache, Nginx, Netlify, Vercel, Hostinger etc.).
+Gerado a partir das páginas do canvas de design (mesmo conteúdo e comportamento).
 
 ## Estrutura
-- `index.html` — Home
-- `quem-somos.html`, `segmentos.html`, `onde-estamos.html`, `esg.html`, `clientes.html`
-- `solucoes-eletrica.html`, `solucoes-mecanica.html`, `solucoes-civil.html`, `solucoes-instrumentacao.html`, `solucoes-facilities.html`
-- `blog.html` e um arquivo por post: `blog-<slug>.html`
-- `trabalhe-conosco.html`, `orcamento.html`, `contato.html`
-- `universidade-corporativa.html` — hot site da Universidade Corporativa (o botão "Acessar a plataforma" está com `href="#"`: troque pela URL da plataforma)
-- `assets/css/style.css` — estilos base + classes geradas a partir do layout (`.sNN`) e estados de hover (`.hNN`)
-- `assets/js/main.js` — menu mobile, aviso de cookies, utilitários
-- `assets/js/universidade.js` — perguntas frequentes da Universidade Corporativa
-- `assets/js/home.js`, `assets/js/quem-somos.js`, `assets/js/onde-estamos.js`, `assets/js/blog-post.js`, `assets/js/orcamento.js`, `assets/js/contato.js`, `assets/js/trabalhe-conosco.js`
-- `assets/js/data/site-data.js` — configuração e dados (endereços das filiais, endpoints de formulário)
-- `assets/` — logos (`logo-rp-header.png`, `logo-rp-footer.png`), fotos, logos de clientes e selos ISO
+- `*.html` — páginas (index.html é a Home; certificados.html é nova)
+- `assets/components/` — Header e Footer, carregados por todas as páginas
+- `assets/js/dc-runtime.js` — runtime que monta as páginas (abas, filtros, mapa, contadores, formulários)
+- `assets/js/vendor/` — React e Babel locais (não depende de CDN)
+- `assets/data/` — dados do site (números, unidades, soluções, mapa)
+- `assets/css/base.css`, imagens em `assets/img-*`, `assets/clientes`, logos
 
-## Formulários
-Sem endpoint configurado, os formulários rodam em **modo demonstração** (simulam o envio).
-Para ativar o envio real, preencha em `assets/js/data/site-data.js`:
-- `config.endpointOrcamento` — usado por Orçamento e Contato (fornecedores)
-- `config.endpointCurriculo` — usado por Trabalhe conosco (multipart, com arquivo)
+## Como publicar
+Suba a pasta inteira em qualquer hospedagem estática (Apache, Nginx, Netlify, GitHub Pages etc.).
+As páginas precisam ser abertas por http(s); abrindo o arquivo direto do computador (file://) o Header e o Footer não carregam.
+Para testar localmente: `python3 -m http.server` dentro da pasta e abra http://localhost:8000.
 
-Qualquer serviço que aceite `POST` com `FormData` funciona (Formspree, Getform, backend próprio).
-
-## Ganchos de JavaScript
-Elementos dinâmicos usam atributos:
-- `data-if="nome"` — bloco mostrado/ocultado via `hidden`
-- `data-t="nome"` — texto atualizado por script
-- `data-a="nome"` — elemento com comportamento (clique, estilo dinâmico)
-
-Não remova esses atributos ao editar o HTML.
-
-## Pendências de conteúdo
-Os textos marcados `// EXEMPLO` em `assets/js/data/site-data.js` e os números/unidades exibidos nas páginas ainda são dados de exemplo.
-Créditos e licenças das fotos: `assets/img-exemplo/CREDITOS.md`.
-
-## Unidades e sedes
-- Dados das filiais (endereço, telefone, horário e foto de cada estado) ficam em `assets/js/data/site-data.js`, na lista `filiais`.
-- Os endereços das sedes (página Onde estamos e Home) estão escritos direto no HTML.
-- Fotos marcadas como "FOTO ILUSTRATIVA" são provisórias: troque o arquivo em `assets/img-exemplo/` ou o campo `foto` da filial.

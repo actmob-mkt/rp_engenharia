@@ -22,6 +22,9 @@
     :focus-visible{outline:3px solid #FF7A1A;outline-offset:3px}
     .uc-ben{grid-template-columns:repeat(3,minmax(0,1fr))}
     .uc-steps{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .uc-tri{grid-template-columns:minmax(0,4fr) minmax(0,6fr) minmax(0,3fr)}
+    .uc-tag{justify-self:end;white-space:nowrap}
+    @media (max-width:900px){.uc-tri{grid-template-columns:1fr;align-items:start}.uc-tag{justify-self:start}}
     @media (max-width:1080px){.uc-steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media (max-width:900px){.uc-ben{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media (max-width:600px){.uc-ben,.uc-steps{grid-template-columns:1fr}}
@@ -130,7 +133,7 @@
         <li style="padding:32px 28px 32px 0;border-bottom:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;gap:14px;">
           <span style="font:800 56px/1 'Sora',sans-serif;color:#FF7A1A;">1</span>
           <h3 style="font:700 22px/1.2 'Sora',sans-serif;margin:0;">Receba seu acesso</h3>
-          <p style="font-size:16px;line-height:1.6;color:#D5D9EA;margin:0;">Na admissão, o RH cadastra você na plataforma. Login e senha chegam por e-mail ou WhatsApp.</p>
+          <p style="font-size: 16px; line-height: 1.6; color: #D5D9EA; margin: 0; width: 242px">Na admissão, o RH cadastra você na plataforma. Login e senha chegam por e-mail ou WhatsApp.</p>
         </li>
         <li style="padding:32px 28px 32px 0;border-bottom:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;gap:14px;">
           <span style="font:800 56px/1 'Sora',sans-serif;color:#FF7A1A;">2</span>
@@ -156,30 +159,30 @@
     <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#4A5275;">03 — TRILHAS</span>
     <h2 id="h-tri" style="font:700 clamp(32px,4.4vw,60px)/1.05 'Sora',sans-serif;letter-spacing:-.025em;margin:16px 0 48px;max-width:14em;text-wrap:balance;">O que você vai aprender.</h2>
     <div style="display:flex;flex-direction:column;border-top:1px solid #0A1033;">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px 32px;padding:32px 0;border-bottom:1px solid #C9CCD8;align-items:start;">
+      <div class="uc-tri" style="display:grid;gap:16px clamp(32px,4vw,72px);padding:clamp(32px,3.2vw,44px) 0;border-bottom:1px solid #C9CCD8;align-items:center;">
         <div style="display:flex;align-items:baseline;gap:16px;"><span style="font:500 13px 'IBM Plex Mono',monospace;color:#C24E00;">T-01</span><h3 style="font:700 26px/1.15 'Sora',sans-serif;margin:0;">Integração RP</h3></div>
         <p style="font-size:16px;line-height:1.6;color:#3A4266;margin:0;">História e valores, código de conduta, LGPD, canais de comunicação e o dia a dia nas bases.</p>
-        <span style="justify-self:start;font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;background:#0B1B5C;color:#FFFFFF;padding:8px 12px;">TODOS OS COLABORADORES</span>
+        <span class="uc-tag" style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;background:#0B1B5C;color:#FFFFFF;padding:8px 12px;">TODOS OS COLABORADORES</span>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px 32px;padding:32px 0;border-bottom:1px solid #C9CCD8;align-items:start;">
+      <div class="uc-tri" style="display:grid;gap:16px clamp(32px,4vw,72px);padding:clamp(32px,3.2vw,44px) 0;border-bottom:1px solid #C9CCD8;align-items:center;">
         <div style="display:flex;align-items:baseline;gap:16px;"><span style="font:500 13px 'IBM Plex Mono',monospace;color:#C24E00;">T-02</span><h3 style="font:700 26px/1.15 'Sora',sans-serif;margin:0;">Segurança e NRs</h3></div>
         <p style="font-size:16px;line-height:1.6;color:#3A4266;margin:0;">Teoria de NR-06, NR-10, NR-12, NR-33 e NR-35, DDS, APR e permissão de trabalho. A prática é feita em campo.</p>
-        <span style="justify-self:start;font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;background:#0B1B5C;color:#FFFFFF;padding:8px 12px;">CONFORME A FUNÇÃO</span>
+        <span class="uc-tag" style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;background:#0B1B5C;color:#FFFFFF;padding:8px 12px;">CONFORME A FUNÇÃO</span>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px 32px;padding:32px 0;border-bottom:1px solid #C9CCD8;align-items:start;">
+      <div class="uc-tri" style="display:grid;gap:16px clamp(32px,4vw,72px);padding:clamp(32px,3.2vw,44px) 0;border-bottom:1px solid #C9CCD8;align-items:center;">
         <div style="display:flex;align-items:baseline;gap:16px;"><span style="font:500 13px 'IBM Plex Mono',monospace;color:#C24E00;">T-03</span><h3 style="font:700 26px/1.15 'Sora',sans-serif;margin:0;">Gestão Integrada</h3></div>
         <p style="font-size:16px;line-height:1.6;color:#3A4266;margin:0;">Como funcionam a ISO 14001 e a ISO 45001 na prática: resíduos, aspectos ambientais, riscos e registros.</p>
-        <span style="justify-self:start;font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;background:#0B1B5C;color:#FFFFFF;padding:8px 12px;">TODOS OS COLABORADORES</span>
+        <span class="uc-tag" style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;background:#0B1B5C;color:#FFFFFF;padding:8px 12px;">TODOS OS COLABORADORES</span>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px 32px;padding:32px 0;border-bottom:1px solid #C9CCD8;align-items:start;">
+      <div class="uc-tri" style="display:grid;gap:16px clamp(32px,4vw,72px);padding:clamp(32px,3.2vw,44px) 0;border-bottom:1px solid #C9CCD8;align-items:center;">
         <div style="display:flex;align-items:baseline;gap:16px;"><span style="font:500 13px 'IBM Plex Mono',monospace;color:#C24E00;">T-04</span><h3 style="font:700 26px/1.15 'Sora',sans-serif;margin:0;">Técnica por disciplina</h3></div>
         <p style="font-size:16px;line-height:1.6;color:#3A4266;margin:0;">Elétrica, mecânica, civil e instrumentação: procedimentos, ferramentas e boas práticas do padrão RP.</p>
-        <span style="justify-self:start;font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;background:#FF7A1A;color:#0A1033;padding:8px 12px;">EQUIPES DE CAMPO</span>
+        <span class="uc-tag" style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;background:#FF7A1A;color:#0A1033;padding:8px 12px;">EQUIPES DE CAMPO</span>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px 32px;padding:32px 0;border-bottom:1px solid #C9CCD8;align-items:start;">
+      <div class="uc-tri" style="display:grid;gap:16px clamp(32px,4vw,72px);padding:clamp(32px,3.2vw,44px) 0;border-bottom:1px solid #C9CCD8;align-items:center;">
         <div style="display:flex;align-items:baseline;gap:16px;"><span style="font:500 13px 'IBM Plex Mono',monospace;color:#C24E00;">T-05</span><h3 style="font:700 26px/1.15 'Sora',sans-serif;margin:0;">Liderança de equipe</h3></div>
         <p style="font-size:16px;line-height:1.6;color:#3A4266;margin:0;">Para quem vai ser ou já é encarregado: planejamento da frente, comunicação, segurança da equipe e indicadores.</p>
-        <span style="justify-self:start;font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;background:#FF7A1A;color:#0A1033;padding:8px 12px;">ENCARREGADOS E LÍDERES</span>
+        <span class="uc-tag" style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.06em;background:#FF7A1A;color:#0A1033;padding:8px 12px;">ENCARREGADOS E LÍDERES</span>
       </div>
     </div>
   </section>
@@ -187,7 +190,7 @@
   <!-- DUPLO GANHO -->
   <section aria-labelledby="h-duo" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));background:#FFFFFF;border-top:1px solid #DADCE3;">
     <div style="background:#0B1B5C;min-height:420px;position:relative;overflow:hidden;">
-      <img src="assets/img-exemplo/estrutura-07.webp" alt="Turma de colaboradores da RP com certificados de treinamento" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1);mix-blend-mode:luminosity;opacity:.92;"></img>
+      <img src="assets/img-exemplo/estrutura-07.webp" alt="Turma de colaboradores da RP com certificados de treinamento" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1);mix-blend-mode:luminosity;opacity:.92;">
     </div>
     <div style="padding:clamp(56px,7vw,96px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:28px;justify-content:center;">
       <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#C24E00;">04 — GANHA TODO MUNDO</span>
@@ -228,13 +231,13 @@
 
   <!-- CTA FINAL -->
   <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));">
-    <a href="{{ plataforma }}" target="_blank" rel="noopener" style="background:#FF7A1A;color:#0A1033;text-decoration:none;padding:clamp(48px,6vw,80px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:10px;" style-hover="background:#FF8C3A;color:#0A1033;"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;">JÁ É DA RP</span><span style="font:800 clamp(28px,3.4vw,48px)/1.05 'Sora',sans-serif;">Acessar minha trilha ↗</span></a>
-    <a href="trabalhe-conosco.html" style="background:#060B26;color:#FFFFFF;text-decoration:none;padding:clamp(48px,6vw,80px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:10px;" style-hover="background:#0B1440;color:#FFFFFF;"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C93B3;">AINDA NÃO É</span><span style="font:800 clamp(28px,3.4vw,48px)/1.05 'Sora',sans-serif;">Ver vagas abertas →</span></a>
+    <a href="{{ plataforma }}" target="_blank" rel="noopener" style="background: #FF7A1A; color: #0A1033; text-decoration: none; padding: clamp(48px,6vw,80px) clamp(28px,6vw,96px); display: flex; flex-direction: column; gap: 10px; min-width: 0" style-hover="background:#FF8C3A;color:#0A1033;"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;">JÁ É DA RP</span><span style="font:800 clamp(24px,3.2vw,48px)/1.05 'Sora',sans-serif;white-space:nowrap;">Acessar minha trilha ↗</span></a>
+    <a href="trabalhe-conosco.html" style="background:#060B26;color:#FFFFFF;text-decoration:none;padding:clamp(48px,6vw,80px) clamp(28px,6vw,96px);display:flex;flex-direction:column;gap:10px;" style-hover="background:#0B1440;color:#FFFFFF;"><span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C93B3;">AINDA NÃO É</span><span style="font:800 clamp(24px,3.2vw,48px)/1.05 'Sora',sans-serif;white-space:nowrap;">Ver vagas abertas →</span></a>
   </section>
 </main>
 <dc-import name="Footer" hint-size="100%,640px"></dc-import>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"plataformaUrl":{"editor":"text","default":"#","tsType":"string","section":"Plataforma"}}'>
+<script type="text/x-dc" data-dc-script data-props='{"plataformaUrl":{"editor":"text","default":"https://rpengenharia.crescamais.com/","tsType":"string","section":"Plataforma"}}'>
 const FAQ = [
   ['Preciso pagar alguma coisa?', 'Não. Os cursos da Universidade Corporativa são custeados pela RP Engenharia para todos os colaboradores.'],
   ['Como recebo meu login?', 'O RH cadastra você na plataforma durante a admissão. O acesso chega por e-mail ou WhatsApp; se não chegar em até dois dias úteis, fale com o RH da sua base.'],
@@ -248,7 +251,7 @@ class Component extends DCLogic {
   renderVals() {
     const open = this.state.open;
     return {
-      plataforma: this.props.plataformaUrl ?? '#',
+      plataforma: (this.props.plataformaUrl && this.props.plataformaUrl !== '#') ? this.props.plataformaUrl : 'https://rpengenharia.crescamais.com/',
       faq: FAQ.map(([p, r], i) => ({
         p, r, id: 'faq-' + i, open: open === i, exp: open === i ? 'true' : 'false', icon: open === i ? '−' : '+',
         toggle: () => this.setState({ open: open === i ? -1 : i })
@@ -257,6 +260,5 @@ class Component extends DCLogic {
   }
 }
 </script>
-<script src="assets/js/review-tool.js" data-project="RP Engenharia" data-html2canvas="assets/js/vendor/html2canvas.min.js" data-jspdf="assets/js/vendor/jspdf.umd.min.js" defer></script>
 </body>
 </html>

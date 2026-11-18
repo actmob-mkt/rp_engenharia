@@ -133,7 +133,7 @@
       <figure style="margin:0;border:1px solid #1C2450;background:#08102F;padding:clamp(20px,2.6vw,40px) clamp(14px,1.8vw,24px);overflow-x:auto;">
         <svg viewBox="0 0 1000 380" role="img" aria-label="Diagrama das seis frentes da RP — Elétrica, Mecânica, Civil, Instrumentação e automação, Facilities e Operação — convergindo para uma gestão única e para a operação do cliente funcionando" style="width:100%;min-width:640px;height:auto;display:block;">
           <sc-for list="{{ frentes6 }}" as="c" hint-placeholder-count="6">
-            <a href="{{ c.href }}">
+            <a href="{{ c.href }}" style="width: 548px; height: 168px">
               <path d="{{ c.path }}" fill="none" stroke="{{ c.color }}" stroke-width="{{ c.sw }}" stroke-opacity="{{ c.op }}" style="transition:stroke-opacity .3s,stroke-width .3s;"></path>
               <path d="{{ c.path }}" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="4 24" stroke-opacity="{{ c.flowOp }}" style="animation:rpFlow 1.1s linear infinite;"></path>
               <circle cx="{{ c.x0 }}" cy="{{ c.y }}" r="5" fill="#08102F" stroke="{{ c.color }}" stroke-width="2" stroke-opacity="{{ c.op }}"></circle>
@@ -707,12 +707,11 @@ class Component extends DCLogic {
       plantLabelsEl: React.createElement('g', null, plantLabels.map((l, i) => React.createElement('text', { key: i, x: l.x, y: l.y, textAnchor: l.anchor, fill: l.fill, style: { font: "500 12px 'IBM Plex Mono',monospace", transition: 'fill .35s' } }, l.t))),
       numCols: 'repeat(' + ((this.state.vw || 1440) >= 900 ? 3 : (this.state.vw || 1440) >= 560 ? 2 : 1) + ',minmax(0,1fr))',
       mapStates, miniStates, mapPins, sedePins, nums, plant, plantLabels, tabs, circuits, frentes6, panel, sols, segs, ufs, logosLoop,
-      posts: ready ? D.posts.map(p => Object.assign({}, p, { href: 'blog-post.html?p=' + p.slug })) : [],
+      posts: ready ? D.posts.map(p => Object.assign({}, p, { href: p.pagina || ('blog-termografia-em-paineis.html?p=' + p.slug) })) : [],
       plantAria: 'Planta ilustrativa de estação de tratamento de esgoto destacando a disciplina ' + P.title
     };
   }
 }
 </script>
-<script src="assets/js/review-tool.js" data-project="RP Engenharia" data-html2canvas="assets/js/vendor/html2canvas.min.js" data-jspdf="assets/js/vendor/jspdf.umd.min.js" defer></script>
 </body>
 </html>
